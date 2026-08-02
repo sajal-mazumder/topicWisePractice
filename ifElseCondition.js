@@ -48,22 +48,22 @@ If it has numbers and special character, return ‘strong’. Or return ‘week�
 Goal: Return the correct security label.
 */
 
-let password = 'abe#$#@@@@8';
-let hasNumber = /\d/.test(password);
-let hasCharacter = /[^A-Za-z0-9]/.test(password);
+// let password = 'abe#$#@@@@8';
+// let hasNumber = /\d/.test(password);
+// let hasCharacter = /[^A-Za-z0-9]/.test(password);
 
-if (password.length < 8) {
-    console.log('Too short Password!')
-}else if (hasNumber && hasCharacter) {
-    console.log('Strong Password.')
-}else{
-    console.log('Weak Password.')
-}
+// if (password.length < 8) {
+//     console.log('Too short Password!')
+// }else if (hasNumber && hasCharacter) {
+//     console.log('Strong Password.')
+// }else{
+//     console.log('Weak Password.')
+// }
 
 // using ternary
 
-let printedPassword = (password.length < 8) ? 'Too short Password' : ((hasNumber && hasCharacter) ? 'Strong Password' : 'Weak Password.');
-console.log(printedPassword);
+// let printedPassword = (password.length < 8) ? 'Too short Password' : ((hasNumber && hasCharacter) ? 'Strong Password' : 'Weak Password.');
+// console.log(printedPassword);
 
 /*
 🎉No : 3 
@@ -101,3 +101,88 @@ Goal: orders under 50$ cost 5$ for shipping.
 // }else{
 //     console.log('Shipping cost $5.')
 // }
+
+/*
+🎉No : 4
+Cinema ticket pricing
+A cinema offers various discounts based on age and student status.
+Inputs:  Age (number) and is Student (true / false).
+Logic to figure out: 
+Children under 12 years old get a ticket for 6$.
+Seniors age >= 65 get a ticket for 8$.
+For everyone else (12 to 64) : If they are a student they pay 10$, otherwise 15$.
+Goal : determine the ticket price.
+*/
+
+// let age = 10;
+// let isStudent = true;
+
+// if (age < 12) {
+//     console.log('Pay $6 for ticket.')
+// }else if (age >= 65) {
+//     console.log('Pay $8 for ticket.')
+// }else if (age < 65 && isStudent) {
+//     console.log('Pay $10 for ticket.')
+// }else{
+//     console.log('Pay $15 for ticket.')
+// }
+
+// ternary
+
+// let ticketPrice = (age < 12) ? 'Pay $6 for ticket' : ((age >= 65) ? '$8': (age < 65 && isStudent) ? '$10' : '$15');
+// console.log(ticketPrice);
+
+
+/*
+🎉No 5: 
+Toll booth calculation
+A small toll booth calculates fees based on the vehicle types and the time of day.
+Inputs: Vehicles type ( ‘car’, ‘truck’, or ‘motorbike’) and peak hours (true / false).
+Logic: 
+Motorbikes always pay $2.
+Trucks always pay 10$.
+Cars pay 5$ during non-peak hours, but if it is peak hours, they pay 8$.
+Goal: determine the correct toll amount for a given vehicle.
+*/
+
+// let typeOfVehicle = 'Cycle';
+// let isPeakHour = false;
+// if (typeOfVehicle === 'Truck') {
+//     console.log('Pay $10.')
+// }else if (typeOfVehicle === 'Motorbike') {
+//     console.log('Pay $2.')
+// }else if (typeOfVehicle === 'Car' && isPeakHour) {
+//     console.log('Pay $5.')
+// }else if (typeOfVehicle === 'Car' && !isPeakHour) {
+//     console.log('Pay $8')
+// }
+// else{
+//     console.log('Select a valid Vehicle.')
+// }
+
+// switch case
+
+// let vehicleType = 'Car'; // valid vehicle - bus, truck, car.
+// let isPeakHour = false;
+// let carRent = '';
+
+// switch (true) {
+//     case (vehicleType === 'Bus'):
+//         carRent = '$2'
+//         break;
+//     case ( vehicleType === 'Truck'):
+//         carRent = '$10'
+//         break;
+//     case (vehicleType === 'Car' && isPeakHour):
+//         carRent = '$5'
+//         break;
+//     case (vehicleType === 'Car' && !isPeakHour):
+//         carRent = '$8'
+//         break;
+//     default:
+//         carRent = 'Select a valid vehicle.'
+//         break;
+// }
+// console.log(carRent);
+
+                                                                                                                      
