@@ -162,27 +162,27 @@ Goal: determine the correct toll amount for a given vehicle.
 
 // switch case
 
-// let vehicleType = 'Car'; // valid vehicle - bus, truck, car.
-// let isPeakHour = false;
-// let carRent = '';
+let vehicleType = 'cycle'; // valid vehicle - bus, truck, car.
+let isPeakHour = false;
+let carRent = '';
 
-// switch (true) {
-//     case (vehicleType === 'Bus'):
-//         carRent = '$2'
-//         break;
-//     case ( vehicleType === 'Truck'):
-//         carRent = '$10'
-//         break;
-//     case (vehicleType === 'Car' && isPeakHour):
-//         carRent = '$5'
-//         break;
-//     case (vehicleType === 'Car' && !isPeakHour):
-//         carRent = '$8'
-//         break;
-//     default:
-//         carRent = 'Select a valid vehicle.'
-//         break;
-// }
-// console.log(carRent);
+switch (true) {
+    case (vehicleType === 'Bus'):
+        carRent = '$2'
+        break;
+    case ( vehicleType === 'Truck'):
+        carRent = '$10'
+        break;
+    case (vehicleType === 'Car' && isPeakHour):
+        carRent = '$5'
+        break;
+    case (vehicleType === 'Car' && !isPeakHour):
+        carRent = '$8'
+        break;
+    default:
+        carRent = 'Select a valid vehicle.'
+        break;
+}
+console.log(carRent);
 
                                                                                                                       
