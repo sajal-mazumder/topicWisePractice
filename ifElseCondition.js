@@ -162,27 +162,202 @@ Goal: determine the correct toll amount for a given vehicle.
 
 // switch case
 
-let vehicleType = 'cycle'; // valid vehicle - bus, truck, car.
-let isPeakHour = false;
-let carRent = '';
+// let vehicleType = 'cycle'; // valid vehicle - bus, truck, car.
+// let isPeakHour = false;
+// let carRent = '';
 
-switch (true) {
-    case (vehicleType === 'Bus'):
-        carRent = '$2'
-        break;
-    case ( vehicleType === 'Truck'):
-        carRent = '$10'
-        break;
-    case (vehicleType === 'Car' && isPeakHour):
-        carRent = '$5'
-        break;
-    case (vehicleType === 'Car' && !isPeakHour):
-        carRent = '$8'
-        break;
-    default:
-        carRent = 'Select a valid vehicle.'
-        break;
+// switch (true) {
+//     case (vehicleType === 'Bus'):
+//         carRent = '$2'
+//         break;
+//     case ( vehicleType === 'Truck'):
+//         carRent = '$10'
+//         break;
+//     case (vehicleType === 'Car' && isPeakHour):
+//         carRent = '$5'
+//         break;
+//     case (vehicleType === 'Car' && !isPeakHour):
+//         carRent = '$8'
+//         break;
+//     default:
+//         carRent = 'Select a valid vehicle.'
+//         break;
+// }
+// console.log(carRent);
+
+/*
+🎉No 6:
+Traffic light simulator: 
+Accept a string variable representing a traffic light color (‘red’, ‘yellow’, ‘green’).
+Output: ‘stop’, ‘slow down’, or ‘go’ respectively.
+Include a fallback message for any invalid color.
+*/
+
+// let lightColor = 'Green';
+// if (lightColor === 'Red') {
+//     console.log('Stop!')
+// }else if (lightColor === 'Yellow') {
+//     console.log('Slow down.')
+// }else if (lightColor === 'Green') {
+//     console.log('Go to your destination.')
+// }else{
+//     console.log('Please select a valid color.')
+// }
+
+// using switch case
+
+// let colorLight = 'Green';
+// let traffic = '';
+// switch (true) {
+//     case colorLight === 'Red':
+//         traffic = 'Stop.'
+//         break;
+//     case colorLight === 'Yellow':
+//         traffic = 'Slow down.'
+//         break;
+//     case colorLight === 'Green':
+//         traffic = 'Go first.'
+//         break;
+//     default:
+//         traffic = 'Please select a valid color.'
+//         break;
+// }
+// console.log(traffic);
+
+
+/*
+🎉No 7:  
+Movie rating guide
+Accept a letter grade representing a movie rating ( ‘G’, ‘PG’, ‘PG-13’, or ‘R’).
+Log a short description of who is allowed to watch it.
+Handle unknown rating codes gracefully.
+*/
+
+// let movieRating = 'V';
+// if (movieRating === 'G') {
+//     console.log('General spectetor. All ages people can enjoy.')
+// }else if (movieRating === 'PG') {
+//     console.log('Parental Guide allowed to watch movie.')
+// }else if (movieRating === 'PG-13') {
+//     console.log('Under 13 are allowed with Parental Guide.')
+// }else if (movieRating === 'R') {
+//     console.log('Restricted! Only adults are allowed.')
+// }else{
+//     console.log('Violance and Sexual content.')
+// }
+
+// using switch case
+
+// let ratingMovie = 'V';
+// let movie = '';
+// switch (true) {
+//     case ratingMovie === 'G':
+//         movie = 'General Spectetor.'
+//         break;
+//     case ratingMovie === 'PG':
+//         movie = 'Parental Guide need.'
+//         break;
+//     case ratingMovie === 'PG-13':
+//         movie = 'Under 13 are not allowed.'
+//         break;
+//     case ratingMovie === 'R':
+//         movie = 'Restricted.'
+//         break;    
+//     default:
+//         movie = 'Horror movie.'
+//         break;
+// }
+// console.log(movie);
+
+
+/*
+🎉No 8:
+Gym membership tier (switch case)
+Accept a membership level number (1 for Bronze, 2 for Silver, 3 for Gold).
+Log the specific perks for the tier.
+Make sure that higher tiers automatically inherit (“fall through” intentionally into) the perks of the lower tiers.
+*/
+// let gymMember = 11;
+// // let packege = '';
+// switch (gymMember) {
+//     case  3:
+//         // packege = 'You are a Gold star. Can use Stationary Bike (Spin Bike)'
+//         console.log('you are a gold star.')
+//     case  2:
+//         // packege = 'You are a Silver star. Can use Chest Press Machine'
+//         console.log('You are a silver star.')
+//     case  1:
+//         // packege = 'You are a Bronze star. Can use Dumbbells'
+//         console.log('you are a bronze star.')
+//         break;   
+//     default:
+//         // packege = 'Please select a valid membership.'
+//         console.log('please select 1, 2 or 3.')
+//         break;
+// }
+// console.log(packege);
+
+// let member = 3;
+// let offerPackeges = 'Your packege includes:';
+// switch (member) {
+//     case 3:
+//         offerPackeges += '\n- Gold star: Stationary Bike (Spin Bike)'
+//     case 2:
+//         offerPackeges += '\n- Silver star: Chest Press Machine'
+//     case 1:
+//         offerPackeges += '\n- Bronze star: Dumbbells'
+//         break;
+//     default:
+//         offerPackeges = 'please select 1, 2 or 3.'
+//         break;
+// }
+// console.log(offerPackeges);
+
+// if else condition
+
+// let member = 2;
+// let offerPackeges = 'Your packege includes:';
+// if (member >=1 && member <=3) {
+//     if (member >= 3) {
+//         offerPackeges += '\n- Gold star: Stationary Bike (Spin Bike)';
+//     }
+//     if (member >= 2) {
+//         offerPackeges += '\n- Silver star: Chest Press Machine';
+//     }
+//     if (member >=1) {
+//         offerPackeges += '\n- Bronze star: Dumbbells';
+//     }
+// }else{
+//     offerPackeges = 'Please select 1, 2 or 3.';
+// }
+// console.log(offerPackeges);
+
+
+/*
+🎉No 9:
+Fitness workout plans (switch case )
+Accept a string for the current day of week.
+Log “Cardio” for monday and wednesday, “Strength” for tuesday and thursday, “Yoga” for friday and “Rest Day” for the weekend.
+Group the matching days together efficiently.
+*/
+// 
+
+
+/*
+🎉No 10:
+The amusement park ride
+A roller coaster requires a rider to be over 120 cm tall and accompanied by an adult, or they can ride alone if they are over 140 cm tall.
+Your states:
+You are 135 cm tall and you are alone.
+Is the final scenario true or false for you being allowed to ride?
+*/
+let height = 128;
+let hasCompani = true;
+if (height >= 120 && hasCompani || height > 140) {
+    console.log('can ride.')
+}else{
+    console.log('not allowed.')
 }
-console.log(carRent);
 
-                                                                                                                      
+let allowRide = (height >=120 && hasCompani || height > 140) ? 'allowed' : 'not allowed.';
+console.log(allowRide);
