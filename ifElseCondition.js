@@ -485,21 +485,91 @@ However, if the user is using a "Trusted Device", they can log in without an OTP
 But if the user is directly blocked, they will not be allowed to log in under any circumstances. 
 */
 
-let isBlocked = true;
-let isTrustedDevice = false;
-let isCorrectOTP = false;
+// let isBlocked = true;
+// let isTrustedDevice = false;
+// let isCorrectOTP = false;
 
-if (!isBlocked) {
-    if (isTrustedDevice || isCorrectOTP) {
-        console.log('log into app.')
-    }else{
-        console.log('wrong OTP or not trusted device.')
-    }
-}else{
-    console.log('sorry! you are blocked.')
-}
+// if (!isBlocked) {
+//     if (isTrustedDevice || isCorrectOTP) {
+//         console.log('log into app.')
+//     }else{
+//         console.log('wrong OTP or not trusted device.')
+//     }
+// }else{
+//     console.log('sorry! you are blocked.')
+// }
 
 // ternary
 
-let logInApp = (!isBlocked) ? ((isTrustedDevice || isCorrectOTP) ? 'log in to app.' : 'wrong otp or unknown device.') : 'you are blocked.';
-console.log(logInApp);
+// let logInApp = (!isBlocked) ? ((isTrustedDevice || isCorrectOTP) ? 'log in to app.' : 'wrong otp or unknown device.') : 'you are blocked.';
+// console.log(logInApp);
+
+
+/*
+🎉No 16:
+Free Shipping
+An e-commerce website offers free shipping if the total order cost is greater than $50 AND the customer is a resident of the same city (Local).
+Alternatively, if the customer is a Premium Member, they will receive free shipping regardless of the order cost. 
+*/
+
+// let orderCost = 60;  // $60
+// let isLocal = false;
+// let isPremiumMember = false;
+
+// if (isPremiumMember) {
+//     console.log('order cost 0tk.')
+// }else if (orderCost > 50 && isLocal) {
+//     console.log('order cost 0taka.')
+// }else{
+//     console.log('order cost 10$.')
+// }
+
+// ternary
+
+// let shippingFee = (isPremiumMember) ? 'order cost 0$' : (orderCost > 50 && isLocal) ? 'order cost 0taka': 'order cost 10$';
+// console.log(shippingFee);
+
+
+/*
+🎉No 17:
+Blood Donation Eligibility
+To donate blood, the age must be between 18 and 60 years AND the weight must be greater than 50 kg and last blood donation above 3 months.
+However, if a tattoo has been gotten within the last 9 months, blood donation is not allowed. 
+*/
+
+// let age = 45;
+// let weight = 55; 
+// let lastBloodDonate = 4;
+// let hasTattoo = 14; // less than 9 months
+
+// if (hasTattoo > 9) {
+//     if (age >= 18 && age <= 60) {
+//         if (weight >= 50) {
+//             if (lastBloodDonate > 3) {
+//                 console.log('congratulations! can donate your blood.')
+//             }else{
+//                 console.log('your last blood donation is less than 3 months.')
+//             }
+//         }else{
+//             console.log('you are under weight.')
+//         }
+//     }else{
+//         console.log('your age is not 18 - 60')
+//     }
+// }else{
+//     console.log('sorry! you have a tattoo less than 9 months.')
+// }
+
+// clean code using guard clause
+
+// if (hasTattoo <=9) {
+//     console.log('sorry you have a tattoo within 9 months.')
+// }else if (age < 18 || age > 60) {
+//     console.log('you must be 18 - 60.')
+// }else if (weight < 50) {
+//     console.log('you are under weight.')
+// }else if (lastBloodDonate < 3) {
+//     console.log('your last blood donate is less than 3 months.')
+// }else{
+//     console.log('congratulations. you can donate blood.')
+// }
