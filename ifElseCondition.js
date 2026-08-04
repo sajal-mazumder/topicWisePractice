@@ -573,3 +573,128 @@ However, if a tattoo has been gotten within the last 9 months, blood donation is
 // }else{
 //     console.log('congratulations. you can donate blood.')
 // }
+
+
+/*
+🎉No 18:
+ATM Withdrawal
+To withdraw money from an ATM booth, the user must provide the correct PIN.
+Next, the booth must have enough cash.
+However, if the user is a VIP account holder, the bank will provide the money from another fund even if the booth's cash is low (meaning there is no need to check the booth's cash). 
+*/
+
+// let correctPin = true;
+// let haveEnoughCash = false;
+// let isVIP = true;
+
+// if (correctPin) {
+//     if (haveEnoughCash) {
+//         console.log('withdraw your cash.')
+//     }else if (isVIP) {
+//         console.log('please withdraw your cash.')
+//     }else{
+//         console.log('not enough cash.')
+//     }
+// }else{
+//     console.log('incorrect pin.')
+// }
+
+// guard clause
+
+// if (!correctPin) {
+//     console.log('Oops! incorrect pin.')
+// }else if (haveEnoughCash) {
+//     console.log('withdraw your cash.')
+// }else if (isVIP) {
+//     console.log('please cash your taka.')
+// }else{
+//     console.log('have not enough cash.')
+// }
+
+
+/*
+🎉No 19:
+Movie Ticket Pricing
+The ticket price at a movie theater will be free ($0) if the viewer is a child aged 5 or under (Age <= 5) OR a military member.
+However, if a "Special Screening" or premier show is running in the theater, ticket purchase is mandatory for everyone (no one gets it for free). 
+*/
+
+// let isChild = false; // <5
+// let isMilitaryMember = false;
+// let isPremiurShow = false;
+
+// if (isPremiurShow) {
+//     console.log('ticket price $5.')
+// }else if (isChild || isMilitaryMember) {
+//     console.log('ticket price 0$.')
+// }else{
+//     console.log('ticket 5$.')
+// }
+
+// ternary
+
+// let ticketPrice = (isPremiurShow) ? 'ticket price $5.' : (isChild || isMilitaryMember) ? 'ticket price 0$.' : 'ticket 5$.';
+// console.log(ticketPrice);
+
+
+/*
+🎉No 20:
+Credit Card Approval
+A bank will issue you a credit card if your monthly income is greater than 50,000 TK AND your credit score is above 700.
+However, if you have an active loan defaulter record with the bank, you will not be allowed to get a card under any circumstances. 
+*/
+
+// let haveActiveLoan = false;
+// let monthlyIncome = 70000;
+// let creditScore = 600;
+
+// if (!haveActiveLoan) {
+//     if (monthlyIncome > 50000 && creditScore > 700) {
+//         console.log('can issue credit card.')
+//     }else{
+//         console.log('check monthly income range or credit score.')
+//     }
+// }else{
+//     console.log('you have an active loan. can not issue card anyway.')
+// }
+
+// ternary
+
+// let issueCard = (!haveActiveLoan) ? ((monthlyIncome > 50000 && creditScore > 700) ? 'can issue credit card.' : 'check monthly income range or credit score.') : 'you have an active loan. can not issue card anyway.';
+// console.log(issueCard);
+
+
+/*
+🎉No 21:
+Flight Boarding Eligibility
+A passenger can board the plane if they have a valid passport AND a boarding pass.
+However, if they are an enforcement officer (such as police/security personnel) on active duty, they can board the plane with just a passport, without needing a boarding pass. 
+*/
+
+let hasValidPassport = true;
+let isEnforcementOfficer = false;
+let hasBoardingPass = true;
+
+if (hasValidPassport) {
+    if (isEnforcementOfficer) {
+        console.log('can boarding plane without boarding pass.')
+    }else if (hasBoardingPass) {
+        console.log('can boarding plane with your passport and boarding pass.')
+    }else{
+        console.log('please collect your boarding pass.')
+    }
+}else{
+    console.log('can not boarding plane. you do not have valid passport.')
+}
+
+// guard clause
+
+if (!hasValidPassport) {
+    console.log('can not boarding plane. you do not have valid passport.')
+}else if (isEnforcementOfficer) {
+    console.log('can boarding plane without boarding pass.')
+}else if (hasBoardingPass) {
+    console.log('can boarding plane with your passport and boarding pass.')
+}else{
+    console.log('please collect boarding pass.')
+}
