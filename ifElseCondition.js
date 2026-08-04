@@ -351,13 +351,40 @@ Your states:
 You are 135 cm tall and you are alone.
 Is the final scenario true or false for you being allowed to ride?
 */
-let height = 128;
-let hasCompani = true;
-if (height >= 120 && hasCompani || height > 140) {
-    console.log('can ride.')
+// let height = 128;
+// let hasCompany = true;
+// if (height >= 120 && hasCompany || height > 140) {
+//     console.log('can ride.')
+// }else{
+//     console.log('not allowed.')
+// }
+
+// ternary
+
+// let allowRide = (height >=120 && hasCompany || height > 140) ? 'allowed' : 'not allowed.';
+// console.log(allowRide);
+
+
+/*
+🎉No 11:
+The online discount
+A website gives a discount if a customer is a new user and has a promo code.
+Alternatively, they get the discount if they are a VIP member ( regardless of the code or user age).
+Your stats: You are a new user, you don’t have a promo code, and you are a VIP member.
+Is the final scenario true or false for you getting the discount?
+*/
+
+let newCustomer = true;
+let hasPromoCode = false;
+let isVIP = false;
+if (isVIP) {
+    console.log('Discount 100%.')
+}else if (newCustomer && hasPromoCode) {
+    console.log('Also discount 100%')
 }else{
-    console.log('not allowed.')
+    console.log('No discount.')
 }
 
-let allowRide = (height >=120 && hasCompani || height > 140) ? 'allowed' : 'not allowed.';
-console.log(allowRide);
+// ternary 
+let getDiscount = (isVIP) ? 'discount 100%.' : (newCustomer && hasPromoCode) ? 'also get discount 100%' : 'sorry, no discount.';
+console.log(getDiscount);
