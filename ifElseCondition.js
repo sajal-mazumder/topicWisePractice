@@ -374,17 +374,132 @@ Your stats: You are a new user, you don’t have a promo code, and you are a VIP
 Is the final scenario true or false for you getting the discount?
 */
 
-let newCustomer = true;
-let hasPromoCode = false;
-let isVIP = false;
-if (isVIP) {
-    console.log('Discount 100%.')
-}else if (newCustomer && hasPromoCode) {
-    console.log('Also discount 100%')
-}else{
-    console.log('No discount.')
-}
+// let newCustomer = true;
+// let hasPromoCode = false;
+// let isVIP = false;
+// if (isVIP) {
+//     console.log('Discount 100%.')
+// }else if (newCustomer && hasPromoCode) {
+//     console.log('Also discount 100%')
+// }else{
+//     console.log('No discount.')
+// }
 
 // ternary 
-let getDiscount = (isVIP) ? 'discount 100%.' : (newCustomer && hasPromoCode) ? 'also get discount 100%' : 'sorry, no discount.';
-console.log(getDiscount);
+
+// let getDiscount = (isVIP) ? 'discount 100%.' : (newCustomer && hasPromoCode) ? 'also get discount 100%' : 'sorry, no discount.';
+// console.log(getDiscount);
+
+/*
+🎉No 12:
+The automated greenhouse
+The watering system turns on if the soil is dry and the temperature is above 25 degrees.
+Current stats: the soil is wet, the temperature is 30 and it is 9:00 pm.
+Is the final scenario true or false for the watering system turning on?
+*/
+
+// let soilCondition = 'wet';
+// let temperature = 28;
+// let peakHour = false;
+// if (soilCondition === 'dry' && temperature > 25) {
+//     if (peakHour === true) {
+//         console.log('Turn on waterinng system.')
+//     }else{
+//         console.log('Turn off watering system.')
+//     }
+// }else{
+//     console.log('No need watering system.')
+// }
+
+// ternary
+
+// let watering = (soilCondition === 'dry' && temperature > 25) ? (peakHour ? 'turn on watering' : 'turn off watering') : 'no need to watering.';
+// console.log(watering);
+
+/*
+🎉No 13:
+The exam eligibility 
+To sit for an exam, a student must have paid their fees and have an attendance over 75%. However, if they have a medical waiver, they only need to have paid their fees.
+Your stats: You paid your fees, your attendance is 65% and you do not have a medical waiver.
+Is the final scenario true or false for you being eligible for the exam?
+*/
+
+// let paidFees = true;
+// let attendence = 80;
+// let medicalWaver = false;
+// if (paidFees && (attendence >= 75 || medicalWaver)) {
+//     console.log('allowed for exam.')
+// }else{
+//     console.log('not allowed.')
+// }
+
+
+// if (paidFees) {
+//     if (attendence >=75 || medicalWaver) {
+//         console.log('allowed.')
+//     }else{
+//         console.log('not allowed.')
+//     }
+// }else{
+//     console.log('First pay your fees.')
+// }
+
+// ternary
+
+// let sitForExam = (paidFees) ? ((attendence >= 75 || medicalWaver) ? 'allowed for exam' : 'not allowed.') : 'first pay fees.';
+// console.log(sitForExam);
+
+/*
+🎉No 14:
+The smartphone unlock
+A phone will unlock if face ID matches or if the correct PIN is entered.
+However, the phone will absolutely not unlock if the battery is completely dead, no matter what.
+Current status: Face ID matches, the PIN is incorrect, and the battery is completely dead.
+Is the final scenario true or false for the phone unlocking?
+*/
+
+// let batteryDead = false;
+// let matchFaceID = true;
+// let isPin = false;
+// if (!batteryDead) {
+//     if (matchFaceID || isPin) {
+//         console.log('unlock your phone.')
+//     }else{
+//         console.log('make sure your face ID or correct Pin.')
+//     }
+// }else{
+//     console.log('first turn on your mobile phone.')
+// }
+
+// ternary 
+
+// let openMobile = (!batteryDead) ? ((matchFaceID || isPin) ? 'unlock your phone.' : 'first check face Id or Pin.') : 'turn on your phone.';
+// console.log(openMobile);
+
+
+/*
+🎉No 15:
+OTP Verification
+To log in to an app, the user must provide the correct OTP.
+However, if the user is using a "Trusted Device", they can log in without an OTP.
+But if the user is directly blocked, they will not be allowed to log in under any circumstances. 
+*/
+
+let isBlocked = true;
+let isTrustedDevice = false;
+let isCorrectOTP = false;
+
+if (!isBlocked) {
+    if (isTrustedDevice || isCorrectOTP) {
+        console.log('log into app.')
+    }else{
+        console.log('wrong OTP or not trusted device.')
+    }
+}else{
+    console.log('sorry! you are blocked.')
+}
+
+// ternary
+
+let logInApp = (!isBlocked) ? ((isTrustedDevice || isCorrectOTP) ? 'log in to app.' : 'wrong otp or unknown device.') : 'you are blocked.';
+console.log(logInApp);
