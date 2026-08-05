@@ -811,30 +811,66 @@ However, if you are an international tourist, you can bypass the age limit but y
 Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.
 */
 
-let age = 19;
-let hasDriverLicense = false;
-let isIntTourist = false;
-let hasIntDriverLicense = false;
+// let age = 19;
+// let hasDriverLicense = false;
+// let isIntTourist = false;
+// let hasIntDriverLicense = false;
 
-if (isIntTourist) {
-    if (hasIntDriverLicense) {
-        console.log('Can rent a BMW car.')
+// if (isIntTourist) {
+//     if (hasIntDriverLicense) {
+//         console.log('Can rent a BMW car.')
+//     }else{
+//         console.log('You do not have an International Driving License.')
+//     }
+// }else if (age > 21) {
+//     if (hasDriverLicense) {
+//         console.log('Can rent Toyota car.')
+//     }else{
+//         console.log('You do not have a Driving License.')
+//     }
+// }else{
+//     console.log('You are under age 21.')
+// }
+
+// ternary
+
+// let rentCar = (isIntTourist) ? 
+// ((hasIntDriverLicense) ? 'Can rent a BMW car.': 'You do not have an Intenational Driving License.')
+// : ((age > 21) ? 
+//     ((hasDriverLicense) ? 'Can rent a Toyota car.' : 'You do not have a Driving License.')
+//      : 'You are under age 21.');
+// console.log(rentCar);
+
+
+/*
+🎉No 26:
+The job interview shortlist
+A company automatically invites an applicant for an interview if they have a recommendation letter from the CEO.
+For regular applicants, they must have a computer science degree and at least 2 years experience to get shortlisted.
+Your stats: You do not have a recommendation letter, you have a CS degree and you have 5 years of experience.
+*/
+
+let hasRecommendCEO = false;
+let isRegular = true;
+let hasComputerScDegree = false;
+let hasExperience = 1;
+
+if (hasRecommendCEO) {
+    console.log('You are shortlisted for interview by the recommendation of honorable CEO.')
+}else if (isRegular) {
+    if (hasComputerScDegree && hasExperience >= 2) {
+        console.log('You are shortlisted for interview. Please submit your valid papers.')
     }else{
-        console.log('You do not have an International Driving License.')
-    }
-}else if (age > 21) {
-    if (hasDriverLicense) {
-        console.log('Can rent Toyota car.')
-    }else{
-        console.log('You do not have a Driving License.')
+        console.log('Sorry! You do not have computer science degree or job experience more than 2 years.')
     }
 }else{
-    console.log('You are under age 21.')
+    console.log('You are not a candidate at all.')
 }
 
-let rentCar = (isIntTourist) ? 
-((hasIntDriverLicense) ? 'Can rent a BMW car.': 'You do not have an Intenational Driving License.')
-: ((age > 21) ? 
-    ((hasDriverLicense) ? 'Can rent a Toyota car.' : 'You do not have a Driving License.')
-     : 'You are under age 21.');
-console.log(rentCar);
+let jobInterview = (hasRecommendCEO) ? 
+'You are shortlisted for interview by the recommendation of honorable CEO.' 
+    : ((isRegular) ? ((hasComputerScDegree && hasExperience >= 2) 
+        ? 'You are shortlisted for interview. Please submit your valid papers.' 
+            : 'Sorry! You do not have computer science degree or job experience more than 2 years.') 
+                : 'You are not a candidate at all.');
+console.log(jobInterview);
