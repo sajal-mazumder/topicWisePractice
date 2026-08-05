@@ -671,30 +671,128 @@ A passenger can board the plane if they have a valid passport AND a boarding pas
 However, if they are an enforcement officer (such as police/security personnel) on active duty, they can board the plane with just a passport, without needing a boarding pass. 
 */
 
-let hasValidPassport = true;
-let isEnforcementOfficer = false;
-let hasBoardingPass = true;
+// let hasValidPassport = true;
+// let isEnforcementOfficer = false;
+// let hasBoardingPass = true;
 
-if (hasValidPassport) {
-    if (isEnforcementOfficer) {
-        console.log('can boarding plane without boarding pass.')
-    }else if (hasBoardingPass) {
-        console.log('can boarding plane with your passport and boarding pass.')
+// if (hasValidPassport) {
+//     if (isEnforcementOfficer) {
+//         console.log('can boarding plane without boarding pass.')
+//     }else if (hasBoardingPass) {
+//         console.log('can boarding plane with your passport and boarding pass.')
+//     }else{
+//         console.log('please collect your boarding pass.')
+//     }
+// }else{
+//     console.log('can not boarding plane. you do not have valid passport.')
+// }
+
+// guard clause
+
+// if (!hasValidPassport) {
+//     console.log('can not boarding plane. you do not have valid passport.')
+// }else if (isEnforcementOfficer) {
+//     console.log('can boarding plane without boarding pass.')
+// }else if (hasBoardingPass) {
+//     console.log('can boarding plane with your passport and boarding pass.')
+// }else{
+//     console.log('please collect boarding pass.')
+// }
+
+
+
+/*
+🎉No 22:
+E-commerce Combo Offer
+A shop will give you a discount if you buy at least 3 items OR if your total bill is greater than 5,000 TK.
+However, if your cart contains any "Clearance Sale" items, this offer will not be applicable (meaning you will not receive any discount). 
+*/
+
+// let itemsBuy = 2;
+// let totalBill = 2000;
+// let isClearenceSale = false;
+
+// if (isClearenceSale) {
+//     console.log('No discount applicable.')
+// }else if (itemsBuy > 3 || totalBill > 5000) {
+//     console.log('You will get 10% discount on your cart.')
+// }else{
+//     console.log('No discount available.')
+// }
+
+// ternary
+
+// let discountGet = (isClearenceSale) ? 'No discount applicable.' : ((itemsBuy > 3 || totalBill > 5000) ? 'You will get 10% discount on your cart.' : 'No discount available.');
+// console.log(discountGet);
+
+
+/*
+🎉No 23:
+Books from a library
+A library allows you to borrow a book if you have a library card and you have no overdue fines.
+However, if you are a teacher, you can borrow books instantly ( even without a card or fines).
+*/
+
+// let isTeacher = false;
+// let hasLibraryCard = true;
+// let hasOverDue = false;
+
+// if (isTeacher) {
+//     console.log('You can borrow book without card.')
+// }else if (!hasLibraryCard) {
+//     console.log('Please entry your valid library card.')
+// }else if (hasOverDue) {
+//     console.log('Please pay your due.')
+// }
+// else{
+//     console.log('You can borrow book from library for 7 days.')
+// }
+
+// ternary
+
+// let canBorrowBook = (isTeacher) ? 'You can borrow book without card.' : ((!hasLibraryCard) ? 'Please entry your valid library card.' : ((hasOverDue) ? 'Please pay your due.' : 'You can borrow book from library for 7 days.'));
+// console.log(canBorrowBook);
+
+
+/*
+🎉No 24:
+The gym premium zone
+A gym has a private VIP lounge.
+A member can enter if they have a premium membership and their account is active ( not suspended ).
+However, any gym instructor or stuff can enter the lounge anytime automatically, even if they don’t have a membership.
+Your stats: You are a regular member, your account is active and you are not a staff member.
+*/
+
+let isStaff = false;
+let isAccountActive = true;
+let isPremiumMember = false;
+let isRegularMember = false;
+
+if (isStaff) {
+    console.log('You are an honorable stuff. please enter VIP lounge.')   
+}else if (isAccountActive) {
+    if (isPremiumMember) {
+        console.log('You are a VIP member. VIP lounge allowed.')
+    }else if (isRegularMember) {
+        console.log('You are a regular member. VIP lounge not allowed.')
     }else{
-        console.log('please collect your boarding pass.')
+        console.log('Access Denied. Your membership tier does not have VIP lounge access.')
     }
-}else{
-    console.log('can not boarding plane. you do not have valid passport.')
+}
+else{
+    console.log('Sorry! Your account is inactive.')
 }
 
 // guard clause
 
-if (!hasValidPassport) {
-    console.log('can not boarding plane. you do not have valid passport.')
-}else if (isEnforcementOfficer) {
-    console.log('can boarding plane without boarding pass.')
-}else if (hasBoardingPass) {
-    console.log('can boarding plane with your passport and boarding pass.')
+if (isStaff) {
+    console.log('You are an honorable instructor. allowed VIP lounge.')
+}else if (!isAccountActive) {
+    console.log('Sorry! Your account is inactive.')
+}else if (isPremiumMember) {
+    console.log('You are a VIP member. VIP lounge allowed.')
+}else if (isRegularMember) {
+    console.log('You are a regular member. VIP lounge not allowed.')
 }else{
-    console.log('please collect boarding pass.')
+    console.log('Access Denied. Your membership tier does not have VIP lounge access.')
 }
