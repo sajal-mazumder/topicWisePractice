@@ -763,36 +763,78 @@ However, any gym instructor or stuff can enter the lounge anytime automatically,
 Your stats: You are a regular member, your account is active and you are not a staff member.
 */
 
-let isStaff = false;
-let isAccountActive = true;
-let isPremiumMember = false;
-let isRegularMember = false;
+// let isStaff = false;
+// let isAccountActive = true;
+// let isPremiumMember = false;
+// let isRegularMember = false;
 
-if (isStaff) {
-    console.log('You are an honorable stuff. please enter VIP lounge.')   
-}else if (isAccountActive) {
-    if (isPremiumMember) {
-        console.log('You are a VIP member. VIP lounge allowed.')
-    }else if (isRegularMember) {
-        console.log('You are a regular member. VIP lounge not allowed.')
-    }else{
-        console.log('Access Denied. Your membership tier does not have VIP lounge access.')
-    }
-}
-else{
-    console.log('Sorry! Your account is inactive.')
-}
+// if (isStaff) {
+//     console.log('You are an honorable stuff. please enter VIP lounge.')   
+// }else if (isAccountActive) {
+//     if (isPremiumMember) {
+//         console.log('You are a VIP member. VIP lounge allowed.')
+//     }else if (isRegularMember) {
+//         console.log('You are a regular member. VIP lounge not allowed.')
+//     }else{
+//         console.log('Access Denied. Your membership tier does not have VIP lounge access.')
+//     }
+// }
+// else{
+//     console.log('Sorry! Your account is inactive.')
+// }
+
+// ternary
+
+// let loungePass = (isStaff) ? 'You are an honorable stuff. please enter VIP lounge' : (((isAccountActive) ? (isPremiumMember) ? 'You are a VIP member. VIP lounge allowed.' : ((isRegularMember) ? 'You are a regular member. VIP lounge not allowed.' : 'Access denied. Your membership tier does not have VIP lounge access.') : 'Sorry! Your account is inactive.' ));
+// console.log(loungePass);
 
 // guard clause
 
-if (isStaff) {
-    console.log('You are an honorable instructor. allowed VIP lounge.')
-}else if (!isAccountActive) {
-    console.log('Sorry! Your account is inactive.')
-}else if (isPremiumMember) {
-    console.log('You are a VIP member. VIP lounge allowed.')
-}else if (isRegularMember) {
-    console.log('You are a regular member. VIP lounge not allowed.')
+// if (isStaff) {
+//     console.log('You are an honorable instructor. allowed VIP lounge.')
+// }else if (!isAccountActive) {
+//     console.log('Sorry! Your account is inactive.')
+// }else if (isPremiumMember) {
+//     console.log('You are a VIP member. VIP lounge allowed.')
+// }else if (isRegularMember) {
+//     console.log('You are a regular member. VIP lounge not allowed.')
+// }else{
+//     console.log('Access Denied. Your membership tier does not have VIP lounge access.')
+// }
+
+
+/*
+🎉No 25:
+The car rental
+A car rental company will rent you a car if you are over 21 years old and have a valid drivers license.
+However, if you are an international tourist, you can bypass the age limit but you absolutely must have an international drivers license.
+Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.
+*/
+
+let age = 19;
+let hasDriverLicense = false;
+let isIntTourist = false;
+let hasIntDriverLicense = false;
+
+if (isIntTourist) {
+    if (hasIntDriverLicense) {
+        console.log('Can rent a BMW car.')
+    }else{
+        console.log('You do not have an International Driving License.')
+    }
+}else if (age > 21) {
+    if (hasDriverLicense) {
+        console.log('Can rent Toyota car.')
+    }else{
+        console.log('You do not have a Driving License.')
+    }
 }else{
-    console.log('Access Denied. Your membership tier does not have VIP lounge access.')
+    console.log('You are under age 21.')
 }
+
+let rentCar = (isIntTourist) ? 
+((hasIntDriverLicense) ? 'Can rent a BMW car.': 'You do not have an Intenational Driving License.')
+: ((age > 21) ? 
+    ((hasDriverLicense) ? 'Can rent a Toyota car.' : 'You do not have a Driving License.')
+     : 'You are under age 21.');
+console.log(rentCar);
