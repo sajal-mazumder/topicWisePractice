@@ -850,27 +850,57 @@ For regular applicants, they must have a computer science degree and at least 2 
 Your stats: You do not have a recommendation letter, you have a CS degree and you have 5 years of experience.
 */
 
-let hasRecommendCEO = false;
-let isRegular = true;
-let hasComputerScDegree = false;
-let hasExperience = 1;
+// let hasRecommendCEO = false;
+// let isRegular = true;
+// let hasComputerScDegree = false;
+// let hasExperience = 1;
 
-if (hasRecommendCEO) {
-    console.log('You are shortlisted for interview by the recommendation of honorable CEO.')
-}else if (isRegular) {
-    if (hasComputerScDegree && hasExperience >= 2) {
-        console.log('You are shortlisted for interview. Please submit your valid papers.')
+// if (hasRecommendCEO) {
+//     console.log('You are shortlisted for interview by the recommendation of honorable CEO.')
+// }else if (isRegular) {
+//     if (hasComputerScDegree && hasExperience >= 2) {
+//         console.log('You are shortlisted for interview. Please submit your valid papers.')
+//     }else{
+//         console.log('Sorry! You do not have computer science degree or job experience more than 2 years.')
+//     }
+// }else{
+//     console.log('You are not a candidate at all.')
+// }
+
+// ternary
+
+// let jobInterview = (hasRecommendCEO) ? 
+// 'You are shortlisted for interview by the recommendation of honorable CEO.' 
+//     : ((isRegular) ? ((hasComputerScDegree && hasExperience >= 2) 
+//         ? 'You are shortlisted for interview. Please submit your valid papers.' 
+//             : 'Sorry! You do not have computer science degree or job experience more than 2 years.') 
+//                 : 'You are not a candidate at all.');
+// console.log(jobInterview);
+
+
+/*
+🎉No 27:
+The automated warehouse drone
+An automated shipping drone will launch to deliver a package if it has high priority tags.
+For standard priority packages, the drone will only launch if the delivery distance is under 5 miles and the current weather status is clear.
+*/
+
+let isHighPriority = false;
+let isStandardPriority = false;
+let distance = 3;
+let isWeatherClear = false;
+
+if (isHighPriority) {
+    console.log('Drone will Launch any distance.')
+}else if (isStandardPriority) {
+    if (distance <= 5 && isWeatherClear) {
+        console.log('Drone will Launch.')
     }else{
-        console.log('Sorry! You do not have computer science degree or job experience more than 2 years.')
+        console.log('Distance is more than 5 miles or weather is bad.')
     }
 }else{
-    console.log('You are not a candidate at all.')
+    console.log('Has no priority. Drone will not launch.')
 }
 
-let jobInterview = (hasRecommendCEO) ? 
-'You are shortlisted for interview by the recommendation of honorable CEO.' 
-    : ((isRegular) ? ((hasComputerScDegree && hasExperience >= 2) 
-        ? 'You are shortlisted for interview. Please submit your valid papers.' 
-            : 'Sorry! You do not have computer science degree or job experience more than 2 years.') 
-                : 'You are not a candidate at all.');
-console.log(jobInterview);
+let droneLaunch = (isHighPriority) ? 'Drone will launch any distance.' : (((isStandardPriority) ? ((distance <= 5 && isWeatherClear) ? 'Drone will launch.' : 'Distance is more than 5 miles or weather is bad.') : 'Has no priority. Drone will not launch.'));
+console.log(droneLaunch);
