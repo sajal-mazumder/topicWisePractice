@@ -885,22 +885,55 @@ An automated shipping drone will launch to deliver a package if it has high prio
 For standard priority packages, the drone will only launch if the delivery distance is under 5 miles and the current weather status is clear.
 */
 
-let isHighPriority = false;
-let isStandardPriority = false;
-let distance = 3;
-let isWeatherClear = false;
+// let isHighPriority = false;
+// let isStandardPriority = false;
+// let distance = 3;
+// let isWeatherClear = false;
 
-if (isHighPriority) {
-    console.log('Drone will Launch any distance.')
-}else if (isStandardPriority) {
-    if (distance <= 5 && isWeatherClear) {
-        console.log('Drone will Launch.')
-    }else{
-        console.log('Distance is more than 5 miles or weather is bad.')
-    }
+// if (isHighPriority) {
+//     console.log('Drone will Launch any distance.')
+// }else if (isStandardPriority) {
+//     if (distance <= 5 && isWeatherClear) {
+//         console.log('Drone will Launch.')
+//     }else{
+//         console.log('Distance is more than 5 miles or weather is bad.')
+//     }
+// }else{
+//     console.log('Has no priority. Drone will not launch.')
+// }
+
+// ternary
+
+// let droneLaunch = (isHighPriority) ? 
+// 'Drone will launch any distance.' 
+//     : (((isStandardPriority) ? ((distance <= 5 && isWeatherClear) ? 'Drone will launch.' 
+//         : 'Distance is more than 5 miles or weather is bad.') 
+//             : 'Has no priority. Drone will not launch.'));
+// console.log(droneLaunch);
+
+
+
+/*
+🎉No 28:
+Credit card fraud alert
+A bank’s security system automatically triggers a fraud alert if a transaction is flagged  as an international withdrawal.
+For domestic transactions, an alert is triggered only if the transaction amount is over $500 and the user has never shopped at that store before.
+*/
+
+let isInternationalWithdraw = false;
+let transactionAmount = 600;
+let  hasNeverShopped = false;
+
+if (isInternationalWithdraw) {
+    console.log('Fraud Alert Triggered: International withdrawal detected. Transaction blocked.')
+}else if (transactionAmount > 500 && hasNeverShopped) {
+    console.log('Fraud Alert Triggered: High-value domestic transaction at an unfamiliar store.')
 }else{
-    console.log('Has no priority. Drone will not launch.')
+    console.log('Transaction Successful! Welcome to our secure banking partner.')
 }
 
-let droneLaunch = (isHighPriority) ? 'Drone will launch any distance.' : (((isStandardPriority) ? ((distance <= 5 && isWeatherClear) ? 'Drone will launch.' : 'Distance is more than 5 miles or weather is bad.') : 'Has no priority. Drone will not launch.'));
-console.log(droneLaunch);
+let fraudTrigger = (isInternationalWithdraw) 
+? 'Fraud Alert Triggered:- International withdrawal detected. Transaction blocked.'
+    : ((transactionAmount > 500 && hasNeverShopped) ? 'Fraud Alert Triggered:- High-value domestic          transaction at an unfamiliar store.' 
+        : 'Transaction Successful! Welcome to our secure banking partner.');
+console.log(fraudTrigger);
