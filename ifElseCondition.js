@@ -920,20 +920,85 @@ A bank’s security system automatically triggers a fraud alert if a transaction
 For domestic transactions, an alert is triggered only if the transaction amount is over $500 and the user has never shopped at that store before.
 */
 
-let isInternationalWithdraw = false;
-let transactionAmount = 600;
-let  hasNeverShopped = false;
+// let isInternationalWithdraw = false;
+// let transactionAmount = 600;
+// let  hasNeverShopped = false;
 
-if (isInternationalWithdraw) {
-    console.log('Fraud Alert Triggered: International withdrawal detected. Transaction blocked.')
-}else if (transactionAmount > 500 && hasNeverShopped) {
-    console.log('Fraud Alert Triggered: High-value domestic transaction at an unfamiliar store.')
+// if (isInternationalWithdraw) {
+//     console.log('Fraud Alert Triggered: International withdrawal detected. Transaction blocked.')
+// }else if (transactionAmount > 500 && hasNeverShopped) {
+//     console.log('Fraud Alert Triggered: High-value domestic transaction at an unfamiliar store.')
+// }else{
+//     console.log('Transaction Successful! Welcome to our secure banking partner.')
+// }
+
+// let fraudTrigger = (isInternationalWithdraw) 
+// ? 'Fraud Alert Triggered:- International withdrawal detected. Transaction blocked.'
+//     : ((transactionAmount > 500 && hasNeverShopped) ? 'Fraud Alert Triggered:- High-value domestic          transaction at an unfamiliar store.' 
+//         : 'Transaction Successful! Welcome to our secure banking partner.');
+// console.log(fraudTrigger);
+
+
+/*
+🎉No 29:
+Flight boarding clearance
+A passenger is allowed to board an airplane instantly if they have a first class ticket.
+For economy passengers, they are allowed to board only if they have a valid passport and their carry-on luggage weights under 10kg.
+*/
+
+// let hasFirstClassTicket = false;
+// let isEconmyPassenger = false;
+// let hasValidPassport = false;
+// let luggageWeight = 9;
+
+// if (hasFirstClassTicket) {
+//     console.log('You are a First Class Passenger. Boarding allowed instantly.')
+// }else if (isEconmyPassenger) {
+//     if (hasValidPassport && luggageWeight < 10) {
+//         console.log('You are a economy class passenger. Boarding allowed.')
+//     }else{
+//         console.log('Invalid Passport or luggage weight more than 10 kg.')
+//     }
+// }else{
+//     console.log('You are not eligible for boarding plane anyhow.')
+// }
+
+// let boardingPlane = (hasFirstClassTicket) 
+// ? 'You are a First Class Passenger. Boarding allowed instantly.' 
+//     : ((isEconmyPassenger) ? ((hasValidPassport && luggageWeight < 10) ? 'You are a economy class passenger. Boarding allowed.' 
+//         : 'Invalid Passport or luggage weight more than 10 kg.') 
+//             : 'You are not eligible for boarding plane anyhow.');
+// console.log(boardingPlane);
+
+
+/*
+🎉No 30:
+Autonomous car emergency braking
+An autonomous car triggers its emergency brakes instantly if a Pedestrian is detected in its path.
+For static obstacles ( like trash cans or cones ), the brakes are triggered only if the car’s current speed is over 30 mph and the road conditions are slippery.
+*/
+
+let isPedestrianDetected = false;
+let isTrashCans = false;
+let currentSpeed = 20;
+let roadCondition = 'slipperyNot';
+
+if (isPedestrianDetected) {
+    console.log('Brake car instantly. Wait for pedestrian cross the road.')
+}else if (isTrashCans) {
+    if (currentSpeed > 30 && roadCondition === 'slippery') {
+        console.log('Brake car for road bad sitiution.')
+    }else{
+        console.log('No need to brake. Speed below 30 kph or road is not slipper.')
+    }
 }else{
-    console.log('Transaction Successful! Welcome to our secure banking partner.')
+    console.log('Keep on running car. Road condition is good.')
 }
 
-let fraudTrigger = (isInternationalWithdraw) 
-? 'Fraud Alert Triggered:- International withdrawal detected. Transaction blocked.'
-    : ((transactionAmount > 500 && hasNeverShopped) ? 'Fraud Alert Triggered:- High-value domestic          transaction at an unfamiliar store.' 
-        : 'Transaction Successful! Welcome to our secure banking partner.');
-console.log(fraudTrigger);
+
+let carRunning = (isPedestrianDetected) 
+? 'Brake car instantly. Wait for pedestrian cross the road.' 
+    : ((isTrashCans) ? ((currentSpeed > 30 && roadCondition === 'slippery') ? 'Brake car for road bad sitiution.' 
+        : 'No need to brake. Speed below 30 kph or road is not slipper.') 
+            : 'Keep on running car. Road condition is good.');
+console.log(carRunning);
