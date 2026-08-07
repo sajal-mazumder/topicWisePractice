@@ -1107,20 +1107,52 @@ If yes, print “cash dispensed”
 If not, print “ Insufficient balance”.
 */
 
-let isPinCorrect = true;
-let withdrawalBalance = 1000;
-let accountBalance = 5000;
+// let isPinCorrect = true;
+// let withdrawalBalance = 1000;
+// let accountBalance = 5000;
 
-if (!isPinCorrect) {
-    console.log('Sorry! Incorrect pin. Try again.')
-}else if (accountBalance >= withdrawalBalance) {
-    console.log('Cash dispensed.')
-}else{
-    console.log('Insufficient balance.')
-}
+// if (!isPinCorrect) {
+//     console.log('Sorry! Incorrect pin. Try again.')
+// }else if (accountBalance >= withdrawalBalance) {
+//     console.log('Cash dispensed.')
+// }else{
+//     console.log('Insufficient balance.')
+// }
 
-let cashDispense = (!isPinCorrect) 
-? 'Sorry! Incorrect pin. Try again.' 
-    : ((accountBalance >= withdrawalBalance) ? 'Cash dispensed.' 
-        : 'Insufficient balance.');
-console.log(cashDispense);
+// ternary
+
+// let cashDispense = (!isPinCorrect) 
+// ? 'Sorry! Incorrect pin. Try again.' 
+//     : ((accountBalance >= withdrawalBalance) ? 'Cash dispensed.' 
+//         : 'Insufficient balance.');
+// console.log(cashDispense);
+
+
+/*
+🎉No 35:
+Website admin panel access
+A security portal controls access to a sensitive dashboard.
+Outer condition: First check if the user is Logged in. If not, print “Please log in first”.
+Inner condition ( if logged in ) : Check the user’s role.
+If their role is “admin”, print “Welcome to admin dashboard”.
+If their role is anything else, print “Access denied: Admins are allowed only”.
+*/
+
+// let isLoggedIn = false;
+// let isAdmin = false;
+
+// if (!isLoggedIn) {
+//     console.log('Please log in first.')
+// }else if (isAdmin) {
+//     console.log('Welcome to admin dashboard.')
+// }else{
+//     console.log('Access denied: Admins are allowed only.')
+// }
+
+// ternary
+
+let adminDashboard = (!isLoggedIn) 
+? 'Please log in first.' 
+    : ((isAdmin) ? 'Welcome to admin dashboard.' 
+        : 'Access denied. Admin are allowed only.');
+console.log(adminDashboard);
