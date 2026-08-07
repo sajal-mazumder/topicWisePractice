@@ -1199,35 +1199,107 @@ Inner condition: If the weather is good, check the mechanical system.
 If isFuelFull is true and isEngineReady is true, print “Rocket launched successfully”. Otherwise print “ launched aborted, system failure”.
 */
 
-let isWeatherClear = true;
-let windSpeed = 25;  // < 20mph
-let isFuelFull = true;
-let isEngineReady = true;
+// let isWeatherClear = true;
+// let windSpeed = 25;  // < 20mph
+// let isFuelFull = true;
+// let isEngineReady = true;
 
-if (isWeatherClear && windSpeed < 20) {
-    if (isFuelFull && isEngineReady) {
-        console.log('Rocket launched successfully.')
-    }else{
-        console.log('Launch aborted. System failured.')
-    }
-}else{
-    console.log('Launch aborted: Bad wether.')
-}
+// if (isWeatherClear && windSpeed < 20) {
+//     if (isFuelFull && isEngineReady) {
+//         console.log('Rocket launched successfully.')
+//     }else{
+//         console.log('Launch aborted. System failured.')
+//     }
+// }else{
+//     console.log('Launch aborted: Bad wether.')
+// }
 
 // guard
 
-if (!isWeatherClear || windSpeed >= 20) {
-    console.log('Launch aborted: Bad wether.')
-}else if (isFuelFull && isEngineReady) {
-    console.log('Rocket launched successfully.')
-}else{
-    console.log('Launch aborted. System failured.')
-}
+// if (!isWeatherClear || windSpeed >= 20) {
+//     console.log('Launch aborted: Bad wether.')
+// }else if (isFuelFull && isEngineReady) {
+//     console.log('Rocket launched successfully.')
+// }else{
+//     console.log('Launch aborted. System failured.')
+// }
 
 // ternary 
 
-let rocketLaunch = (!isWeatherClear || windSpeed >= 20) 
-? 'Launch aborted: Bad wether.' 
-    : ((isFuelFull && isEngineReady) ? 'Rocket launched successfully. ' 
-        : 'Launch aborted. System failured.');
-console.log(rocketLaunch);
+// let rocketLaunch = (!isWeatherClear || windSpeed >= 20) 
+// ? 'Launch aborted: Bad wether.' 
+//     : ((isFuelFull && isEngineReady) ? 'Rocket launched successfully. ' 
+//         : 'Launch aborted. System failured.');
+// console.log(rocketLaunch);
+
+
+/*
+🎉No 38:
+E-sports tournament eligibility
+A gaming tournament checks if a player can enter the Pro Division or the Amateur Division.
+Outer condition: First check if the player’s age is 16 or older.
+If they are under 16, print “ Too young to compete”.
+Inner condition: If they are old enough, check their game rank score. If their score is above 2500 or they have a Pro license, print “ Welcome to Pro Division”. Otherwise, print “ Welcome to Amateur division”.
+*/
+
+
+// let playersAge = 20;
+// let gameScore = 2400;
+// let hasProLicense = false;
+
+// if (playersAge < 16) {
+//     console.log('Too young to compete.')
+// }else if (gameScore > 2500 || hasProLicense) {
+//     console.log('Welcome to Pro Division.')
+// }else{
+//     console.log('Welcome to Amateur Division.')
+// }
+
+// ternary
+
+// let tournamentEligible = (playersAge < 16) 
+// ? 'Too young to compete.' 
+//     : ((gameScore > 2500 || hasProLicense) ? 'Welcome to Pro Division.' 
+//         : 'Welcome to Amateur Division.');
+// console.log(tournamentEligible);
+
+
+/*
+🎉No 39:
+Hospital emergency room triage
+An automated hospital system prioritizes patients when they arrive at the emergency room.
+Outer condition: First check, if the patient has a Life - Threatening emergency ( isCritical === true ), if true, print “ Admit immediately to ICU”.
+Inner condition: If they are not critical, check their fever temperature.
+If the temperature is above 38 degrees ( 100.4 F ) and they have a cough, print “ Direct to fever clinic”.
+Otherwise print, “ Please wait in the regular waiting room”.
+*/
+
+// let isCritical = false;
+// let feverTemp = 37;
+// let hasCough = true;
+
+// if (isCritical) {
+//     console.log('Admit immediately to ICU.')
+// }else if (feverTemp > 38 && hasCough) {
+//     console.log('Refer to fever clinic.')
+// }else{
+//     console.log('Please wait in the regular waiting room and take primary treatment.')
+// }
+
+// ternary
+
+// let admitHospital = (isCritical) 
+// ? 'Admit immediately to ICU.' 
+//     : ((feverTemp > 38 && hasCough) ? 'Refer to fever clinic.' 
+//         : 'Please wait in the regular waiting room and take primary treatement.');
+// console.log(admitHospital);
+
+
+/*
+🎉No 40: My own created problems
+BCS application eligibility
+For BCS exam application an examiner must be Bangladeshi and age less than 30 years old.
+For special quota age consider upto 32.
+The examiner must complete honors 4th year exam in the circulation given last date of application.
+No 3rd class result accepted in the education ssc, hsc.
+*/
