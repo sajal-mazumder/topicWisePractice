@@ -1070,26 +1070,57 @@ If they are not VIPs, shipping costs $5.
 Inner conditions ( for under 100 orders ): if they are a VIP shipping costs $10, otherwise shipping costs $20.
 */
 
-let orderAmount = 20;
-let isVIP = false;
+// let orderAmount = 20;
+// let isVIP = false;
 
-if (orderAmount >= 100) {
-    if (isVIP) {
-        console.log('You are a VIP customer. Shipping charge free, You ordered more than 100$.')
-    }else{
-        console.log('You are not a VIP customer and ordered more than 100$. Shipping charge $5.')
-    }
+// if (orderAmount >= 100) {
+//     if (isVIP) {
+//         console.log('You are a VIP customer. Shipping charge free, You ordered more than 100$.')
+//     }else{
+//         console.log('You are not a VIP customer and ordered more than 100$. Shipping charge $5.')
+//     }
+// }else{
+//     if (isVIP) {
+//         console.log('You are a VIP customer and ordered less than 100$. Shipping charge $10.')
+//     }else{
+//         console.log('You are not VIP customer and ordered less than 100$. Shipping charge 20$.')
+//     }
+// }
+
+// ternary
+
+// let shippingCharge = (orderAmount >=100) 
+// ? ((isVIP) ? 'You are a VIP customer. Shipping charge free, You ordered more than 100$.' 
+//     :  'You are not a VIP customer and ordered more than 100$. Shipping charge $5.') 
+//         : ((isVIP) ? 'You are a VIP customer and ordered less than 100$. Shipping charge $10.' 
+//             : 'You are not VIP customer and ordered less than 100$. Shipping charge 20$.');
+// console.log(shippingCharge);
+
+
+/*
+🎉No 34:
+ATM cash withdrawal security
+An ATM checks a bank account before dispensing cash.
+Outer condition: First check if the entered PIN is correct. If it is wrong, print “Wrong Pin”.
+Inner condition ( if pin is correct ); Check if the account has enough balance for the requested withdrawal amount.
+If yes, print “cash dispensed”
+If not, print “ Insufficient balance”.
+*/
+
+let isPinCorrect = true;
+let withdrawalBalance = 1000;
+let accountBalance = 5000;
+
+if (!isPinCorrect) {
+    console.log('Sorry! Incorrect pin. Try again.')
+}else if (accountBalance >= withdrawalBalance) {
+    console.log('Cash dispensed.')
 }else{
-    if (isVIP) {
-        console.log('You are a VIP customer and ordered less than 100$. Shipping charge $10.')
-    }else{
-        console.log('You are not VIP customer and ordered less than 100$. Shipping charge 20$.')
-    }
+    console.log('Insufficient balance.')
 }
 
-let shippingCharge = (orderAmount >=100) 
-? ((isVIP) ? 'You are a VIP customer. Shipping charge free, You ordered more than 100$.' 
-    :  'You are not a VIP customer and ordered more than 100$. Shipping charge $5.') 
-        : ((isVIP) ? 'You are a VIP customer and ordered less than 100$. Shipping charge $10.' 
-            : 'You are not VIP customer and ordered less than 100$. Shipping charge 20$.');
-console.log(shippingCharge);
+let cashDispense = (!isPinCorrect) 
+? 'Sorry! Incorrect pin. Try again.' 
+    : ((accountBalance >= withdrawalBalance) ? 'Cash dispensed.' 
+        : 'Insufficient balance.');
+console.log(cashDispense);
