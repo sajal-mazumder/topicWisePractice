@@ -1304,43 +1304,164 @@ The examiner must complete honors 4th year exam in the circulation given last da
 No 3rd class result accepted in the education ssc, hsc.
 */
 
-let isBangladeshi = true;
-let applicantAge = 30;
-let hasQuata = false;
-let maxAge = hasQuata ? 32: 30;
-let hasCompleteHonors4ht = true;
-let sscResult = 1;  // No 3rd class allowed (GPA below 2.0)
-let hscResult = 2;  // No 3rd class allowed (GPA below 2.0)
+// let isBangladeshi = true;
+// let applicantAge = 30;
+// let hasQuata = false;
+// let maxAge = hasQuata ? 32: 30;
+// let hasCompleteHonors4ht = true;
+// let sscResult = 1;  // No 3rd class allowed (GPA below 2.0)
+// let hscResult = 2;  // No 3rd class allowed (GPA below 2.0)
 
-if (isBangladeshi) {
-    if (applicantAge <= maxAge) {
-        if (hasCompleteHonors4ht) {
-            if (sscResult >= 2 && hscResult >= 2) {
-                console.log('Congratulations! You are eligible for BCS exam.')
-            }else{
-                console.log('No 3rd class accepted in ssc and hsc result.')
-            }
-        }else{
-            console.log('You do not completed honors 4th year in application deadline.')
-        }
-    }else{
-        console.log('Exceeded maximum age limit.')
-    }
-}else{
-    console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
-}
+// if (isBangladeshi) {
+//     if (applicantAge <= maxAge) {
+//         if (hasCompleteHonors4ht) {
+//             if (sscResult >= 2 && hscResult >= 2) {
+//                 console.log('Congratulations! You are eligible for BCS exam.')
+//             }else{
+//                 console.log('No 3rd class accepted in ssc and hsc result.')
+//             }
+//         }else{
+//             console.log('You do not completed honors 4th year in application deadline.')
+//         }
+//     }else{
+//         console.log('Exceeded maximum age limit.')
+//     }
+// }else{
+//     console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
+// }
 
 
 // guard
 
-if (!isBangladeshi) {
-    console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
-}else if (applicantAge > maxAge) {
-    console.log('Exceeded age limit.')
-}else if (!hasCompleteHonors4ht) {
-    console.log('You do not completed honors 4th year in application deadline.')
-}else if (sscResult < 2 || hscResult < 2) {
-    console.log('No 3rd class accepted in ssc and hsc result.')
+// if (!isBangladeshi) {
+//     console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
+// }else if (applicantAge > maxAge) {
+//     console.log('Exceeded age limit.')
+// }else if (!hasCompleteHonors4ht) {
+//     console.log('You do not completed honors 4th year in application deadline.')
+// }else if (sscResult < 2 || hscResult < 2) {
+//     console.log('No 3rd class accepted in ssc and hsc result.')
+// }else{
+//     console.log('Congratulations! You are eligible for BCS exam.')
+// }
+
+
+/*
+🎉No 41: My own created problems
+Birth registration certificate
+A child gets its BRC if it is born in Bangladesh or its parents are Bangladeshi.
+If a father or mother has their BRC, they can apply for a child's BRC, otherwise first get fathers or mothers BRC.
+If the child is under 45 days, application is free. Age under 5 years and over 45 days charges 200tk, above 5 years charges 500tk.
+*/
+
+// let bornInBd = true;
+// let areParentsBd = false;
+// let hasFatherBrc = false;
+// let hasMotherBrc = true;
+// let childAge = 1454;
+
+// if (bornInBd || areParentsBd) {
+//     if (hasFatherBrc || hasMotherBrc) {
+//         if (childAge <= 45) {
+//             console.log('Application charge free.')
+//         }else if (childAge <= 1095) {
+//             console.log('Application charge 100tk.')
+//         }else{
+//             console.log('Application charge 300tk.')
+//         }
+//     }else{
+//         console.log('Please collect your fathers or mothers BRC first.')
+//     }
+// }else{
+//     console.log('You are not Bangladeshi by born or by born place.')
+// }
+
+// guard
+
+// if (!bornInBd && !areParentsBd) {
+//     console.log('You are not Bangladeshi by born or by born place.')
+// }else if (!hasFatherBrc && !hasMotherBrc) {
+//     console.log('Please collect your fathers or mothers BRC first.')
+// }else if (childAge <= 45) {
+//     console.log('Application charge free.')
+// }else if (childAge <= 1095) {
+//     console.log('Application charge 100tk.')
+// }else{
+//     console.log('Application charge 300tk')
+// }
+
+
+/*
+🎉No 42: My own created problems
+Getting personal loan
+To get a personal loan from a Bangladeshi Bank you must be a Bangladeshi. You have an account in an existing bank. You must provide your valid papers to the bank. Finally the bank will inquire if your income is enough to pay your loan installment. Then the bank will approve the loan according to your income range.
+*/
+
+let isBangladeshi = true;
+let hasAccount = true;
+let hasValidPapers = true;
+let hasNOC = true;
+let incomeMonthly = 700000;
+let hasCurrentLoan = true;
+let cibReport = 'ok';
+
+if (isBangladeshi) {
+    if (hasAccount) {
+        // console.log('Submit your all valid papers.')
+        if (hasValidPapers) {
+            // console.log('We are waiting for checking your current active loan and cib report.')
+            if (hasCurrentLoan && !hasNOC) {
+                console.log('Please submit your NOC against your current active loan.')
+            }else{
+                // console.log('We are waiting for your cib report.')
+                if (cibReport === 'ok') {
+                    if (incomeMonthly <= 30000) {
+                        console.log('Can approve 2 lac taka.')
+                    }else if (incomeMonthly <= 50000) {
+                        console.log('Can approve 2.5 lac taka.')
+                    }else if (incomeMonthly <= 100000) {
+                        console.log('Can approve 4 lac taka.')
+                    }else if (incomeMonthly <= 500000) {
+                        console.log('Can approve 5 lac taka.')
+                    }else{
+                        console.log('Can approve maximum 10 lac taka.')
+                    }
+                }else{
+                    console.log('Your cib report is not ok.')
+                }
+            }
+        }else{
+            console.log('Please submit your all valid papers.')
+        }
+    }else{
+        console.log('Please open a new account at any branch of our Bank.')
+    }
 }else{
-    console.log('Congratulations! You are eligible for BCS exam.')
+    console.log('You are not a Bangladeshi. Loan approve denied.')
+}
+
+// guard
+
+if (!isBangladeshi) {
+    console.log('You are not a Bangladeshi. Loan approve denied.')
+}else if (!hasAccount) {
+    console.log('Please open a new account at any branch of our Bank.')
+}else if (!hasValidPapers) {
+    console.log('Please submit your all valid papers.')
+}else if (hasCurrentLoan && !hasNOC) {
+    console.log('Please submit your NOC against your current loan.')
+}else if (cibReport !== 'ok') {
+    console.log('Your cib report is not ok.')
+}else{
+    if (incomeMonthly <= 3000) {
+        console.log('Can approve 2 lac taka.')
+    }else if (incomeMonthly <= 50000) {
+        console.log('Can approve 2.5 lac taka.')
+    }else if (incomeMonthly <= 100000) {
+        console.log('Can approve 4 lac taka.')
+    }else if (incomeMonthly <= 500000) {
+        console.log('Can approve 5 lac taka.')
+    }else{
+        console.log('Can approve maximum 10 lac taka.')
+    }
 }
