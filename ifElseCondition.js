@@ -978,27 +978,118 @@ An autonomous car triggers its emergency brakes instantly if a Pedestrian is det
 For static obstacles ( like trash cans or cones ), the brakes are triggered only if the car’s current speed is over 30 mph and the road conditions are slippery.
 */
 
-let isPedestrianDetected = false;
-let isTrashCans = false;
-let currentSpeed = 20;
-let roadCondition = 'slipperyNot';
+// let isPedestrianDetected = false;
+// let isTrashCans = false;
+// let currentSpeed = 20;
+// let roadCondition = 'slipperyNot';
 
-if (isPedestrianDetected) {
-    console.log('Brake car instantly. Wait for pedestrian cross the road.')
-}else if (isTrashCans) {
-    if (currentSpeed > 30 && roadCondition === 'slippery') {
-        console.log('Brake car for road bad sitiution.')
+// if (isPedestrianDetected) {
+//     console.log('Brake car instantly. Wait for pedestrian cross the road.')
+// }else if (isTrashCans) {
+//     if (currentSpeed > 30 && roadCondition === 'slippery') {
+//         console.log('Brake car for road bad situation.')
+//     }else{
+//         console.log('No need to brake. Speed below 30 mph or road is not slippery.')
+//     }
+// }else{
+//     console.log('Keep on running car. Road condition is good.')
+// }
+
+// ternary
+
+// let carRunning = (isPedestrianDetected) 
+// ? 'Brake car instantly. Wait for pedestrian cross the road.' 
+//     : ((isTrashCans) ? ((currentSpeed > 30 && roadCondition === 'slippery') ? 'Brake car for road bad situation.' 
+//         : 'No need to brake. Speed below 30 mph or road is not slippery.') 
+//             : 'Keep on running car. Road condition is good.');
+// console.log(carRunning);
+
+
+/*
+🎉No 31:
+University scholarship qualification
+A university automatically awards a full scholarship if the student is a valedictorian of their high school.
+For all other students, they qualify only if they have an SAT score above 1450 and family income is below $40000.
+*/
+
+// let isValedictorian = false;
+// let satScore = 1500;
+// let familyIncome = 25000;
+
+// if (isValedictorian) {
+//     console.log('Congrates! You are automatically selected for Scholarship.')
+// }else if (satScore > 1450 && familyIncome < 30000) {
+//     console.log('You are selected for our Scholarship.')
+// }else {
+//     console.log('Not eligible for Scholarship. Your sat score is less than 1450 or family income more than $30000')
+// }
+
+// ternary
+
+// let scholarship = (isValedictorian) 
+// ? 'Congrates! You are automatically selected for Scholarship.' 
+//     : ((satScore > 1450 && familyIncome < 30000) ? 'You are selected for our Scholarship.' 
+//         : 'Not eligible for Scholarship. Your sat score is less than 1450 or family income more than $30000');
+// console.log(scholarship);
+
+/*
+
+🎉No 32: 
+Movie ticket pricing system 
+A theater decides ticket prices based on age and whether the customer is a student.
+Outer condition: First check if the person is an adult ( age 18 or above ) or a child ( under 18 ).
+Inner condition ( for adults ): If they are a student, the ticket is $10.
+If they are not students, the ticket is $15.
+Inner condition ( for children ): All children’s tickets are $5 ( no student check needed ).
+*/
+
+// let age = 10;
+// let isStudent = false;
+
+// if (age < 18) {
+//     console.log('Ticket price $5.')
+// }else if (isStudent) {
+//     console.log('Ticket price $10.')
+// }else{
+//     console.log('Ticket price $15.')
+// }
+
+// ternary
+
+// let ticketPrice = (age < 18) ? 'Ticket price $5.' : (isStudent ? 'Ticket price $10.' : 'Ticket price $15.');
+// console.log(ticketPrice);
+
+
+/*
+🎉No 33:
+E-commerce premium shipping
+An online shop calculates shipping costs based on the total order amount and VIP membership status.
+Order conditions: First check if the order amount is $100 or more.
+Inner condition ( for $100+ orders ): If the customer is a VIP, shipping is free.
+If they are not VIPs, shipping costs $5.
+Inner conditions ( for under 100 orders ): if they are a VIP shipping costs $10, otherwise shipping costs $20.
+*/
+
+let orderAmount = 20;
+let isVIP = false;
+
+if (orderAmount >= 100) {
+    if (isVIP) {
+        console.log('You are a VIP customer. Shipping charge free, You ordered more than 100$.')
     }else{
-        console.log('No need to brake. Speed below 30 kph or road is not slipper.')
+        console.log('You are not a VIP customer and ordered more than 100$. Shipping charge $5.')
     }
 }else{
-    console.log('Keep on running car. Road condition is good.')
+    if (isVIP) {
+        console.log('You are a VIP customer and ordered less than 100$. Shipping charge $10.')
+    }else{
+        console.log('You are not VIP customer and ordered less than 100$. Shipping charge 20$.')
+    }
 }
 
-
-let carRunning = (isPedestrianDetected) 
-? 'Brake car instantly. Wait for pedestrian cross the road.' 
-    : ((isTrashCans) ? ((currentSpeed > 30 && roadCondition === 'slippery') ? 'Brake car for road bad sitiution.' 
-        : 'No need to brake. Speed below 30 kph or road is not slipper.') 
-            : 'Keep on running car. Road condition is good.');
-console.log(carRunning);
+let shippingCharge = (orderAmount >=100) 
+? ((isVIP) ? 'You are a VIP customer. Shipping charge free, You ordered more than 100$.' 
+    :  'You are not a VIP customer and ordered more than 100$. Shipping charge $5.') 
+        : ((isVIP) ? 'You are a VIP customer and ordered less than 100$. Shipping charge $10.' 
+            : 'You are not VIP customer and ordered less than 100$. Shipping charge 20$.');
+console.log(shippingCharge);
