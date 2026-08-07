@@ -1167,22 +1167,67 @@ Inner condition ( if above 30 ): If humidity is above 70%, print “Turn on AC (
 Inner condition ( if below 30): print “ Turn on Heater”.
 */
 
-let temperature = 24; // 30 degree
-let humidity = 55; // above 70%
+// let temperature = 24; // 30 degree
+// let humidity = 55; // above 70%
 
-if (temperature > 30) {
-    if (humidity > 70) {
-        console.log('Turn on AC. High power.')
+// if (temperature > 30) {
+//     if (humidity > 70) {
+//         console.log('Turn on AC. High power.')
+//     }else{
+//         console.log('Turn on AC. Normal power.')
+//     }
+// }else{
+//     console.log('Turn on Heater.')
+// }
+
+// ternary
+
+// let turnAc = (temperature > 30) 
+// ? ((humidity > 70) ? 'Turn on AC. High power.' 
+//     : 'Turn on AC. Normal power.') 
+//         : 'Turn on Heater.';
+// console.log(turnAc);
+
+
+/*
+🎉No 37:
+Space rocket launch command
+A space agency launches a rocket based on weather, mechanical readiness and countdown status.
+Outer condition: First check if the weather is clear and the wind speed is under 20 mph.
+If not, print “ Launch aborted: Bad weather.”
+Inner condition: If the weather is good, check the mechanical system.
+If isFuelFull is true and isEngineReady is true, print “Rocket launched successfully”. Otherwise print “ launched aborted, system failure”.
+*/
+
+let isWeatherClear = true;
+let windSpeed = 25;  // < 20mph
+let isFuelFull = true;
+let isEngineReady = true;
+
+if (isWeatherClear && windSpeed < 20) {
+    if (isFuelFull && isEngineReady) {
+        console.log('Rocket launched successfully.')
     }else{
-        console.log('Turn on AC. Normal power.')
+        console.log('Launch aborted. System failured.')
     }
 }else{
-    console.log('Turn on Heater.')
+    console.log('Launch aborted: Bad wether.')
 }
 
+// guard
 
-let turnAc = (temperature > 30) 
-? ((humidity > 70) ? 'Turn on AC. High power.' 
-    : 'Turn on AC. Normal power.') 
-        : 'Turn on Heater.';
-console.log(turnAc);
+if (!isWeatherClear || windSpeed >= 20) {
+    console.log('Launch aborted: Bad wether.')
+}else if (isFuelFull && isEngineReady) {
+    console.log('Rocket launched successfully.')
+}else{
+    console.log('Launch aborted. System failured.')
+}
+
+// ternary 
+
+let rocketLaunch = (!isWeatherClear || windSpeed >= 20) 
+? 'Launch aborted: Bad wether.' 
+    : ((isFuelFull && isEngineReady) ? 'Rocket launched successfully. ' 
+        : 'Launch aborted. System failured.');
+console.log(rocketLaunch);
