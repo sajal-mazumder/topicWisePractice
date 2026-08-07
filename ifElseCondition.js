@@ -1303,3 +1303,44 @@ For special quota age consider upto 32.
 The examiner must complete honors 4th year exam in the circulation given last date of application.
 No 3rd class result accepted in the education ssc, hsc.
 */
+
+let isBangladeshi = true;
+let applicantAge = 30;
+let hasQuata = false;
+let maxAge = hasQuata ? 32: 30;
+let hasCompleteHonors4ht = true;
+let sscResult = 1;  // No 3rd class allowed (GPA below 2.0)
+let hscResult = 2;  // No 3rd class allowed (GPA below 2.0)
+
+if (isBangladeshi) {
+    if (applicantAge <= maxAge) {
+        if (hasCompleteHonors4ht) {
+            if (sscResult >= 2 && hscResult >= 2) {
+                console.log('Congratulations! You are eligible for BCS exam.')
+            }else{
+                console.log('No 3rd class accepted in ssc and hsc result.')
+            }
+        }else{
+            console.log('You do not completed honors 4th year in application deadline.')
+        }
+    }else{
+        console.log('Exceeded maximum age limit.')
+    }
+}else{
+    console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
+}
+
+
+// guard
+
+if (!isBangladeshi) {
+    console.log('Sorry! You are not a Bangladeshi. Not allowed for BCS exam.')
+}else if (applicantAge > maxAge) {
+    console.log('Exceeded age limit.')
+}else if (!hasCompleteHonors4ht) {
+    console.log('You do not completed honors 4th year in application deadline.')
+}else if (sscResult < 2 || hscResult < 2) {
+    console.log('No 3rd class accepted in ssc and hsc result.')
+}else{
+    console.log('Congratulations! You are eligible for BCS exam.')
+}
