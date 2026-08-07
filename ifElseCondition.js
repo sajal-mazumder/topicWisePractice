@@ -1151,8 +1151,38 @@ If their role is anything else, print “Access denied: Admins are allowed only�
 
 // ternary
 
-let adminDashboard = (!isLoggedIn) 
-? 'Please log in first.' 
-    : ((isAdmin) ? 'Welcome to admin dashboard.' 
-        : 'Access denied. Admin are allowed only.');
-console.log(adminDashboard);
+// let adminDashboard = (!isLoggedIn) 
+// ? 'Please log in first.' 
+//     : ((isAdmin) ? 'Welcome to admin dashboard.' 
+//         : 'Access denied. Admin are allowed only.');
+// console.log(adminDashboard);
+
+
+/*
+🎉No 36: 
+Smart thermostat home climate control
+A smart home system decides whether to turn on the AC or Heater based on temperature and humidity.
+Outer condition: First check if the temperature is above 30 degrees.
+Inner condition ( if above 30 ): If humidity is above 70%, print “Turn on AC ( high power)”. Otherwise print “Turn on AC (normal power)”.
+Inner condition ( if below 30): print “ Turn on Heater”.
+*/
+
+let temperature = 24; // 30 degree
+let humidity = 55; // above 70%
+
+if (temperature > 30) {
+    if (humidity > 70) {
+        console.log('Turn on AC. High power.')
+    }else{
+        console.log('Turn on AC. Normal power.')
+    }
+}else{
+    console.log('Turn on Heater.')
+}
+
+
+let turnAc = (temperature > 30) 
+? ((humidity > 70) ? 'Turn on AC. High power.' 
+    : 'Turn on AC. Normal power.') 
+        : 'Turn on Heater.';
+console.log(turnAc);
