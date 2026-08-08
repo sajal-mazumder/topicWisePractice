@@ -54,10 +54,26 @@
 NO 01: Print 1 to 10: Write a program to display the first 10 natural numbers (1, 2, 3... 10)
 */
 
-let iResult = '';
+// let iResult = '';
 
-for( let i = 1; i <= 10; i++){
-    // console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
-    iResult += i + ' ) ' + ' number is' + ' = ' + i + '\n';
-}
-console.log(iResult);
+// for( let i = 1; i <= 10; i++){
+//     // console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
+//     iResult += i + ' ) ' + ' number is' + ' = ' + i + '\n';
+// }
+// console.log(iResult);
+
+/*
+No 2: Even Numbers only: Write a loop that prints only the even numbers from 2 to 20 
+*/
+
+// let evenNum = '';
+
+// for( let i = 2; i <= 20; i++){
+//     // if (i % 2 === 0) {
+//     //     evenNum += 'Even number is ' + ' = ' + i + '\n';
+//     // }
+//     if ( i % 2 !== 1)  {
+//         evenNum += 'Even number is ' + ' = ' + i + '\n';
+//     }
+// }
+// console.log(evenNum);
