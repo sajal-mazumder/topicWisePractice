@@ -77,3 +77,12 @@ No 2: Even Numbers only: Write a loop that prints only the even numbers from 2 t
 //     }
 // }
 // console.log(evenNum);
+
+/*
+Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1
+*/
+
+let decrease = '';
+for( let i = 10; i >=1; i--){
+    console.log(i);
+}
