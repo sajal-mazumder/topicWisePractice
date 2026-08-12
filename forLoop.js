@@ -114,12 +114,62 @@ No 5: Sum of Numbers: Calculate the total sum of all numbers from 1 to 10 and pr
 No 6: Skip a Number: Write a loop that prints numbers from 1 to 10, but skips the number 5 using a continue statement
 */
 
-let skipResult = '';
-for( let i = 1; i <= 10; i++){
-    if (i == 5) {
-        continue;
-    }
-    // console.log(i);
-    skipResult += i + ' ) ' + 'Skip 5 result is ' + ' = ' + i + '\n';
-}
-console.log(skipResult);
+// let skipResult = '';
+// let serials = 1;
+
+// for( let i = 1; i <= 10; i++){
+//     if (i == 5) {
+//         continue;
+//     }
+//     // console.log(i);
+//     skipResult += serials + ' ) ' + 'Skip 5 result is ' + ' = ' + i + '\n';
+//     serials++;
+// }
+// console.log(skipResult);
+
+/*
+No 7: Reverse Count by 2: Write a loop that starts at 20 and counts down to 0, decreasing by 2 each time (20, 18, 16... 0)
+*/
+
+// let decreaseResult = '';
+// let serial = 1;
+
+// for( let i = 20; i >= 0; i -= 2){
+//     // console.log(i)
+//     decreaseResult += serial + ' ) ' + 'Decrease result is ' + ' = ' + i + '\n';
+//     serial++;
+// }
+// console.log(decreaseResult);
+
+
+/*
+No 8: Square of Numbers: Print the square of each number from 1 to 5 (e.g., 1, 4, 9, 16, 25)
+*/
+
+// let sqrResult = '';
+// let sqrSerial = 1;
+// let cubeResult = ''
+
+// for( let i = 1; i <= 5; i++){
+//     // console.log(i * i);
+//     sqrResult += sqrSerial + ' ) ' + ' Square Result of ' + i + ' is  = ' + (i*i) + '\n';
+
+//     cubeResult += sqrSerial + ' ) ' + 'Cube result of' + i + ' is = ' + (i*i*i) + '\n';
+//     sqrSerial++;
+// }
+// console.log(sqrResult, cubeResult);
+
+
+/*
+Array Iteration: Given an array of fruits ['apple', 'banana', 'cherry'], use a for loop to print each fruit's name
+*/
+
+// let fruitArr = ['apple', 'banana', 'cherry'];
+// let arrResult = '';
+// let arrSerial = 1;
+// for( let i = 0; i < fruitArr.length; i++){
+//     // console.log(fruitArr[i]);
+//     arrResult += arrSerial + ' ) ' + 'Result of Fruit array is ' + ' = ' + fruitArr[i] + '\n';
+//     arrSerial++;
+// }
+// console.log(arrResult);
