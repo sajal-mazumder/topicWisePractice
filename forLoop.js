@@ -161,7 +161,7 @@ No 8: Square of Numbers: Print the square of each number from 1 to 5 (e.g., 1, 4
 
 
 /*
-Array Iteration: Given an array of fruits ['apple', 'banana', 'cherry'], use a for loop to print each fruit's name
+No 9: Array Iteration: Given an array of fruits ['apple', 'banana', 'cherry'], use a for loop to print each fruit's name
 */
 
 // let fruitArr = ['apple', 'banana', 'cherry'];
@@ -173,3 +173,56 @@ Array Iteration: Given an array of fruits ['apple', 'banana', 'cherry'], use a f
 //     arrSerial++;
 // }
 // console.log(arrResult);
+
+
+/*
+No 10: Odd Positions: Create a loop that prints numbers from 1 to 15, but only displays those that are at odd positions (1, 3, 5... 15)
+*/
+
+// let oddNum = '';
+// let oddSerial = 1;
+// for( let i = 1; i <= 15; i++){
+//     if (i % 2 === 1) {
+//         // console.log(i)
+//         oddNum += oddSerial + ' ) ' + 'Odd number is ' + ' = ' + i + '\n';
+//         oddSerial++;
+//     }
+// }
+// console.log(oddNum);
+
+
+// new challange
+
+/*
+challange 1: . Search and Destroy (Intermediate)Goal: Write a loop that prints numbers from 1 to 10. 
+However, if the loop hits the number 7, it must stop completely and print nothing else after it.Hint: Use the break; statement inside an if block.
+*/
+
+// let breakResult = '';
+// let breakSerial = 1;
+// for( let i = 1; i <= 10; i++){
+//     if (i === 7) {
+//         break;
+//     }
+//     // console.log(i);
+//     breakResult += breakSerial + ' ) ' + ' Break result of 7 is ' + ' = ' + i + '\n';
+//     breakSerial++;
+// }
+// console.log(breakResult);
+
+
+/*
+challange 2: . The Price Filter (Array Challenge)Goal: You are given an array of prices: let prices = [10, 45, 60, 12, 85, 30];. 
+Use a loop to print only the prices that are greater than 40.
+Hint: Combine your array loop knowledge (prices[i]) with an if condition.
+*/
+
+// let priceArr = [10, 45, 60, 12, 85, 30];
+// let priceArrRslt = '';
+// for( let i = 0; i < priceArr.length; i++){
+//     if (priceArr[i] > 40) {
+//         // console.log(priceArr[i])
+//         priceArrRslt += priceArr[i] + '\n';
+//     }
+// }
+// console.log(priceArrRslt)
