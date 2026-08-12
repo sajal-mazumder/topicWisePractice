@@ -79,10 +79,47 @@ No 2: Even Numbers only: Write a loop that prints only the even numbers from 2 t
 // console.log(evenNum);
 
 /*
-Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1
+No 3: Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1
 */
 
-let decrease = '';
-for( let i = 10; i >=1; i--){
-    console.log(i);
+// let decrease = '';
+// for( let i = 10; i >=1; i--){
+//     // console.log(i);
+//     decrease += i + ' ) ' + 'decrease is ' + ' = ' + i + '\n';
+// }
+// console.log(decrease);
+
+/*
+No 4: Multiplication Table: Pick a number (like 5) and print its multiplication table up to 10 (e.g., 5, 10, 15... 50)
+*/
+
+// let num = 5;
+// let result = '';
+// for( let i = 0; i <= 10; i++){
+//     result += i + ' ) ' + 'Result is ' + ' = ' + ( i * num) + '\n';
+// }
+// console.log(result);
+
+/*
+No 5: Sum of Numbers: Calculate the total sum of all numbers from 1 to 10 and print only the final result
+*/
+
+// let sum = 0;
+// for( let i = 1; i <= 10; i++){
+//     sum += i;
+// }
+// console.log('Sum is ' + ' = ' + sum);
+
+/*
+No 6: Skip a Number: Write a loop that prints numbers from 1 to 10, but skips the number 5 using a continue statement
+*/
+
+let skipResult = '';
+for( let i = 1; i <= 10; i++){
+    if (i == 5) {
+        continue;
+    }
+    // console.log(i);
+    skipResult += i + ' ) ' + 'Skip 5 result is ' + ' = ' + i + '\n';
 }
+console.log(skipResult);
