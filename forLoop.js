@@ -225,4 +225,100 @@ Hint: Combine your array loop knowledge (prices[i]) with an if condition.
 //         priceArrRslt += priceArr[i] + '\n';
 //     }
 // }
-// console.log(priceArrRslt)
+// console.log(priceArrRslt);
+
+
+// mid lebel problems
+
+/*
+No 1: The Narcissistic Number Search
+Find all 3-digit numbers where the sum of each digit raised to the power of 3 equals the number itself (e.g., 1³ + 5³ + 3³ = 153).
+*/
+
+// for( let i = 100; i <= 999; i++){
+//     let temp = i;
+
+//     let digit3 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp %10;
+
+//     let sumOfCubes = Math.pow(digit1, 3) + Math.pow(digit2, 3) + Math.pow(digit3, 3);
+
+//     if (sumOfCubes === i) {
+//         console.log(i)
+//     }
+// }
+
+
+// for(let i = 10; i <= 99; i++){
+//     let temp = i;
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp % 10;
+
+//     let sumOfSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
+
+//     if (sumOfSqr === i) {
+//         console.log(i)
+//     }
+    
+// }
+// console.log('No Narcissistic Number found.')
+
+// for( let num = 1000; num <= 9999; num++){
+//     let temp = num;
+
+//     let digit4 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit3 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp % 10;
+
+//     let sumOfQuardrats = Math.pow(digit1, 4) + Math.pow(digit2, 4) + Math.pow(digit3, 4) + Math.pow(digit4, 4);
+
+//     if (sumOfQuardrats === num) {
+//         console.log(num);
+//     }
+// }
+// console.log('No Narcissistic Number found.')
+
+
+/*
+No 2: The Collatz Conjecture Sequence
+Given any positive integer, print its Collatz sequence using a loop. If even, divide by 2; if odd, multiply by 3 and add 1. Stop when it hits 1.
+*/
+
+let num = 6;
+for( let i = num; i >1;){
+    if (i % 2 === 0) {
+        i = i / 2;
+    }
+    else{
+        i = i * 3 + 1;
+    }
+    
+    console.log(i);
+}
+
+// using while loop
+
+while (num > 1) {
+    if (num % 2 === 0) {
+        num = num / 2
+    }
+    else{
+        num = num * 3 + 1;
+    }
+    console.log(num);
+}
