@@ -275,12 +275,81 @@ Print a right-angled triangle of asterisks (*) with 5 rows (Row 1 has 1 star, Ro
 //     console.log(result);
 // }
 
+// for( let i = 1; i <= 5; i++){
+//     let result = '';
+//     for( let j = 1; j <= 5; j++){   // square pattern
+//         result += ' * '
+//     }
+//     console.log(result);
+// }
+
+
+/*
+Array Element Doubler
+Given a list of numbers (e.g., [1, 2, 3, 4, 5]), use a loop to print double the value of each number.
+*/
+
+// let numArr = [2, 4, 33, 55, 4]
+
+// for( let i = 0; i < numArr.length ; i++){
+//     console.log(numArr[i] * 2)
+// }
+
+
+/*
+Factorial Finder
+Find the factorial of 5 (multiply 1 × 2 × 3 × 4 × 5) and print the final result.
+*/
+
+// let factorial = 1; 
+// for( let i = 1; i <= 7; i++){
+//     factorial *= i;
+// }
+// console.log(factorial)
+
+
+/*
+Count the Vowels
+Loop through a given sentence or word and count how many total vowels (a, e, i, o, u) it contains.
+*/
+
+// let sentence = 'I am bangladeshi. I love bangladesh.';
+// let vowels = 'aeiou';
+// let count = 0;
+
+// for( let i = 0; i < sentence.length; i++){
+//     // console.log(sentence[i].toLowerCase());
+//     let char = sentence[i].toLowerCase();
+//     if (vowels.includes(char)) {
+//         console.log(char)  // prints only vowels 
+//         count++;
+//     }
+// }
+// console.log(count)
+
+// for( let i = 0; i < sentence.length; i++){
+//     // console.log(sentence[i].toLowerCase());
+//     let char = sentence[i].toLowerCase();
+//     if (!vowels.includes(char) && char >= 'a' && char <= 'z') {
+//         console.log(char)  // prints ony consonants
+//         count++;
+//     }
+// }
+// console.log(count)
+
+
+/*
+The Number Grid
+Print a square grid of numbers from 1 to 3 repeated across 3 rows.
+(Output should look like 123 on line one, 123 on line two, and 123 on line three). 
+*/
+
 for( let i = 1; i <= 5; i++){
     let result = '';
-    for( let j = 1; j <= 5; j++){   // square pattern
-        result += ' * '
+    for( let j = 1; j <= 5; j++){
+        result += j + ' ';
     }
-    console.log(result);
+    console.log(result)
 }
 
 // new challange
