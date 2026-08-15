@@ -57,7 +57,7 @@ NO 01: Print 1 to 10: Write a program to display the first 10 natural numbers (1
 // let iResult = '';
 
 // for( let i = 1; i <= 10; i++){
-//     // console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
+    // console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
 //     iResult += i + ' ) ' + ' number is' + ' = ' + i + '\n';
 // }
 // console.log(iResult);
@@ -83,6 +83,7 @@ No 3: Count Down: Create a countdown loop that starts from 10 and prints each nu
 */
 
 // let decrease = '';
+
 // for( let i = 10; i >=1; i--){
 //     // console.log(i);
 //     decrease += i + ' ) ' + 'decrease is ' + ' = ' + i + '\n';
@@ -189,6 +190,39 @@ No 10: Odd Positions: Create a loop that prints numbers from 1 to 15, but only d
 //     }
 // }
 // console.log(oddNum);
+
+
+/*
+The Even Skipper
+Print all even numbers from 2 to 20, but skip the number 12.
+*/
+
+// let evenSkip = '';
+// let serialEven = 1;
+
+// for( let i = 0; i <= 20; i++){
+//     if (i % 2 === 0) {
+//         // console.log(i)
+//         if (i === 12) {
+//             continue;
+//         }
+//         // console.log(i)
+//         evenSkip += serialEven + ' ) skip 12 number is' + ' = ' + i + '\n';
+//         serialEven++;
+//     }
+// }
+// console.log(evenSkip)
+
+
+/*
+The Countdown Rocket
+Count down from 10 to 1 and then print the word "Blastoff!" at the very end.
+*/
+
+let countdown = '';
+for( let i = 10; i >= 1; i--){
+    console.log(i)
+}
 
 
 // new challange
@@ -299,26 +333,64 @@ No 2: The Collatz Conjecture Sequence
 Given any positive integer, print its Collatz sequence using a loop. If even, divide by 2; if odd, multiply by 3 and add 1. Stop when it hits 1.
 */
 
-let num = 6;
-for( let i = num; i >1;){
-    if (i % 2 === 0) {
-        i = i / 2;
-    }
-    else{
-        i = i * 3 + 1;
-    }
+// let num = 7;
+// for( let i = num; i >1;){
+//     if (i % 2 === 0) {
+//         i = i / 2;
+//     }
+//     else{
+//         i = i * 3 + 1;
+//     }
     
-    console.log(i);
-}
+//     console.log(i);
+// }
 
 // using while loop
 
-while (num > 1) {
-    if (num % 2 === 0) {
-        num = num / 2
-    }
-    else{
-        num = num * 3 + 1;
-    }
-    console.log(num);
-}
+// while (num > 1) {
+//     if (num % 2 === 0) {
+//         num = num / 2
+//     }
+//     else{
+//         num = num * 3 + 1;
+//     }
+//     console.log(num);
+// }
+
+
+/*
+No 3: Diamond Pattern Generator
+Print a perfect diamond shape made of asterisks (*) based on an odd number of maximum rows provided by the user.
+*/
+
+// let n4 = 8;
+// for(let i = 1; i <= n4; i++){
+//     let result = '';
+//     for( let j = 1; j <= i; j++){
+//         result += '* '
+//         let result1 = '';
+//         for(let k = 1; k <= j; k++){
+//             result1 += '# '
+//         }
+//         // console.log(result1);
+//     }
+//     console.log(result);
+// }
+
+// let n4 = 8;
+
+// for (let i = 1; i <= n4; i++) {
+//     let result = '';
+    
+//     // Pick the character based on odd or even line number
+//     let charToPrint = (i % 2 !== 0) ? '* ' : '# ';
+    
+//     // Build the line with the chosen character
+//     for (let j = 1; j <= i; j++) {
+//         result += charToPrint;
+//     }
+    
+//     console.log(result);
+// }
+
+
