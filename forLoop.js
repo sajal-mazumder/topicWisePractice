@@ -344,13 +344,43 @@ Print a square grid of numbers from 1 to 3 repeated across 3 rows.
 (Output should look like 123 on line one, 123 on line two, and 123 on line three). 
 */
 
-for( let i = 1; i <= 5; i++){
-    let result = '';
-    for( let j = 1; j <= 5; j++){
-        result += j + ' ';
+// for( let i = 1; i <= 5; i++){
+//     let result = '';
+//     for( let j = 1; j <= 5; j++){
+//         result += j + ' ';
+//     }
+//     console.log(result)
+// }
+
+
+
+/*
+ The Alternating Grid (পর্যায়ক্রমিক গ্রিড)৩টি লাইনের (Rows) একটি গ্রিড বা চারকোনা বক্স তৈরি করুন, যেখানে প্রথম লাইনে শুধু 1, দ্বিতীয় লাইনে শুধু 2, এবং তৃতীয় লাইনে শুধু 3 প্রিন্ট হবে। প্রতিটি সংখ্যা ৩ বার করে বসবে এবং মাঝখানে স্পেস থাকবে।
+ */
+
+
+// for( let i = 1; i <= 3; i++){
+//     let result = '';
+//     for( let j = 1; j <= 3; j++){
+//         result += i + ' ';
+//     }
+//     console.log(result)
+// }
+
+
+/*
+The Odd Sum Stop (বিজোড় সংখ্যার যোগফল)১ থেকে শুরু করে ২৫ পর্যন্ত সব বিজোড় (Odd) সংখ্যাগুলোর যোগফল বের করুন। তবে লুপের ভেতরে একটি শর্ত থাকবে—যদি যোগফল কোনো কারণে ৫০ পার হয়ে যায় (sum > 50), তবে লুপটি সঙ্গে সঙ্গে বন্ধ (break) হয়ে যাবে এবং তখনকার চূড়ান্ত যোগফলটি প্রিন্ট করবে।ইঙ্গিত: লুপের ভেতরে if কন্ডিশন এবং break কীওয়ার্ড ব্যবহার করতে হবে।
+*/
+
+let oddSum = 0;
+for( let i = 1; i <= 25; i += 2){
+    oddSum += i;
+    if (oddSum > 50) {
+        break;
     }
-    console.log(result)
 }
+console.log(oddSum);
+
 
 // new challange
 
