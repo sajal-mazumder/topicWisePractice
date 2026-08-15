@@ -219,11 +219,69 @@ The Countdown Rocket
 Count down from 10 to 1 and then print the word "Blastoff!" at the very end.
 */
 
-let countdown = '';
-for( let i = 10; i >= 1; i--){
-    console.log(i)
-}
+// for( let i = 10; i >= 1; i--){
+   
+//     console.log(i)
+// }
+// console.log('Blastoff!')
 
+
+/*
+Multiplication Table
+Take a number (e.g., 5) and print its multiplication table up to 10 (e.g., 5 × 1 = 5, 5 × 2 = 10, etc.)
+*/
+
+// let num = 5;
+// for( let i = 1; i <= 10; i++){
+//     // console.log(num * i)
+//     console.log(`${num} x ${i} = ${num * i}`);
+// }
+
+
+/*
+Character Spaced Out
+Take a fixed string word (like "HELLO") and print each letter on a new line with a hyphen - before it.
+*/
+
+// let hello = 'Bangladesh';
+// for( let i = 0; i < hello.length; i++){
+//     // console.log(hello[i])
+//     console.log(`- ${hello[i]}`);
+// }
+
+
+/*
+Sum of First N Numbers
+Calculate and print the total sum of all numbers from 1 to 50.
+*/
+
+// let sum = 0;
+// for( let i = 1; i <= 50; i++){
+//     sum += i;
+// }
+// console.log(sum)
+
+
+/*
+The Right-Angled Triangle
+Print a right-angled triangle of asterisks (*) with 5 rows (Row 1 has 1 star, Row 2 has 2 stars, up to Row 5).
+*/
+
+// for( let i = 1; i <= 5; i++){
+//     let result = '';
+//     for( let j = 1; j <= i; j++){
+//         result += ' * '
+//     }
+//     console.log(result);
+// }
+
+for( let i = 1; i <= 5; i++){
+    let result = '';
+    for( let j = 1; j <= 5; j++){   // square pattern
+        result += ' * '
+    }
+    console.log(result);
+}
 
 // new challange
 
