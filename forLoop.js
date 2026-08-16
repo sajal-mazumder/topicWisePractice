@@ -372,14 +372,14 @@ Print a square grid of numbers from 1 to 3 repeated across 3 rows.
 The Odd Sum Stop (বিজোড় সংখ্যার যোগফল)১ থেকে শুরু করে ২৫ পর্যন্ত সব বিজোড় (Odd) সংখ্যাগুলোর যোগফল বের করুন। তবে লুপের ভেতরে একটি শর্ত থাকবে—যদি যোগফল কোনো কারণে ৫০ পার হয়ে যায় (sum > 50), তবে লুপটি সঙ্গে সঙ্গে বন্ধ (break) হয়ে যাবে এবং তখনকার চূড়ান্ত যোগফলটি প্রিন্ট করবে।ইঙ্গিত: লুপের ভেতরে if কন্ডিশন এবং break কীওয়ার্ড ব্যবহার করতে হবে।
 */
 
-let oddSum = 0;
-for( let i = 1; i <= 25; i += 2){
-    oddSum += i;
-    if (oddSum > 50) {
-        break;
-    }
-}
-console.log(oddSum);
+// let oddSum = 0;
+// for( let i = 1; i <= 25; i += 2){
+//     oddSum += i;
+//     if (oddSum > 50) {
+//         break;
+//     }
+// }
+// console.log(oddSum);
 
 
 // new challange
@@ -520,34 +520,56 @@ No 3: Diamond Pattern Generator
 Print a perfect diamond shape made of asterisks (*) based on an odd number of maximum rows provided by the user.
 */
 
-// let n4 = 8;
-// for(let i = 1; i <= n4; i++){
-//     let result = '';
-//     for( let j = 1; j <= i; j++){
-//         result += '* '
-//         let result1 = '';
-//         for(let k = 1; k <= j; k++){
-//             result1 += '# '
-//         }
-//         // console.log(result1);
+// let n = 5; 
+// let midLine = Math.floor( n / 2) + 1;
+// for( let i = 1; i <= midLine; i++){
+//     let rowStar = "";
+
+//     // for space print
+//     for( let j = 1; j <= midLine - i; j++){
+//         rowStar += " ";
 //     }
-//     console.log(result);
+
+//     // star print
+//     for(let k = 1; k <= ( 2 * i) - 1; k++){
+//         rowStar += '*'
+//     }
+//     console.log(rowStar);
 // }
 
-// let n4 = 8;
+let n = 5; // মোট রো সংখ্যা (অবশ্যই বিজোড় সংখ্যা হতে হবে)
+let mid = Math.floor(n / 2) + 1; // মাঝখানের লাইন নম্বর (৫ এর জন্য এটি হবে ৩)
 
-// for (let i = 1; i <= n4; i++) {
-//     let result = '';
-    
-//     // Pick the character based on odd or even line number
-//     let charToPrint = (i % 2 !== 0) ? '* ' : '# ';
-    
-//     // Build the line with the chosen character
-//     for (let j = 1; j <= i; j++) {
-//         result += charToPrint;
-//     }
-    
-//     console.log(result);
-// }
+// ১. উপরের অংশ (মাঝখানের লাইনসহ)
+for (let i = 1; i <= mid; i++) {
+    let rowStr = "";
 
+    // স্পেস প্রিন্ট করার লুপ
+    for (let j = 1; j <= mid - i; j++) {
+        rowStr += " ";
+    }
 
+    // স্টার (*) প্রিন্ট করার লুপ
+    for (let k = 1; k <= (2 * i) - 1; k++) {
+        rowStr += "*";
+    }
+
+    console.log(rowStr);
+}
+
+// ২. নিচের অংশ (উল্টো ত্রিভুজ)
+for (let i = mid - 1; i >= 1; i--) {
+    let rowStar = "";
+
+    // স্পেস প্রিন্ট করার লুপ
+    for (let j = 1; j <= mid - i; j++) {
+        rowStar += " ";
+    }
+
+    // স্টার (*) প্রিন্ট করার লুপ
+    for (let k = 1; k <= (2 * i) - 1; k++) {
+        rowStar += "*";
+    }
+
+    console.log(rowStar);
+}
