@@ -520,56 +520,116 @@ No 3: Diamond Pattern Generator
 Print a perfect diamond shape made of asterisks (*) based on an odd number of maximum rows provided by the user.
 */
 
-// let n = 5; 
-// let midLine = Math.floor( n / 2) + 1;
-// for( let i = 1; i <= midLine; i++){
+
+// let n = 5; // মোট রো সংখ্যা (অবশ্যই বিজোড় সংখ্যা হতে হবে)
+// let mid = Math.floor(n / 2) + 1; // মাঝখানের লাইন নম্বর (৫ এর জন্য এটি হবে ৩)
+
+// // ১. উপরের অংশ (মাঝখানের লাইনসহ)
+// for (let i = 1; i <= mid; i++) {
+//     let rowStr = "";
+
+//     // স্পেস প্রিন্ট করার লুপ
+//     for (let j = 1; j <= mid - i; j++) {
+//         rowStr += " ";
+//     }
+
+//     // স্টার (*) প্রিন্ট করার লুপ
+//     for (let k = 1; k <= (2 * i) - 1; k++) {
+//         rowStr += "*";
+//     }
+
+//     console.log(rowStr);
+// }
+
+// // ২. নিচের অংশ (উল্টো ত্রিভুজ)
+// for (let i = mid - 1; i >= 1; i--) {
 //     let rowStar = "";
 
-//     // for space print
-//     for( let j = 1; j <= midLine - i; j++){
+//     // স্পেস প্রিন্ট করার লুপ
+//     for (let j = 1; j <= mid - i; j++) {
 //         rowStar += " ";
 //     }
 
-//     // star print
-//     for(let k = 1; k <= ( 2 * i) - 1; k++){
+//     // স্টার (*) প্রিন্ট করার লুপ
+//     for (let k = 1; k <= (2 * i) - 1; k++) {
+//         rowStar += "*";
+//     }
+
+//     console.log(rowStar);
+// }
+
+
+// let n = 7; 
+// let midLine = Math.floor( n / 2) + 1;
+
+// for( let i = 1; i <= midLine; i++){
+//     let rowStar = '';
+
+//     // for space print
+//     for( let j = 1; j <= midLine - i; j++){
+//         rowStar += ' ';
+//     }
+
+//     // for star print
+//     for( let k = 1; k <= ( 2 * i) - 1; k++){
 //         rowStar += '*'
 //     }
 //     console.log(rowStar);
 // }
 
-let n = 5; // মোট রো সংখ্যা (অবশ্যই বিজোড় সংখ্যা হতে হবে)
-let mid = Math.floor(n / 2) + 1; // মাঝখানের লাইন নম্বর (৫ এর জন্য এটি হবে ৩)
+// // for below structure
 
-// ১. উপরের অংশ (মাঝখানের লাইনসহ)
-for (let i = 1; i <= mid; i++) {
-    let rowStr = "";
+// for( let i = midLine - 1; i >= 1; i--){
+//     let rowStar = '';
 
-    // স্পেস প্রিন্ট করার লুপ
-    for (let j = 1; j <= mid - i; j++) {
-        rowStr += " ";
+//     // for space print
+//     for( let j = 1; j <= midLine - i; j++){
+//         rowStar += ' ';
+//     }
+
+//     // for star print
+//     for( let k = 1; k <= ( 2 * i ) - 1; k++){
+//         rowStar += '*'
+//     }
+//     console.log(rowStar);
+// }
+
+
+
+/*
+Matrix Multiplication Visualizer
+Given two 3 × 3 grids of numbers, use nested loops to calculate and print the resulting multiplied grid.
+*/
+
+let A = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+let B = [
+    [9, 8, 7],
+    [6, 5, 4],
+    [3, 2, 1]
+];
+
+let result = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+];
+
+// Matrix multiplication using nested loops
+for (let i = 0; i < A.length; i++) {
+    for (let j = 0; j < B.length; j++) {
+        for (let k = 0; k < A.length; k++) {
+            result[i][j] += A[i][k] * B[k][j];
+        }
     }
-
-    // স্টার (*) প্রিন্ট করার লুপ
-    for (let k = 1; k <= (2 * i) - 1; k++) {
-        rowStr += "*";
-    }
-
-    console.log(rowStr);
 }
 
-// ২. নিচের অংশ (উল্টো ত্রিভুজ)
-for (let i = mid - 1; i >= 1; i--) {
-    let rowStar = "";
-
-    // স্পেস প্রিন্ট করার লুপ
-    for (let j = 1; j <= mid - i; j++) {
-        rowStar += " ";
-    }
-
-    // স্টার (*) প্রিন্ট করার লুপ
-    for (let k = 1; k <= (2 * i) - 1; k++) {
-        rowStar += "*";
-    }
-
-    console.log(rowStar);
+// Print the resulting grid
+console.log("Result:");
+for (let i = 0; i < B.length; i++) {
+    console.log(result[i].join(" "));
 }
