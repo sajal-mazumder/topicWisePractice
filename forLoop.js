@@ -633,3 +633,37 @@ console.log("Result:");
 for (let i = 0; i < B.length; i++) {
     console.log(result[i].join(" "));
 }
+
+
+let matA = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16]
+];
+let matB = [
+    [13, 14, 15, 16],
+    [12, 11, 10, 9],
+    [8, 7, 6, 5],
+    [4, 3, 2, 1]
+]
+let result1 = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0]
+]
+
+for( let i = 0; i < matA.length; i++){
+    for( let j = 0; j < matB.length; j++){
+        for( let k = 0; k < matA.length; k++){
+            result1[i][j] += matA[i][k] * matB[j][k]
+        }
+    }
+}
+console.log(result1) // return as array number
+
+console.log("Result"); 
+for( let i = 0; i < matA.length; i++){
+    console.log(result1[i].join(' '))
+}
