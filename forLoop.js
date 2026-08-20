@@ -733,9 +733,47 @@ Multiplication Table Generator (নামতার ঘর তৈরি)১ থ�
 //     console.log(n * i)
 // }
 
-for( let i = 1; i <= 5; i++){
-     console.log(`--- ${i} এর নামতার ঘর ---`)
-     for( let j = 1; j <= 10; j++){
-        console.log(`${i} x ${j} = ${i * j}`);
-     }
+// for( let i = 1; i <= 5; i++){
+//      console.log(`--- ${i} এর নামতার ঘর ---`)
+//      for( let j = 1; j <= 10; j++){
+//         console.log(`${i} x ${j} = ${i * j}`);
+//      }
+// }
+
+
+/*
+Count and Sum of Multiples (গুণিতকের সংখ্যা ও যোগফল)১ থেকে ১০০ এর মধ্যে কতগুলো সংখ্যা ৩ এবং ৫ উভয় সংখ্যা দিয়েই বিভাজ্য (ভাগশেষ ০ হয়) তা খুঁজে বের করুন। লুপ শেষে মোট কয়টি সংখ্যা পাওয়া গেল (Count) এবং তাদের সবার যোগফল (Sum) কত হলো তা প্রিন্ট করুন।
+*/
+
+// let sum = 0;
+// let count = 0;
+// for( let i = 1; i <= 100; i++){
+//     if (i % 3 === 0 && i % 5 === 0) {
+//         // console.log(i)
+//         sum += i;
+//         count++;
+//     }
+// }
+// console.log(sum)
+// console.log(count)
+
+
+/*
+Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ সংখ্যা খোঁজা)আপনাকে একটি সংখ্যার অ্যারে দেওয়া হবে (যেমন: [12, 35, 1, 10, 34, 1])। কোনো বিল্ট-ইন শর্টিং (Sorting) ফাংশন ব্যবহার না করে, শুধুমাত্র একটি for লুপ এবং if কন্ডিশন ব্যবহার করে অ্যারের দ্বিতীয় সর্বোচ্চ সংখ্যাটি খুঁজে বের করতে হবে (এই উদাহরণের উত্তর হবে 34)।
+*/
+let num = [12, 35, 37, 14, 54];
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for( let i = 0; i < num.length; i++){
+    // console.log(num[i])
+    let current = num[i];
+    if (current > largest) {
+        secondLargest = largest;
+        largest = current;
+    }else if (current > secondLargest && current !== largest) {
+        secondLargest = current;
+    }
+    
 }
+console.log('second largest number is ' + secondLargest)
