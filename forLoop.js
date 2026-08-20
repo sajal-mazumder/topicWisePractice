@@ -601,69 +601,141 @@ Matrix Multiplication Visualizer
 Given two 3 × 3 grids of numbers, use nested loops to calculate and print the resulting multiplied grid.
 */
 
-let A = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-];
+// let A = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
 
-let B = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1]
-];
+// let B = [
+//     [9, 8, 7],
+//     [6, 5, 4],
+//     [3, 2, 1]
+// ];
 
-let result = [
-    [0, 0, 0],
-    [0, 0, 0],
-    [0, 0, 0]
-];
+// let result = [
+//     [0, 0, 0],
+//     [0, 0, 0],
+//     [0, 0, 0]
+// ];
 
-// Matrix multiplication using nested loops
-for (let i = 0; i < A.length; i++) {
-    for (let j = 0; j < B.length; j++) {
-        for (let k = 0; k < A.length; k++) {
-            result[i][j] += A[i][k] * B[k][j];
-        }
-    }
-}
+// // Matrix multiplication using nested loops
+// for (let i = 0; i < A.length; i++) {
+//     for (let j = 0; j < B.length; j++) {
+//         for (let k = 0; k < A.length; k++) {
+//             result[i][j] += A[i][k] * B[k][j];
+//         }
+//     }
+// }
 
-// Print the resulting grid
-console.log("Result:");
-for (let i = 0; i < B.length; i++) {
-    console.log(result[i].join(" "));
-}
+// // Print the resulting grid
+// console.log("Result:");
+// for (let i = 0; i < B.length; i++) {
+//     console.log(result[i].join(" "));
+// }
 
 
-let matA = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12],
-    [13, 14, 15, 16]
-];
-let matB = [
-    [13, 14, 15, 16],
-    [12, 11, 10, 9],
-    [8, 7, 6, 5],
-    [4, 3, 2, 1]
-]
-let result1 = [
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0],
-    [0, 0, 0, 0]
-]
+// let matA = [
+//     [1, 2, 3, 4],
+//     [5, 6, 7, 8],
+//     [9, 10, 11, 12],
+//     [13, 14, 15, 16]
+// ];
+// let matB = [
+//     [13, 14, 15, 16],
+//     [12, 11, 10, 9],
+//     [8, 7, 6, 5],
+//     [4, 3, 2, 1]
+// ]
+// let result1 = [
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0],
+//     [0, 0, 0, 0]
+// ]
 
-for( let i = 0; i < matA.length; i++){
-    for( let j = 0; j < matB.length; j++){
-        for( let k = 0; k < matA.length; k++){
-            result1[i][j] += matA[i][k] * matB[j][k]
-        }
-    }
-}
-console.log(result1) // return as array number
+// for( let i = 0; i < matA.length; i++){
+//     for( let j = 0; j < matB.length; j++){
+//         for( let k = 0; k < matA.length; k++){
+//             result1[i][j] += matA[i][k] * matB[j][k]
+//         }
+//     }
+// }
+// console.log(result1) // return as array number
 
-console.log("Result"); 
-for( let i = 0; i < matA.length; i++){
-    console.log(result1[i].join(' '))
+// console.log("Result"); 
+// for( let i = 0; i < matA.length; i++){
+//     console.log(result1[i].join(' '))
+// }
+
+
+/*
+The Pascal's Triangle Row Generator
+Generate and display the first N rows of Pascal's Triangle, where each number is the sum of the two numbers directly above it.
+*/
+
+// let n = 9;
+// let nArray = [];
+
+// for( let i = 0; i < n; i++){
+//     let currenArr = [];
+//     for( let j = 0; j <= i; j++){
+//         if ( j === 0 || j === i ) {
+//             currenArr.push(1)
+//         }
+//         else{
+//             let num1 = nArray[i - 1][j - 1];
+//             let num2 = nArray[i - 1][j];
+//             currenArr.push(num1 + num2)
+//         }
+//     }
+//     nArray.push(currenArr);
+// }
+// console.log(nArray); 
+
+// console.log("Result is ...")
+// for( let i = 0; i < nArray.length; i++){
+//     let rowStr = nArray[i].join(' ');
+//     let padding = ' '.repeat(n - i)
+//     console.log(padding + rowStr)
+// }
+
+
+
+/*
+The Number Square Grid (সংখ্যার চারকোনা বক্স)ব্যবহারকারী একটি সংখ্যা দিলে (যেমন ৪) লুপ ব্যবহার করে একটি বর্গাকার গ্রিড প্রিন্ট করতে হবে, যেখানে প্রতিটি লাইনে ১ থেকে শুরু করে সেই সংখ্যা পর্যন্ত থাকবে।
+*/
+
+// for( let i = 1; i <= 4; i++){
+//     let rowStr = '';
+//     for( let j = 1; j <= 4; j++){
+//         rowStr += j + ' ';
+//     }
+//     console.log(rowStr);
+// }
+/*
+The Right-Angled Number Triangle (সংখ্যার সমকোণী ত্রিভুজ)এমন একটি নেস্টেড লুপ লিখুন যা লাইনের নাম্বারের ওপর ভিত্তি করে সংখ্যা প্রিন্ট করবে। ১ম লাইনে ১টি সংখ্যা, ২য় লাইনে ২টি সংখ্যা—এভাবে বাড়বে।
+*/
+// for( let i = 1; i <= 4; i++){
+//     let rowStr = '';
+//     for( let j = 1; j <= i; j++){
+//         rowStr += j + ' ';
+//     }
+//     console.log(rowStr);
+// }
+
+/*
+Multiplication Table Generator (নামতার ঘর তৈরি)১ থেকে শুরু করে ৫ পর্যন্ত (অথবা ব্যবহারকারীর দেওয়া যেকোনো সংখ্যা) প্রতিটা সংখ্যার পুরো নামতার ঘর (১ থেকে ১০ পর্যন্ত গুণফল) লুপের সাহায্যে কনসোলে প্রিন্ট করুন। এখানে বাইরের লুপটি সংখ্যার জন্য এবং ভেতরের লুপটি ১ থেকে ১০ গুণের জন্য কাজ করবে।
+*/
+
+// let n = 5;  // for fixed number
+// for( let i = 1; i <= 10; i++){
+//     console.log(n * i)
+// }
+
+for( let i = 1; i <= 5; i++){
+     console.log(`--- ${i} এর নামতার ঘর ---`)
+     for( let j = 1; j <= 10; j++){
+        console.log(`${i} x ${j} = ${i * j}`);
+     }
 }
