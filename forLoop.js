@@ -39,7 +39,7 @@
 
 // let result = '';
 
-// for (let age = 15; age <= 20; age++) {
+// for (let age = 15; age <= 50; age++) {
 //     if (age >= 18) {
 //         result += 'age' + age + ': Access Granted! ✅\n'
 //     } else {
@@ -185,7 +185,7 @@ No 10: Odd Positions: Create a loop that prints numbers from 1 to 15, but only d
 // for( let i = 1; i <= 15; i++){
 //     if (i % 2 === 1) {
 //         // console.log(i)
-//         oddNum += oddSerial + ' ) ' + 'Odd number is ' + ' = ' + i + '\n';
+//         oddNum += oddSerial + ' ) ' + 'Odd number is = ' + i + '\n';
 //         oddSerial++;
 //     }
 // }
@@ -231,10 +231,10 @@ Multiplication Table
 Take a number (e.g., 5) and print its multiplication table up to 10 (e.g., 5 × 1 = 5, 5 × 2 = 10, etc.)
 */
 
-// let num = 5;
+// let num11 = 5;
 // for( let i = 1; i <= 10; i++){
 //     // console.log(num * i)
-//     console.log(`${num} x ${i} = ${num * i}`);
+//     console.log(`${num11} x ${i} = ${num11 * i}`);
 // }
 
 
@@ -331,7 +331,7 @@ Loop through a given sentence or word and count how many total vowels (a, e, i, 
 //     // console.log(sentence[i].toLowerCase());
 //     let char = sentence[i].toLowerCase();
 //     if (!vowels.includes(char) && char >= 'a' && char <= 'z') {
-//         console.log(char)  // prints ony consonants
+//         console.log(char)  // prints only consonants
 //         count++;
 //     }
 // }
@@ -445,22 +445,27 @@ Find all 3-digit numbers where the sum of each digit raised to the power of 3 eq
 // }
 
 
-// for(let i = 10; i <= 99; i++){
-//     let temp = i;
+for(let i = 10; i <= 99; i++){
+    let temp = i;
 
-//     let digit2 = temp % 10;
-//     temp = Math.floor(temp / 10);
+    let digit2 = temp % 10;
+    temp = Math.floor(temp / 10);
 
-//     let digit1 = temp % 10;
+    let digit1 = temp % 10;
 
-//     let sumOfSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
+    let sumOfSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
 
-//     if (sumOfSqr === i) {
-//         console.log(i)
-//     }
+    if (sumOfSqr === i) {
+        console.log(i)
+    }
+    else{
+        // console.log('No Narcisistic Number found.') // this prints unlimited result
+    }
     
-// }
-// console.log('No Narcissistic Number found.')
+}
+console.log('No Narcissistic Number found.')
+
+
 
 // for( let num = 1000; num <= 9999; num++){
 //     let temp = num;
@@ -597,7 +602,7 @@ Print a perfect diamond shape made of asterisks (*) based on an odd number of ma
 
 
 /*
-Matrix Multiplication Visualizer
+No 4: Matrix Multiplication Visualizer
 Given two 3 × 3 grids of numbers, use nested loops to calculate and print the resulting multiplied grid.
 */
 
@@ -670,7 +675,7 @@ Given two 3 × 3 grids of numbers, use nested loops to calculate and print the r
 
 
 /*
-The Pascal's Triangle Row Generator
+No 5: The Pascal's Triangle Row Generator
 Generate and display the first N rows of Pascal's Triangle, where each number is the sum of the two numbers directly above it.
 */
 
@@ -701,7 +706,7 @@ Generate and display the first N rows of Pascal's Triangle, where each number is
 // }
 
 
-
+// extra semi mid label problems
 /*
 The Number Square Grid (সংখ্যার চারকোনা বক্স)ব্যবহারকারী একটি সংখ্যা দিলে (যেমন ৪) লুপ ব্যবহার করে একটি বর্গাকার গ্রিড প্রিন্ট করতে হবে, যেখানে প্রতিটি লাইনে ১ থেকে শুরু করে সেই সংখ্যা পর্যন্ত থাকবে।
 */
@@ -761,7 +766,7 @@ Count and Sum of Multiples (গুণিতকের সংখ্যা ও য�
 /*
 Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ সংখ্যা খোঁজা)আপনাকে একটি সংখ্যার অ্যারে দেওয়া হবে (যেমন: [12, 35, 1, 10, 34, 1])। কোনো বিল্ট-ইন শর্টিং (Sorting) ফাংশন ব্যবহার না করে, শুধুমাত্র একটি for লুপ এবং if কন্ডিশন ব্যবহার করে অ্যারের দ্বিতীয় সর্বোচ্চ সংখ্যাটি খুঁজে বের করতে হবে (এই উদাহরণের উত্তর হবে 34)।
 */
-let num = [12, 35, 37, 14, 54];
+let num = [12, 35, 1, 10, 34, 1];
 let largest = -Infinity;
 let secondLargest = -Infinity;
 
