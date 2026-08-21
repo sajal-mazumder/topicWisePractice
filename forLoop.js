@@ -794,13 +794,13 @@ Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ �
 
 
 /*
-Prime Factorization Breakdown
+No 6: Prime Factorization Breakdown
 Take a single large number and find all of its prime factors using a loop (e.g., inputting 12 should print 2, 2, 3)
 */
 
-let num = 12; 
-let factors = [];
-let divisor = 2; // for while loop
+// let num = 12; 
+// let factors = [];
+// let divisor = 2; // for while loop
 
 // for( let divisor = 2; num > 1;){
 //     if (num % divisor === 0) {
@@ -829,7 +829,7 @@ let divisor = 2; // for while loop
 
 
 /*
-String Compression (Run-Length Encoding)
+No 7: String Compression (Run-Length Encoding)
 Take a string with repeating characters (like aaabbcdddd) and compress it to count the repetitions (outputting a3b2c1d4). [1]
 */
 
@@ -888,24 +888,103 @@ Take a string with repeating characters (like aaabbcdddd) and compress it to cou
 // console.log("Total multiples of 5:", count);
 
 
-let nums =[10, 20, 30, 40];
-let total = 0;
+// let nums =[10, 20, 30, 40];
+// let total = 0;
 
-for (let i = 0; i < nums.length; i++) {
-    total += nums[i];
-}
+// for (let i = 0; i < nums.length; i++) {
+//     total += nums[i];
+// }
 
-let average = total / nums.length; // 👈 এই লাইনটি খেয়াল করুন
-console.log(average); 
+// let average = total / nums.length; // 👈 এই লাইনটি খেয়াল করুন
+// console.log(average); 
 
-let outer = 1;
-let resultString = '';
-while (outer <= 3) {
-    let inner = 1;
-    while( inner <= 2){
-        resultString += outer * inner + ' ';
-        inner++;
+// let outer = 1;
+// let resultString = '';
+// while (outer <= 3) {
+//     let inner = 1;
+//     while( inner <= 2){
+//         resultString += outer * inner + ' ';
+//         inner++;
+//     }
+//     outer++;
+// }
+// console.log(resultString);
+
+
+/*
+No 8: Caesar Cipher Encryption
+Take a sentence and a shift number (like 3), then shift every letter forward in the alphabet by that amount to encrypt the text.
+*/
+
+// let sentence = "HELLO WORLD";
+// let shift = 3;
+// let encryptedText = "";
+
+// for (let i = 0; i < sentence.length; i++) {
+//     let char = sentence[i];
+//     let code = sentence.charCodeAt(i);
+    
+//     // এখানে আপনার if-else এবং ASCII পরিবর্তনের লজিকটি লিখুন...
+//     if (code >= 65 && code <= 90) {
+//         char = String.fromCharCode(((code - 65 + shift) % 26) + 65)
+//     }
+//     else if (code >= 97 && code <= 122) {
+//          char = String.fromCharCode(((code - 97 + shift) % 26) + 97)
+//     }
+//     encryptedText += char;
+// }
+
+// console.log(encryptedText);
+
+
+/*
+The Josephus Problem (Step-by-Step)
+Simulate a circle of N people where every K-th person is eliminated until only one survives. Print the order of elimination
+*/
+
+// let n = 5; // মোট মানুষ
+// let k = 2; // প্রতি k-তম ব্যক্তিকে বাদ দেওয়া হবে
+// let people =[];
+
+// // ১. বৃত্ত তৈরি করা (১ থেকে n পর্যন্ত)
+// for (let i = 1; i <= n; i++) {
+//     people.push(i);
+// }
+
+// let index = 0; // শুরুর পজিশন
+// let eliminationOrder =[];
+
+// // ২. সিমুলেশন লুপ: n-1 বার ঘুরবে কারণ সবশেষে ১ জন টিকে থাকবে
+// for (let i = 1; i < n; i++) {
+//     // পরবর্তী বাদ পড়ার ইনডেক্স বের করার সূত্র
+//     index = (index + k - 1) % people.length;
+    
+//     // k-তম ব্যক্তিকে বাদ দেওয়া এবং অর্ডারে যোগ করা
+//     let eliminated = people.splice(index, 1);
+//     eliminationOrder.push(eliminated);
+// }
+
+// // ফলাফল প্রিন্ট করা
+// console.log("বাদ পড়ার ক্রম: " + eliminationOrder.join(", "));
+// console.log("বিজয়ীর পজিশন: " + people);
+
+
+/*
+Array Rotation Engine
+Given an array of numbers, rotate the entire array to the right by K steps using a loop without using built-in shift functions.
+*/
+
+let arr = [1, 2, 3, 4, 5];
+let k = 2;
+
+for (let step = 0; step < k; step++) {
+    let last = arr[arr.length - 1];
+
+    for (let i = arr.length - 1; i > 0; i--) {
+        arr[i] = arr[i - 1];
     }
-    outer++;
+
+    arr[0] = last;
 }
-console.log(resultString);
+
+console.log(arr);
