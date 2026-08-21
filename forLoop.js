@@ -445,25 +445,25 @@ Find all 3-digit numbers where the sum of each digit raised to the power of 3 eq
 // }
 
 
-for(let i = 10; i <= 99; i++){
-    let temp = i;
+// for(let i = 10; i <= 99; i++){
+//     let temp = i;
 
-    let digit2 = temp % 10;
-    temp = Math.floor(temp / 10);
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
 
-    let digit1 = temp % 10;
+//     let digit1 = temp % 10;
 
-    let sumOfSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
+//     let sumOfSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
 
-    if (sumOfSqr === i) {
-        console.log(i)
-    }
-    else{
-        // console.log('No Narcisistic Number found.') // this prints unlimited result
-    }
+//     if (sumOfSqr === i) {
+//         console.log(i)
+//     }
+//     else{
+//         // console.log('No Narcisistic Number found.') // this prints unlimited result
+//     }
     
-}
-console.log('No Narcissistic Number found.')
+// }
+// console.log('No Narcissistic Number found.')  // print only one result
 
 
 
@@ -507,7 +507,7 @@ Given any positive integer, print its Collatz sequence using a loop. If even, di
 //     console.log(i);
 // }
 
-// using while loop
+// using while loop - best practice
 
 // while (num > 1) {
 //     if (num % 2 === 0) {
@@ -635,7 +635,7 @@ Given two 3 × 3 grids of numbers, use nested loops to calculate and print the r
 
 // // Print the resulting grid
 // console.log("Result:");
-// for (let i = 0; i < B.length; i++) {
+// for (let i = 0; i < A.length; i++) {
 //     console.log(result[i].join(" "));
 // }
 
@@ -647,7 +647,7 @@ Given two 3 × 3 grids of numbers, use nested loops to calculate and print the r
 //     [13, 14, 15, 16]
 // ];
 // let matB = [
-//     [13, 14, 15, 16],
+//     [16, 15, 14, 13],
 //     [12, 11, 10, 9],
 //     [8, 7, 6, 5],
 //     [4, 3, 2, 1]
@@ -679,7 +679,7 @@ No 5: The Pascal's Triangle Row Generator
 Generate and display the first N rows of Pascal's Triangle, where each number is the sum of the two numbers directly above it.
 */
 
-// let n = 9;
+// let n = 5;
 // let nArray = [];
 
 // for( let i = 0; i < n; i++){
@@ -696,7 +696,7 @@ Generate and display the first N rows of Pascal's Triangle, where each number is
 //     }
 //     nArray.push(currenArr);
 // }
-// console.log(nArray); 
+// // console.log(nArray); // no need
 
 // console.log("Result is ...")
 // for( let i = 0; i < nArray.length; i++){
@@ -714,13 +714,18 @@ The Number Square Grid (সংখ্যার চারকোনা বক্স
 // for( let i = 1; i <= 4; i++){
 //     let rowStr = '';
 //     for( let j = 1; j <= 4; j++){
+//         // rowStr += i + ' ';
 //         rowStr += j + ' ';
 //     }
 //     console.log(rowStr);
 // }
+
+
 /*
 The Right-Angled Number Triangle (সংখ্যার সমকোণী ত্রিভুজ)এমন একটি নেস্টেড লুপ লিখুন যা লাইনের নাম্বারের ওপর ভিত্তি করে সংখ্যা প্রিন্ট করবে। ১ম লাইনে ১টি সংখ্যা, ২য় লাইনে ২টি সংখ্যা—এভাবে বাড়বে।
 */
+
+
 // for( let i = 1; i <= 4; i++){
 //     let rowStr = '';
 //     for( let j = 1; j <= i; j++){
@@ -737,6 +742,8 @@ Multiplication Table Generator (নামতার ঘর তৈরি)১ থ�
 // for( let i = 1; i <= 10; i++){
 //     console.log(n * i)
 // }
+
+// for multiple number 
 
 // for( let i = 1; i <= 5; i++){
 //      console.log(`--- ${i} এর নামতার ঘর ---`)
@@ -766,19 +773,21 @@ Count and Sum of Multiples (গুণিতকের সংখ্যা ও য�
 /*
 Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ সংখ্যা খোঁজা)আপনাকে একটি সংখ্যার অ্যারে দেওয়া হবে (যেমন: [12, 35, 1, 10, 34, 1])। কোনো বিল্ট-ইন শর্টিং (Sorting) ফাংশন ব্যবহার না করে, শুধুমাত্র একটি for লুপ এবং if কন্ডিশন ব্যবহার করে অ্যারের দ্বিতীয় সর্বোচ্চ সংখ্যাটি খুঁজে বের করতে হবে (এই উদাহরণের উত্তর হবে 34)।
 */
-let num = [12, 35, 1, 10, 34, 1];
-let largest = -Infinity;
-let secondLargest = -Infinity;
 
-for( let i = 0; i < num.length; i++){
-    // console.log(num[i])
-    let current = num[i];
-    if (current > largest) {
-        secondLargest = largest;
-        largest = current;
-    }else if (current > secondLargest && current !== largest) {
-        secondLargest = current;
-    }
+
+// let num = [12, 35, 1, 10, 34, 1];
+// let largest = -Infinity;
+// let secondLargest = -Infinity;
+
+// for( let i = 0; i < num.length; i++){
+//     // console.log(num[i])
+//     let current = num[i];
+//     if (current > largest) {
+//         secondLargest = largest;
+//         largest = current;
+//     }else if (current > secondLargest && current !== largest) {
+//         secondLargest = current;
+//     }
     
-}
-console.log('second largest number is ' + secondLargest)
+// }
+// console.log('second largest number is ' + secondLargest)
