@@ -791,3 +791,121 @@ Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ �
     
 // }
 // console.log('second largest number is ' + secondLargest)
+
+
+/*
+Prime Factorization Breakdown
+Take a single large number and find all of its prime factors using a loop (e.g., inputting 12 should print 2, 2, 3)
+*/
+
+let num = 12; 
+let factors = [];
+let divisor = 2; // for while loop
+
+// for( let divisor = 2; num > 1;){
+//     if (num % divisor === 0) {
+//         factors.push(divisor)
+//         num = num / divisor;
+//     }
+//     else{
+//         divisor++;
+//     }
+// }
+// console.log(factors.join(' , '))
+// console.log(factors)
+
+// usin while loop best practice
+
+// while( num > 1){
+//     if (num % divisor === 0) {
+//         factors.push(divisor);
+//         num = num / divisor
+//     }
+//     else{
+//         divisor++
+//     }
+// }
+// console.log(factors)
+
+
+/*
+String Compression (Run-Length Encoding)
+Take a string with repeating characters (like aaabbcdddd) and compress it to count the repetitions (outputting a3b2c1d4). [1]
+*/
+
+// let string = 'aaabbbbccddaaaa';
+// let compressed = '';
+// let count = 1;
+
+// for( let i = 0; i < string.length; i++){
+//     // console.log(string[i])
+//     if (string[i] === string[ i + 1]) {
+//         count++;
+//     }else{
+//         compressed += string[i] + count
+//         count = 1;
+//     }
+// }
+// console.log(compressed);
+
+
+// reverse practice
+
+// let ResultString = "";
+
+// for (let i = 1; i <= 5; i++) {
+//     if (i === 3) {
+//         continue; // 'continue' এর কাজ হলো এই চক্করটি স্কিপ করে পরের চক্করে চলে যাওয়া
+//     }
+//     ResultString += i + "-";
+// }
+
+// console.log(ResultString);
+
+
+// let totalSum = 0;
+
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 === 0) {
+//         totalSum += i; // শুধু এইটুকুই থাকবে
+//     }
+//     // ভেতরের i++ টি মুছে দেওয়া হলো
+// }
+
+// console.log(totalSum); // এখন পারফেক্ট ৩০ আসবে!
+
+// let count = 0;
+
+// for (let i = 1; i <= 50; i++) { // Notice the blank space at the end
+    
+//     if (i % 5 === 0) {
+//         count++;
+//          // Shifting to next number
+//     }
+    
+// }
+
+// console.log("Total multiples of 5:", count);
+
+
+let nums =[10, 20, 30, 40];
+let total = 0;
+
+for (let i = 0; i < nums.length; i++) {
+    total += nums[i];
+}
+
+let average = total / nums.length; // 👈 এই লাইনটি খেয়াল করুন
+console.log(average); 
+
+let outer = 1;
+let resultString = '';
+while (outer <= 3) {
+    let inner = 1;
+    while( inner <= 2){
+        resultString += outer * inner + ' ';
+        inner++;
+    }
+    outer++;
+}
+console.log(resultString);
