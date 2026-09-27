@@ -1,7 +1,7 @@
 // console.log('for loop')
 
 
-// 01
+// 01: increasing operator
 
 // let sum = 0;
 // for( let i = 0; i <= 10; i++){
@@ -11,7 +11,7 @@
 // }
 // console.log(sum);  // when comment inner console than sum prints for one time.
 
-// 02
+// 02: decresing operator
 
 // for( let i = 10; i >= 1; i--){
 //     console.log(i);
@@ -24,13 +24,15 @@
  Imagine you are building a system for a gym. Only people who are 18 years or older can enter. Let's look at how we can use a loop to check multiple ages automatically:
 */
 
-// let age = 15;
+// let age = 25;
 
 // for( let i = 0; i < age; i++){
 //     if (age >= 18) {
-//         console.log('Open gym for you.')
+//         console.log('You are more than 18 years, Open gym for you.')
+//         break;
 //     }else{
 //         console.log('Access denied. Too young for gym.')
+//         break;
 //     }
     
 // }
@@ -39,14 +41,17 @@
 
 // let result = '';
 
-// for (let age = 15; age <= 50; age++) {
+// for (let age = 45; age <= 50; age++) {
 //     if (age >= 18) {
-//         result += 'age' + age + ': Access Granted! ✅\n'
+//         result += 'Age- ' + age + ': Access Granted! ✅\n'
+//         break;
 //     } else {
-//         result += 'age' + age + ': Access Denied! ❌ too young.\n'
+//         result += 'Age- ' + age + ': Access Denied! ❌ too young.\n'
+//         break;
 //     }
 // }
 // console.log(result);
+
 
 // easy lebel for loop question
 
@@ -57,7 +62,7 @@ NO 01: Print 1 to 10: Write a program to display the first 10 natural numbers (1
 // let iResult = '';
 
 // for( let i = 1; i <= 10; i++){
-    // console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
+//     console.log( i + ' ) ' + ' number is' + ' = ' + i + '\n' );
 //     iResult += i + ' ) ' + ' number is' + ' = ' + i + '\n';
 // }
 // console.log(iResult);
@@ -77,6 +82,31 @@ No 2: Even Numbers only: Write a loop that prints only the even numbers from 2 t
 //     }
 // }
 // console.log(evenNum);
+
+
+// 2.1: odd number
+
+// let oddNum = '';
+
+// for( let i = 0; i <= 10; i++){
+//     if (i % 2 === 1) {
+//         // console.log('Odd number is: ' + i)
+//         oddNum += 'Odd number is ' + '= ' + i + '\n' 
+//     }
+// }
+// console.log(oddNum)
+
+// 2.2: numbers divided by 3
+
+let numDividedBy3 = '';
+for( let i = 0; i <= 20; i++){
+    if ( i % 3 === 0) {
+        // console.log(i)
+        numDividedBy3 += 'Number divided by 3 is ' + '= ' + i + '\n'
+    }
+}
+console.log(numDividedBy3)
+
 
 /*
 No 3: Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1
