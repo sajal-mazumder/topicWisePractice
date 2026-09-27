@@ -98,36 +98,44 @@ No 2: Even Numbers only: Write a loop that prints only the even numbers from 2 t
 
 // 2.2: numbers divided by 3
 
-let numDividedBy3 = '';
-for( let i = 0; i <= 20; i++){
-    if ( i % 3 === 0) {
-        // console.log(i)
-        numDividedBy3 += 'Number divided by 3 is ' + '= ' + i + '\n'
-    }
-}
-console.log(numDividedBy3)
+// let numDividedBy3 = '';
+// for( let i = 0; i <= 20; i++){
+//     if ( i % 3 === 0) {
+//         // console.log(i)
+//         numDividedBy3 += 'Number divided by 3 is ' + '= ' + i + '\n'
+//     }
+// }
+// console.log(numDividedBy3)
 
 
 /*
-No 3: Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1
+No 3: Count Down: Create a countdown loop that starts from 10 and prints each number until it reaches 1, 
+when it reach 4 it stop the loop.
 */
 
 // let decrease = '';
 
 // for( let i = 10; i >=1; i--){
 //     // console.log(i);
+//     if ( i === 4) {
+//         break;
+//     }
 //     decrease += i + ' ) ' + 'decrease is ' + ' = ' + i + '\n';
 // }
 // console.log(decrease);
 
 /*
 No 4: Multiplication Table: Pick a number (like 5) and print its multiplication table up to 10 (e.g., 5, 10, 15... 50)
+when it reach 5 stop the loop
 */
 
 // let num = 5;
 // let result = '';
 // for( let i = 0; i <= 10; i++){
-//     result += i + ' ) ' + 'Result is ' + ' = ' + ( i * num) + '\n';
+//     if ( i === 5) {
+//         break;
+//     }
+//     result += i + ' ) ' + 'Multiplication Result is ' + ' = ' + ( i * num) + '\n';
 // }
 // console.log(result);
 
@@ -138,6 +146,7 @@ No 5: Sum of Numbers: Calculate the total sum of all numbers from 1 to 10 and pr
 // let sum = 0;
 // for( let i = 1; i <= 10; i++){
 //     sum += i;
+//     // console.log(sum)
 // }
 // console.log('Sum is ' + ' = ' + sum);
 
@@ -160,12 +169,19 @@ No 6: Skip a Number: Write a loop that prints numbers from 1 to 10, but skips th
 
 /*
 No 7: Reverse Count by 2: Write a loop that starts at 20 and counts down to 0, decreasing by 2 each time (20, 18, 16... 0)
+when it reaches 8 continue loop, when it reaches 4 stop loop
 */
 
 // let decreaseResult = '';
 // let serial = 1;
 
 // for( let i = 20; i >= 0; i -= 2){
+//     if ( i === 8) {
+//         continue;
+//     }
+//     if (i === 4) {
+//         break;
+//     }
 //     // console.log(i)
 //     decreaseResult += serial + ' ) ' + 'Decrease result is ' + ' = ' + i + '\n';
 //     serial++;
@@ -180,13 +196,14 @@ No 8: Square of Numbers: Print the square of each number from 1 to 5 (e.g., 1, 4
 // let sqrResult = '';
 // let sqrSerial = 1;
 // let cubeResult = ''
+// let qubeSerial = 1;
 
 // for( let i = 1; i <= 5; i++){
 //     // console.log(i * i);
 //     sqrResult += sqrSerial + ' ) ' + ' Square Result of ' + i + ' is  = ' + (i*i) + '\n';
 
-//     cubeResult += sqrSerial + ' ) ' + 'Cube result of' + i + ' is = ' + (i*i*i) + '\n';
-//     sqrSerial++;
+//     cubeResult += qubeSerial + ' ) ' + 'Cube result of ' + i + ' is = ' + (i*i*i) + '\n';
+//     qubeSerial++;
 // }
 // console.log(sqrResult, cubeResult);
 
@@ -237,7 +254,7 @@ Print all even numbers from 2 to 20, but skip the number 12.
 //             continue;
 //         }
 //         // console.log(i)
-//         evenSkip += serialEven + ' ) skip 12 number is' + ' = ' + i + '\n';
+//         evenSkip += serialEven + ' ) Skip 12 number is' + ' = ' + i + '\n';
 //         serialEven++;
 //     }
 // }
@@ -261,11 +278,14 @@ Multiplication Table
 Take a number (e.g., 5) and print its multiplication table up to 10 (e.g., 5 × 1 = 5, 5 × 2 = 10, etc.)
 */
 
-// let num11 = 5;
+// let num = 5;
+// let multiResult = '';
 // for( let i = 1; i <= 10; i++){
 //     // console.log(num * i)
-//     console.log(`${num11} x ${i} = ${num11 * i}`);
+//     multiResult += `${num} * ${i} = ${num * i} \n`
+//     // console.log(`${num} x ${i} = ${num * i}`);
 // }
+// console.log(multiResult)
 
 
 /*
@@ -274,11 +294,13 @@ Take a fixed string word (like "HELLO") and print each letter on a new line with
 */
 
 // let hello = 'Bangladesh';
+// let letter = ''
 // for( let i = 0; i < hello.length; i++){
 //     // console.log(hello[i])
-//     console.log(`- ${hello[i]}`);
+//     // console.log(`- ${hello[i]}`);
+//     letter += `- ${hello[i]} \n`
 // }
-
+// console.log(letter)
 
 /*
 Sum of First N Numbers
