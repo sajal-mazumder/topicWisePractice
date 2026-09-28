@@ -606,7 +606,7 @@ Given any positive integer, print its Collatz sequence using a loop. If even, di
 
 // let num5 = 20;
 // for(let i = num5; i > 1;){
-//     if ( i % 2 === 0) {
+//     if ( i % 2 === 0) { // can not use 4 or other digit
 //         i = i / 2;
 //     }else{
 //         i = i * 3 + 1; // can not use 5 or 7,...., it loops for infinity.
@@ -614,8 +614,9 @@ Given any positive integer, print its Collatz sequence using a loop. If even, di
 //     console.log(i)
 // }
 
-// using while loop - best practice
+//! using while loop - best practice
 
+// let num = 5;
 // while (num > 1) {
 //     if (num % 2 === 0) {
 //         num = num / 2
@@ -670,6 +671,36 @@ Print a perfect diamond shape made of asterisks (*) based on an odd number of ma
 //     console.log(rowStar);
 // }
 
+let seven = 7;
+let mid = Math.floor(seven / 2) +1;
+
+for(let i = 1; i <= mid; i++){
+    let starRow = '';
+
+    for(let j = 1; j <= mid - i; j++){
+        starRow += ' '
+    }
+
+    for(let k = 1; k <= (2 * i) -1; k++){
+        starRow += '$'
+    }
+    console.log(starRow)
+}
+
+for( let i = mid - 1; i >=1; i--){
+    let starRow = ''
+
+    for(let j = 1; j <= mid - i; j++){
+        starRow += ' '
+    }
+
+    for(let k = 1; k <= (2 * i) -1; k++){
+        starRow += '$' 
+    }
+    console.log(starRow)
+}
+
+//! another practice
 
 // let n = 7; 
 // let midLine = Math.floor( n / 2) + 1;
