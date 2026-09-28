@@ -341,12 +341,14 @@ Array Element Doubler
 Given a list of numbers (e.g., [1, 2, 3, 4, 5]), use a loop to print double the value of each number.
 */
 
-// let numArr = [2, 4, 33, 55, 4]
+// let numArr = [2, 4, 33, 55, 4];
+// let doubleArr = []; // it can be empty array or empty string
 
 // for( let i = 0; i < numArr.length ; i++){
-//     console.log(numArr[i] * 2)
+//     // console.log(numArr[i] * 2)
+//     doubleArr += `${numArr[i] * 2} \n`
 // }
-
+// console.log(doubleArr)
 
 /*
 Factorial Finder
@@ -354,10 +356,13 @@ Find the factorial of 5 (multiply 1 × 2 × 3 × 4 × 5) and print the final res
 */
 
 // let factorial = 1; 
+// let factorialResult = ''
 // for( let i = 1; i <= 7; i++){
-//     factorial *= i;
+//     // factorial *= i;
+//     factorialResult = `${factorial *= i}`
 // }
-// console.log(factorial)
+// // console.log(factorial)
+// console.log(factorialResult)
 
 
 /*
@@ -378,6 +383,7 @@ Loop through a given sentence or word and count how many total vowels (a, e, i, 
 //     }
 // }
 // console.log(count)
+
 
 // for( let i = 0; i < sentence.length; i++){
 //     // console.log(sentence[i].toLowerCase());
@@ -446,6 +452,7 @@ However, if the loop hits the number 7, it must stop completely and print nothin
 // for( let i = 1; i <= 10; i++){
 //     if (i === 7) {
 //         break;
+//         // continue;
 //     }
 //     // console.log(i);
 //     breakResult += breakSerial + ' ) ' + ' Break result of 7 is ' + ' = ' + i + '\n';
@@ -462,10 +469,12 @@ Hint: Combine your array loop knowledge (prices[i]) with an if condition.
 
 // let priceArr = [10, 45, 60, 12, 85, 30];
 // let priceArrRslt = '';
+// let serial = 1;
 // for( let i = 0; i < priceArr.length; i++){
 //     if (priceArr[i] > 40) {
 //         // console.log(priceArr[i])
-//         priceArrRslt += priceArr[i] + '\n';
+//         priceArrRslt += serial + '. ' + priceArr[i] + '\n';
+//         serial++;
 //     }
 // }
 // console.log(priceArrRslt);
@@ -497,6 +506,8 @@ Find all 3-digit numbers where the sum of each digit raised to the power of 3 eq
 // }
 
 
+//! 2 digit Narcissistic number
+
 // for(let i = 10; i <= 99; i++){
 //     let temp = i;
 
@@ -518,6 +529,8 @@ Find all 3-digit numbers where the sum of each digit raised to the power of 3 eq
 // console.log('No Narcissistic Number found.')  // print only one result
 
 
+
+//! 4 digit Narcissistic number
 
 // for( let num = 1000; num <= 9999; num++){
 //     let temp = num;
@@ -542,6 +555,36 @@ Find all 3-digit numbers where the sum of each digit raised to the power of 3 eq
 // console.log('No Narcissistic Number found.')
 
 
+//! 5 digit Narcissistic number
+
+// for( let i = 10000; i <= 99999; i++){
+//     let temp = i;
+
+//     let digit5 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit4 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit3 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp % 10;
+
+//     let sumOfPowerToFive = Math.pow(digit1, 5) + Math.pow(digit2, 5) + Math.pow(digit3, 5) + Math.pow(digit4, 5) + Math.pow(digit5, 5);
+
+//     if ( sumOfPowerToFive === i ) {
+//         console.log(i)
+//     }else{
+
+//         // console.log('No Narcissistic number found.')
+//         // break;
+//     }
+// }
+
 /*
 No 2: The Collatz Conjecture Sequence
 Given any positive integer, print its Collatz sequence using a loop. If even, divide by 2; if odd, multiply by 3 and add 1. Stop when it hits 1.
@@ -557,6 +600,18 @@ Given any positive integer, print its Collatz sequence using a loop. If even, di
 //     }
     
 //     console.log(i);
+// }
+
+//! another one collatz number practice
+
+// let num5 = 20;
+// for(let i = num5; i > 1;){
+//     if ( i % 2 === 0) {
+//         i = i / 2;
+//     }else{
+//         i = i * 3 + 1; // can not use 5 or 7,...., it loops for infinity.
+//     }
+//     console.log(i)
 // }
 
 // using while loop - best practice
