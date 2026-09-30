@@ -671,34 +671,6 @@ Print a perfect diamond shape made of asterisks (*) based on an odd number of ma
 //     console.log(rowStar);
 // }
 
-let seven = 7;
-let mid = Math.floor(seven / 2) +1;
-
-for(let i = 1; i <= mid; i++){
-    let starRow = '';
-
-    for(let j = 1; j <= mid - i; j++){
-        starRow += ' '
-    }
-
-    for(let k = 1; k <= (2 * i) -1; k++){
-        starRow += '$'
-    }
-    console.log(starRow)
-}
-
-for( let i = mid - 1; i >=1; i--){
-    let starRow = ''
-
-    for(let j = 1; j <= mid - i; j++){
-        starRow += ' '
-    }
-
-    for(let k = 1; k <= (2 * i) -1; k++){
-        starRow += '$' 
-    }
-    console.log(starRow)
-}
 
 //! another practice
 
@@ -773,6 +745,7 @@ Given two 3 × 3 grids of numbers, use nested loops to calculate and print the r
 
 // // Print the resulting grid
 // console.log("Result:");
+
 // for (let i = 0; i < A.length; i++) {
 //     console.log(result[i].join(" "));
 // }
@@ -891,6 +864,7 @@ Multiplication Table Generator (নামতার ঘর তৈরি)১ থ�
 // }
 
 
+
 /*
 Count and Sum of Multiples (গুণিতকের সংখ্যা ও যোগফল)১ থেকে ১০০ এর মধ্যে কতগুলো সংখ্যা ৩ এবং ৫ উভয় সংখ্যা দিয়েই বিভাজ্য (ভাগশেষ ০ হয়) তা খুঁজে বের করুন। লুপ শেষে মোট কয়টি সংখ্যা পাওয়া গেল (Count) এবং তাদের সবার যোগফল (Sum) কত হলো তা প্রিন্ট করুন।
 */
@@ -906,6 +880,22 @@ Count and Sum of Multiples (গুণিতকের সংখ্যা ও য�
 // }
 // console.log(sum)
 // console.log(count)
+
+//! another practice
+
+// let sum = 0; 
+// let count = 0;
+// let matchNum = []
+
+// for( let i = 1; i <= 100; i++){
+//     if(i %3 === 0 && i % 5 === 0){
+//         // console.log(i)
+//         matchNum.push(i);
+//         sum += i;
+//         count++
+//     }
+// }
+// console.log(matchNum, sum, count)
 
 
 /*
@@ -930,6 +920,20 @@ Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ �
 // }
 // console.log('second largest number is ' + secondLargest)
 
+let arrNum = [34, 33, 56, 32, 22, 57, 59, 93, 23, 99];
+let largests = -Infinity;
+let sLargest = -Infinity;
+
+for(let i = 0; i < arrNum.length; i++){
+    let current = arrNum[i];
+    if(current > largests){
+        sLargest = largests;
+        largests = current;
+    }else if(current > sLargest && current !== largests){
+        sLargest = current;
+    }
+}
+console.log(sLargest);
 
 /*
 No 6: Prime Factorization Breakdown
