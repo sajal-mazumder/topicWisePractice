@@ -920,27 +920,29 @@ Find the Second Largest Number (দ্বিতীয় সর্বোচ্চ �
 // }
 // console.log('second largest number is ' + secondLargest)
 
-let arrNum = [34, 33, 56, 32, 22, 57, 59, 93, 23, 99];
-let largests = -Infinity;
-let sLargest = -Infinity;
+//! another practice
 
-for(let i = 0; i < arrNum.length; i++){
-    let current = arrNum[i];
-    if(current > largests){
-        sLargest = largests;
-        largests = current;
-    }else if(current > sLargest && current !== largests){
-        sLargest = current;
-    }
-}
-console.log(sLargest);
+// let arrNum = [34, 33, 56, 32, 22, 57, 59, 93, 23, 99];
+// let largests = -Infinity;
+// let sLargest = -Infinity;
+
+// for(let i = 0; i < arrNum.length; i++){
+//     let current = arrNum[i];
+//     if(current > largests){
+//         sLargest = largests;
+//         largests = current;
+//     }else if(current > sLargest && current !== largests){
+//         sLargest = current;
+//     }
+// }
+// console.log(`Second Largest Number of Array is ${sLargest}`);
 
 /*
 No 6: Prime Factorization Breakdown
 Take a single large number and find all of its prime factors using a loop (e.g., inputting 12 should print 2, 2, 3)
 */
 
-// let num = 12; 
+// let num = 85; 
 // let factors = [];
 // let divisor = 2; // for while loop
 
@@ -956,7 +958,7 @@ Take a single large number and find all of its prime factors using a loop (e.g.,
 // console.log(factors.join(' , '))
 // console.log(factors)
 
-// usin while loop best practice
+// using while loop best practice
 
 // while( num > 1){
 //     if (num % divisor === 0) {
