@@ -974,10 +974,10 @@ Take a single large number and find all of its prime factors using a loop (e.g.,
 
 /*
 No 7: String Compression (Run-Length Encoding)
-Take a string with repeating characters (like aaabbcdddd) and compress it to count the repetitions (outputting a3b2c1d4). [1]
+Take a string with repeating characters (like aaabbcdddd) and compress it to count the repetitions (outputting a3b2c1d4). 
 */
 
-// let string = 'aaabbbbccddaaaa';
+// let string = 'xyz';
 // let compressed = '';
 // let count = 1;
 
@@ -1001,7 +1001,7 @@ Take a string with repeating characters (like aaabbcdddd) and compress it to cou
 //     if (i === 3) {
 //         continue; // 'continue' এর কাজ হলো এই চক্করটি স্কিপ করে পরের চক্করে চলে যাওয়া
 //     }
-//     ResultString += i + "-";
+//     ResultString += i + ",";
 // }
 
 // console.log(ResultString);
@@ -1011,6 +1011,7 @@ Take a string with repeating characters (like aaabbcdddd) and compress it to cou
 
 // for (let i = 1; i <= 10; i++) {
 //     if (i % 2 === 0) {
+//         // console.log(i) // 2, 4, 6, 8, 10
 //         totalSum += i; // শুধু এইটুকুই থাকবে
 //     }
 //     // ভেতরের i++ টি মুছে দেওয়া হলো
@@ -1023,6 +1024,7 @@ Take a string with repeating characters (like aaabbcdddd) and compress it to cou
 // for (let i = 1; i <= 50; i++) { // Notice the blank space at the end
     
 //     if (i % 5 === 0) {
+//         // console.log(i)
 //         count++;
 //          // Shifting to next number
 //     }
@@ -1037,6 +1039,7 @@ Take a string with repeating characters (like aaabbcdddd) and compress it to cou
 
 // for (let i = 0; i < nums.length; i++) {
 //     total += nums[i];
+//     // console.log(total)
 // }
 
 // let average = total / nums.length; // 👈 এই লাইনটি খেয়াল করুন
@@ -1118,17 +1121,50 @@ Array Rotation Engine
 Given an array of numbers, rotate the entire array to the right by K steps using a loop without using built-in shift functions.
 */
 
-let arr = [1, 2, 3, 4, 5];
-let k = 2;
+// let arr = [1, 2, 3, 4, 5];
+// let k = 2;
 
-for (let step = 0; step < k; step++) {
-    let last = arr[arr.length - 1];
+// for (let step = 0; step < k; step++) {
+//     let last = arr[arr.length - 1];
 
-    for (let i = arr.length - 1; i > 0; i--) {
-        arr[i] = arr[i - 1];
-    }
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         arr[i] = arr[i - 1];
+//     }
 
-    arr[0] = last;
-}
+//     arr[0] = last;
+// }
 
-console.log(arr);
+// console.log(arr);
+
+
+// একজন লোকের ক্রয় করা জিনিসের এরে থেকে লুপ করে মোট মুল্যের উপর ডিসকাউন্ট হিসাব করা। 
+
+// let billArr = [1200, 2400, 300, 450, 500, 1500, 1000];
+// let billTotal = 0;
+// let discount = 0;
+// let discountedBill = 0;
+// for(let i = 0; i < billArr.length; i++){
+//     // console.log(billArr[i])
+//     billTotal += billArr[i];
+//     // console.log(billTotal)
+// }
+// if(billTotal < 3000){
+//         discount = billTotal * 0
+//         discountedBill = billTotal;
+//         // console.log(discountedBill)
+//     }else if(billTotal < 5000){
+//         discount = billTotal * .10
+//         // console.log(discount)
+//         discountedBill = billTotal - discount;
+//         // console.log(discountedBill)
+//     }else if(billTotal >= 5000){
+//         discount = billTotal * .15
+//         // console.log(discount)
+//         discountedBill = billTotal - discount;
+//         // console.log(discountedBill)
+//     }
+// console.log(`--- Supershop Bill ---`);
+// console.log(`--- Total Bill --- ${billTotal} tk.`);
+// console.log(`--- Total Discount --- ${discount} tk.`);
+// console.log(`--- Discounted Bill --- ${discountedBill} tk.`)
+
