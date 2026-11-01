@@ -269,20 +269,257 @@ Log the specific perks for the tier.
 Make sure that higher tiers automatically inherit (“fall through” intentionally into) the perks of the lower tiers.
 */
 
-let tierNum = 13;
-let perks = '';
-switch (tierNum) {
-    case 3: 
-    console.log('gold star')
+// let tierNum = 13;
+// let perks = '';
+// switch (tierNum) {
+//     case 3: 
+//     console.log('gold star')
 
-    case 2: 
-    console.log('silver star')
+//     case 2: 
+//     console.log('silver star')
 
-    case 3: 
-    console.log('bronze star')
-    break;
+//     case 3: 
+//     console.log('bronze star')
+//     break;
 
-    default:
-        console.log('please select 1,2 or 3.')
-        break;
-}
+//     default:
+//         console.log('please select 1,2 or 3.')
+//         break;
+// }
+
+// switch (tierNum) {
+//     case 3:
+//         perks = 'gold star'
+//         break;
+//     case 2:
+//         perks = 'silver star'
+//         break;
+//     case 1:
+//         perks = 'bronze star'
+//         break;
+
+//     default:
+//         perks = 'please select a valid number.'
+//         break;
+// }
+// console.log(perks)
+
+/*
+🎉No 9:
+Fitness workout plans (switch case )
+Accept a string for the current day of week.
+Log “Cardio” for monday and wednesday, “Strength” for tuesday and thursday, “Yoga” for friday and “Rest Day” for the weekend.
+Group the matching days together efficiently.
+*/
+
+// let days = 'saturday'
+// let workDays = days.toLowerCase()
+// let work = '';
+// switch (true) {
+//     case (workDays === 'monday' || workDays === 'wenesday'):
+//         work = 'Cardio'
+//         break;
+//     case (workDays === 'tuesday' || workDays === 'thursday'):
+//         work = 'Strength'
+//         break;
+//     case (workDays === 'friday'):
+//         work = 'Yoga'
+//         break;
+//     case (workDays === 'saturday' || workDays === 'sunday'):
+//         work = 'Rest day'
+//         break;
+
+//     default:
+//         work = 'Please select a valid day'
+//         break;
+// }
+// console.log(work)
+
+// switch (workDays) {
+//     case 'monday':
+//     case 'wenesday':
+//         work = 'Cardio'
+//         break;
+//     case 'tuesday':
+//     case 'thursday':
+//         work = 'Strength'
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         work = 'Rest day'
+//         break;
+//     case 'friday':
+//         work = 'Yoga'
+//         break;
+
+//     default:
+//         work = 'Please select a valid day'
+//         break;
+// }
+// console.log(work)
+
+/*
+🎉No 10:
+The amusement park ride
+A roller coaster requires a rider to be over 120 cm tall and accompanied by an adult, or they can ride alone if they are over 140 cm tall.
+Your states:
+You are 135 cm tall and you are alone.
+Is the final scenario true or false for you being allowed to ride?
+*/
+
+// let tall = 145;
+// let isAlone = true;
+// if (tall >= 140) {
+//     console.log('Ride alone')
+// }else if(tall >= 120 && !isAlone){
+//     console.log('Ride with accompany')
+// }else{
+//     console.log('Can not ride.')
+// }
+
+// if(tall >= 120 && !isAlone || tall >= 140){
+//     console.log('Can ride')
+// }else{
+//     console.log('can not ride.')
+// }
+
+// let ride = (tall >= 120 && !isAlone) || tall >= 140 ? 'can ride' : 'can not ride.'
+// console.log(ride)
+
+
+/*
+🎉No 11:
+The online discount
+A website gives a discount if a customer is a new user and has a promo code.
+Alternatively, they get the discount if they are a VIP member ( regardless of the code or user age).
+Your stats: You are a new user, you don’t have a promo code, and you are a VIP member.
+Is the final scenario true or false for you getting the discount?
+*/
+
+// let newUser = true;
+// let hasPromoCode = true;
+// let VIPis = false;
+// if (VIPis) {
+//     console.log('get discount')
+// }else if(newUser && hasPromoCode){
+//     console.log('get discount also.')
+// }else{
+//     console.log('no discount available.')
+// }
+
+// let getDiscount = VIPis ? 'get discount' : ((newUser && hasPromoCode) ? 'get discount also' : 'no discount applied.');
+// console.log(getDiscount)
+
+
+/*
+🎉No 12:
+The automated greenhouse
+The watering system turns on if the soil is dry and the temperature is above 25 degrees.
+Current stats: the soil is wet, the temperature is 30 and it is 9:00 pm.
+Is the final scenario true or false for the watering system turning on?
+*/
+
+// let isSoilDry = true;
+// let temperature = 28;
+// let isPeakHour = true;
+// if(isSoilDry && temperature > 25 && !isPeakHour){
+//     console.log('turn on watering system.')
+// }else{
+//     console.log('turn off watering system.')
+// }
+
+// let watering = isSoilDry && temperature > 25 && !isPeakHour ? 'turn on watering system': 'turn off watering system.'
+// console.log(watering)
+
+
+/*
+🎉No 13:
+The exam eligibility 
+To sit for an exam, a student must have paid their fees and have an attendance over 75%. However, if they have a medical waiver, they only need to have paid their fees.
+Your stats: You paid your fees, your attendance is 65% and you do not have a medical waiver.
+Is the final scenario true or false for you being eligible for the exam?
+*/
+
+// let feesPaid = false;
+// let attendence = 55;
+// let hasMedicalWaiver = true;
+// if(feesPaid){
+//     if(attendence >= 75 || hasMedicalWaiver){
+//         console.log('eligible for exam')
+//     }else{
+//         console.log('not eligible for exam')
+//     }
+// }else{
+//     console.log('first pay your fees.')
+// }
+
+// if(feesPaid && (attendence >= 75 || hasMedicalWaiver)){
+//     console.log('allowed for exam')
+// }else{
+//     console.log('not allowed for exam.')
+// }
+
+// let eligibleForExam = !feesPaid ? 'first pay your fees' : (attendence >= 75 || hasMedicalWaiver ? 'allowed for exam' : 'not allowed for exam.')
+// console.log(eligibleForExam)
+
+// let allowForExam = feesPaid ? ((attendence >= 75 || hasMedicalWaiver) ? 'allowed for exam' : 'not allowed for exam') : 'first pay your fees.'
+// console.log(allowForExam)
+
+
+/*
+🎉No 14:
+The smartphone unlock
+A phone will unlock if face ID matches or if the correct PIN is entered.
+However, the phone will absolutely not unlock if the battery is completely dead, no matter what.
+Current status: Face ID matches, the PIN is incorrect, and the battery is completely dead.
+Is the final scenario true or false for the phone unlocking?
+*/
+
+// let isBatteryDead = true;
+// let isFaceMatch = false;
+// let isPinCorrect = false;
+
+// if(!isBatteryDead){
+//     if(isFaceMatch || isPinCorrect){
+//         console.log('Unlock your phone.')
+//     }else{
+//         console.log('Please match your face id or enter correct pin.')
+//     }
+// }else{
+//     console.log('Sorry! Your phone is dead.')
+// }
+
+// let unlockPhone = isBatteryDead ? 'Sorry! your phone is dead.': ((isFaceMatch || isPinCorrect) ? 'Unlock your phone.' : 'Please match your face id or enter correct pin.') 
+// console.log(unlockPhone)
+
+// let phoneUnlock = !isBatteryDead ? ((isFaceMatch || isPinCorrect) ? 'Unlock your phone.' : 'Please match your face id or enter correct pin.') : 'Sorry! your phone is dead.'
+// console.log(phoneUnlock)
+
+
+/*
+🎉No 15:
+OTP Verification
+To log in to an app, the user must provide the correct OTP.
+However, if the user is using a "Trusted Device", they can log in without an OTP.
+But if the user is directly blocked, they will not be allowed to log in under any circumstances. 
+*/
+
+// let isCorrectOTP = false;
+// let isTrustedDevice = false;
+// let isBlocked = false;
+
+// if(!isBlocked){
+//     if (isCorrectOTP || isTrustedDevice) {
+//         console.log('Log in to app.')
+//     }else{
+//         console.log('Please enter valid OTP or use trusted device.')
+//     }
+// }else{
+//     console.log('Sorry! Your device is blocked.')
+// }
+
+// let logInApp = !isBlocked ? ((isCorrectOTP || isTrustedDevice) ? 'Log in to app.' : 'Please enter valid OTP or use trusted device.') : 'Sorry! Your device is blocked.'
+// console.log(logInApp);
+
+// let appLogin = isBlocked ? 'Sorry! Your device is blocked.' : ((isCorrectOTP || isTrustedDevice) ? 'Log in to app.' : 'Please enter valid OTP or use trusted device.')
+// console.log(appLogin);
