@@ -649,12 +649,196 @@ However, if a "Special Screening" or premier show is running in the theater, tic
 let isPremiurShow = false;
 let isMilitaryMember = true;
 let age = 34;
-if(!isPremiurShow){
-    if(isMilitaryMember || age <= 5){
-        console.log('ticket for 0$.')
-    }else{
-        console.log('ticket for 10$.')
-    }
+// if(!isPremiurShow){
+//     if(isMilitaryMember || age <= 5){
+//         console.log('ticket for 0$.')
+//     }else{
+//         console.log('ticket for 10$.')
+//     }
+// }else{
+//     console.log('tikcet for 10$.')
+// }
+
+// let ticketPrice = isPremiurShow ? 'ticket for 12$' : ((isMilitaryMember || age < 5) ? 'ticket for 0$.' : 'ticket for 10$.');
+// console.log(ticketPrice);
+
+
+/*
+🎉No 20:
+Credit Card Approval
+A bank will issue you a credit card if your monthly income is greater than 50,000 TK AND your credit score is above 700.
+However, if you have an active loan defaulter record with the bank, you will not be allowed to get a card under any circumstances. 
+*/
+
+// let hasActiveLoan = false;
+// let creditScore = 700;
+// let monthlyIncome = 44000;
+// if(hasActiveLoan){
+//     console.log('No credit card in any circumstances.')
+// }else if(monthlyIncome >= 50000 && creditScore >= 700){
+//     console.log('Issue credit card.')
+// }else{
+//     console.log('Can not issue credit card.')
+// }
+
+// let issueCard = hasActiveLoan ? 'No credit card in any circumstances.' : ((monthlyIncome >= 50000 && creditScore >= 700) ? 'Issue credit card.' : 'Can not issue credit card.');
+// console.log(issueCard);
+
+
+/*
+🎉No 21:
+Flight Boarding Eligibility
+A passenger can board the plane if they have a valid passport AND a boarding pass.
+However, if they are an enforcement officer (such as police/security personnel) on active duty, they can board the plane with just a passport, without needing a boarding pass. 
+*/
+
+// let isSecurityPerson = true;
+// let hasValidPassport = true;
+// let hasBoardingPass = false;
+// let activeDuty = false;
+// if(hasValidPassport){
+//     if(isSecurityPerson && activeDuty){
+//         console.log('You can board plane without boarding pass.')
+//     }else if(hasBoardingPass){
+//         console.log('you can board plane.')
+//     }else{
+//         console.log('Not allowed to board plane.')
+//     }
+// }else{
+//     console.log('Not a valid passport.')
+// }
+
+// guard clause
+// if(!hasValidPassport){
+//     console.log('Oops! invalid passport.')
+// }else if(isSecurityPerson && activeDuty){
+//     console.log('Can board plane without boarding pass.')
+// }else if(hasBoardingPass){
+//     console.log('can board plane.')
+// }else{
+//     console.log('Not allowed to board plane.')
+// }
+
+// let boardingPlane = hasValidPassport ? ((isSecurityPerson && activeDuty) ? 'You can board plane without boarding pass.' : (hasBoardingPass ? 'You can board plane.':'Not allowed to board plane.')) : 'Not a valid passport.';
+// console.log(boardingPlane)
+
+// let planeBoard = !hasValidPassport ? 'Ops! invalid passport.' : ((isSecurityPerson && activeDuty) ? 'Can board plane without boarding pass.' : (hasBoardingPass ? 'can board plane.' : 'Not allowed to board plane.'));
+// console.log(planeBoard);
+
+
+/*
+🎉No 22:
+E-commerce Combo Offer
+A shop will give you a discount if you buy at least 3 items OR if your total bill is greater than 5,000 TK.
+However, if your cart contains any "Clearance Sale" items, this offer will not be applicable (meaning you will not receive any discount). 
+*/
+
+// let buyItems = 2;
+// let billTotal = 3000;
+// let isClearenceSale = false;
+// if(isClearenceSale){
+//     console.log('No discount.')
+// }else if(buyItems > 3 || billTotal > 5000){
+//     console.log('10% discount.')
+// }else{
+//     console.log('No discount.')
+// }
+
+// let discount = isClearenceSale ? 'No discount.' : ((buyItems > 3 || billTotal > 5000) ? '10% discount.' : 'No discount.')
+// console.log(discount);
+
+
+/*
+🎉No 23:
+Books from a library
+A library allows you to borrow a book if you have a library card and you have no overdue fines.
+However, if you are a teacher, you can borrow books instantly ( even without a card or fines).
+*/
+
+// let isTeacher = false;
+// let isStudent = true;
+// let hasLibraryCard = true;
+// let hasOverDue = false;
+// if(isTeacher){
+//     console.log('Please take your book. No need a library card.')
+// }else if(isStudent){
+//     if(hasLibraryCard && !hasOverDue){
+//         console.log('Can borrow book.')
+//     }else{
+//         console.log('library card issue or over due.')
+//     }
+// }else{
+//     console.log('Sorry! you are not a student / teacher.')
+// }
+
+// let borrowBook = isTeacher ? 'Please take your book. No need a library card.' : (isStudent ? ((hasLibraryCard && !hasOverDue) ? 'Can borrow book.' : 'Library card issue or over due.'): 'Sorry! you are not a student / teacher.');
+// console.log(borrowBook);
+
+/*
+🎉No 24:
+The gym premium zone
+A gym has a private VIP lounge.
+A member can enter if they have a premium membership and their account is active ( not suspended ).
+However, any gym instructor or stuff can enter the lounge anytime automatically, even if they don’t have a membership.
+Your stats: You are a regular member, your account is active and you are not a staff member.
+*/
+
+// let isStuff = false;
+// let isRegularMember = false;
+// let isAccountActive = true;
+// let isVIPmember = false;
+
+// if(isStuff){
+//     console.log('Entry access ok. you are a stuff.')
+// }else if(isAccountActive){
+//     if(isVIPmember){
+//         console.log('Access granted. VIP member.')
+//     }else if(isRegularMember){
+//         console.log('General Lounge granted.')
+//     }else{
+//         console.log('Check your membership.')
+//     }
+// }else{
+//     console.log('Access denied. Account postponed.')
+// }
+
+
+// if(isStuff){
+//     console.log('Entry access ok. you are a stuff.')
+// }else if(!isAccountActive){
+//     console.log('Access denied. Account postponed.')
+// }else if(isVIPmember){
+//     console.log('Access granted. VIP member.')
+// }else if(isRegularMember){
+//     console.log('General lounge granted.')
+// }else{
+//     console.log('Please check your membership.')
+// }
+
+// let gymEntry = isStuff ? 'Entry access ok. you are a stuff.' : ((!isAccountActive) ? 'Access denied. Account postponed.' : (isVIPmember ? 'Access granted' : (isRegularMember ? 'General lounge granted.' : 'Please check your membership.')))
+// console.log(gymEntry);
+
+
+/*
+🎉No 25:
+The car rental
+A car rental company will rent you a car if you are over 21 years old and have a valid drivers license.
+However, if you are an international tourist, you can bypass the age limit but you absolutely must have an international drivers license.
+Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.
+*/
+
+let isIntTourist = false;
+let hasDrivingLicense = false;
+let hasIntDrivingLicense = false;
+let ages = 29;
+
+if(isIntTourist && hasIntDrivingLicense){
+    console.log('Can rent car. no need to age limit.')
+}else if(hasDrivingLicense && ages > 21){
+    console.log('Can rent car.')
 }else{
-    console.log('tikcet for 10$.')
+    console.log('Not allowed.')
 }
+
+let carRent = (isIntTourist && hasIntDrivingLicense) ? 'Can rent car. no need to age limit.' : ((hasDrivingLicense && ages > 21) ? 'Can rent a car.' : 'Not allowed.')
+console.log(carRent);
