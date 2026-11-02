@@ -523,3 +523,138 @@ But if the user is directly blocked, they will not be allowed to log in under an
 
 // let appLogin = isBlocked ? 'Sorry! Your device is blocked.' : ((isCorrectOTP || isTrustedDevice) ? 'Log in to app.' : 'Please enter valid OTP or use trusted device.')
 // console.log(appLogin);
+
+
+/*
+🎉No 16:
+Free Shipping
+An e-commerce website offers free shipping if the total order cost is greater than $50 AND the customer is a resident of the same city (Local).
+Alternatively, if the customer is a Premium Member, they will receive free shipping regardless of the order cost. 
+*/
+
+// let orderCosting = 40;
+// let isLocal = false;
+// let isPremium = false;
+
+// if(isPremium){
+//     console.log('free shipping.')
+// }else if(orderCosting > 50 && isLocal){
+//     console.log('free shipping.')
+// }else{
+//     console.log('shipping charge added.')
+// }
+
+// if(isPremium || isLocal && orderCosting > 50){
+//     console.log('free shipping.')
+// }else{
+//     console.log('shipping charge added.')
+// }
+
+// let shippingCharge = isPremium || (isLocal && orderCosting > 50) ? 'free shipping.' : 'shipping charge added.';
+// console.log(shippingCharge);
+
+/*
+🎉No 17:
+Blood Donation Eligibility
+To donate blood, the age must be between 18 and 60 years AND the weight must be greater than 50 kg and last blood donation above 3 months.
+However, if a tattoo has been gotten within the last 9 months, blood donation is not allowed. 
+*/
+
+// let age = 45;
+// let weight = 55;
+// let lastBloodDonate = 4;
+// let hasTattoo = 10;
+
+// if(hasTattoo >= 9){
+//     if(age >= 18 && age <= 60){
+//         if(weight >= 50){
+//             if(lastBloodDonate > 3){
+//                 console.log('eligible for blood donate.')
+//             }else{
+//                 console.log('Last blood donate must be over 3 months.')
+//             }
+//         }else{
+//             console.log('You are underweight or overweight.')
+//         }
+//     }else{
+//         console.log('You are under 18 or over 60.')
+//     }
+// }else{
+//     console.log('Sorry! Your tattoo does not exceed 9 months. Not eligible for blood donate.')
+// }
+
+
+// // guard clause
+// if(hasTattoo <= 9){
+//     console.log('Sorry! your tattoo does not cross 9 months.')
+// }else if(age < 18 || age > 60){
+//     console.log('You must be 18 - 60.')
+// }else if(weight < 50){
+//     console.log('You must be over 50kg.')
+// }else if(lastBloodDonate < 3){
+//     console.log('Last blood donate must be over 3 months.')
+// }else{
+//     console.log('Congratulations! Eligible for blood donate.')
+// }
+
+
+// let bloodDonate = hasTattoo <= 9 ? 'Sorry! your tattoo does not cross 9 months.' : ((age < 18 || age > 60 ? 'age must be 18 - 60' :(weight < 50) ? 'underweight.' : (lastBloodDonate < 3 ? 'Last blood donate must be over 3 months.' : 'Congratulations! Eligible for blood donate.')))
+// console.log(bloodDonate);
+
+/*
+🎉No 18:
+ATM Withdrawal
+To withdraw money from an ATM booth, the user must provide the correct PIN.
+Next, the booth must have enough cash.
+However, if the user is a VIP account holder, the bank will provide the money from another fund even if the booth's cash is low (meaning there is no need to check the booth's cash). 
+*/
+
+// let isVIPs = true;
+// let cashAmount = 500;
+// let isCorrectPin = true;
+// if(isCorrectPin){
+//     if(isVIPs){
+//         console.log('Can withdraw any amount.')
+//     }else if(cashAmount >= 1000){
+//         console.log('can withdraw your desired amount.')
+//     }else{
+//         console.log('balance is very low.')
+//     }
+// }else{
+//     console.log('Please enter correct pin.')
+// }
+
+// let cashWithdraw = isCorrectPin ? (isVIPs ? 'can withdraw any amount.' : (cashAmount >= 1000 ? 'can withdraw your desired amount.' : 'balance is very low')) : 'Please enter correct pin.';
+// console.log(cashWithdraw);
+
+// guard clause
+
+// if(!isCorrectPin){
+//     console.log('Oops! incorrect pin.')
+// }else if(isVIPs){
+//     console.log('can withdraw any amount.')
+// }else if(cashAmount < 1000){
+//     console.log('low balance.')
+// }else{
+//     console.log('can withdraw your desired amount.')
+// }
+
+
+/*
+🎉No 19:
+Movie Ticket Pricing
+The ticket price at a movie theater will be free ($0) if the viewer is a child aged 5 or under (Age <= 5) OR a military member.
+However, if a "Special Screening" or premier show is running in the theater, ticket purchase is mandatory for everyone (no one gets it for free). 
+*/
+let isPremiurShow = false;
+let isMilitaryMember = true;
+let age = 34;
+if(!isPremiurShow){
+    if(isMilitaryMember || age <= 5){
+        console.log('ticket for 0$.')
+    }else{
+        console.log('ticket for 10$.')
+    }
+}else{
+    console.log('tikcet for 10$.')
+}
