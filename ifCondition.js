@@ -827,18 +827,455 @@ However, if you are an international tourist, you can bypass the age limit but y
 Your stats: You are 19 years old, you are an international tourist, and you have an international driver's license.
 */
 
-let isIntTourist = false;
-let hasDrivingLicense = false;
-let hasIntDrivingLicense = false;
-let ages = 29;
+// let isIntTourist = false;
+// let hasDrivingLicense = false;
+// let hasIntDrivingLicense = false;
+// let ages = 29;
 
-if(isIntTourist && hasIntDrivingLicense){
-    console.log('Can rent car. no need to age limit.')
-}else if(hasDrivingLicense && ages > 21){
-    console.log('Can rent car.')
+// if(isIntTourist && hasIntDrivingLicense){
+//     console.log('Can rent car. no need to age limit.')
+// }else if(hasDrivingLicense && ages > 21){
+//     console.log('Can rent car.')
+// }else{
+//     console.log('Not allowed.')
+// }
+
+// let carRent = (isIntTourist && hasIntDrivingLicense) ? 'Can rent car. no need to age limit.' : ((hasDrivingLicense && ages > 21) ? 'Can rent a car.' : 'Not allowed.')
+// console.log(carRent);
+
+
+/*
+🎉No 26:
+The job interview shortlist
+A company automatically invites an applicant for an interview if they have a recommendation letter from the CEO.
+For regular applicants, they must have a computer science degree and at least 2 years experience to get shortlisted.
+Your stats: You do not have a recommendation letter, you have a CS degree and you have 5 years of experience.
+*/
+
+// let hasRecommendCEO = false;
+// let isRegularApplicant = true;
+// let hasComputerScDegree = true;
+// let hasExperience = 1;
+// if(hasRecommendCEO){
+//     console.log('You are shortlisted by CEO recommendation.')
+// }else if(isRegularApplicant){
+//     if(hasComputerScDegree && hasExperience > 2){
+//         console.log('You are shortlisted candidate.')
+//     }else{
+//         console.log('You do not have a CS degree or 2 years plus experience.')
+//     }
+// }else{
+//     console.log('You are not eligible for interview.')
+// }
+
+// let shortlisted = hasRecommendCEO ? 'You are shortlisted by CEO recommendation.' : ((isRegularApplicant) ? ((hasComputerScDegree && hasExperience > 2) ? 'You are shortlisted candidate.' : 'You do not have a CS degree or 2 years plus experience.'): 'You are not eligible for interview.');
+// console.log(shortlisted);
+
+
+/*
+🎉No 27:
+The automated warehouse drone
+An automated shipping drone will launch to deliver a package if it has high priority tags.
+For standard priority packages, the drone will only launch if the delivery distance is under 5 miles and the current weather status is clear.
+*/
+
+// let hasHighPriority = false;
+// let hasStandardPriority = false;
+// let distance = 6;
+// let isClearSky = true;
+
+// if(hasHighPriority){
+//     console.log('Drone will launch at any distance.')
+// }else if(hasStandardPriority){
+//     if(distance <= 5 && isClearSky){
+//         console.log('Drone will launch shipping.')
+//     }else{
+//         console.log('Long distance or bad sky.')
+//     }
+// }else{
+//     console.log('Sorry! drone will not launch shipping.')
+// }
+
+// let droneLaunch = hasHighPriority ? 'Drone will launch at any distance.' : ((hasStandardPriority) ? ((distance <= 5 && isClearSky) ? 'Drone will launch shipping.' : 'Long distance or bad sky.') : 'Sorry! drone will not launch shipping.');
+// console.log(droneLaunch);
+
+
+/*
+🎉No 28:
+Credit card fraud alert
+A bank’s security system automatically triggers a fraud alert if a transaction is flagged  as an international withdrawal.
+For domestic transactions, an alert is triggered only if the transaction amount is over $500 and the user has never shopped at that store before.
+*/
+
+// let isIntTransaction = false;
+// let isDomesticTransaction = true;
+// let isAmount = 700;
+// let hasNeverShopped = false;
+
+// if(isIntTransaction){
+//     console.log('Fraud alert. May be international hacker.')
+// }else if(isDomesticTransaction){
+//     if(isAmount > 500 && hasNeverShopped){
+//         console.log('Fraud alert. May be domestic hacker.')
+//     }else{
+//         console.log('Safe transaction.')
+//     }
+// }else{
+//     console.log('No access.')
+// }
+
+
+// let cashWithdraw = isIntTransaction ? 'Fraud alert. May be international hacker.' : ((isDomesticTransaction) ? ((isAmount > 500 && hasNeverShopped) ? 'Fraud alert. May be domestic hacker.' : 'Safe transaction.') : 'No access.');
+// console.log(cashWithdraw);
+
+
+/*
+🎉No 29:
+Flight boarding clearance
+A passenger is allowed to board an airplane instantly if they have a first class ticket.
+For economy passengers, they are allowed to board only if they have a valid passport and their carry-on luggage weights under 10kg.
+*/
+
+// let has1stClsTicket = false;
+// let isEconmyPassenger = false;
+// let hasValidPassport = true;
+// let luggageWeight = 9;
+
+// if(has1stClsTicket){
+//     console.log('Board airplane without passport.')
+// }else if(isEconmyPassenger){
+//     if(hasValidPassport && luggageWeight <= 10){
+//         console.log('Board airplane.')
+//     }else{
+//         console.log('Invalid passport or luggage weight over 10 kg.')
+//     }
+// }else{
+//     console.log('No access.')
+// }
+
+// let boardingPlane = has1stClsTicket ? 'Board airplane without passport.' : ((isEconmyPassenger) ? ((hasValidPassport && luggageWeight <= 10) ? 'Board airplane.' : 'Invalid passport or luggage weight over 10 kg.'): 'No access.');
+// console.log(boardingPlane);
+
+
+/*
+🎉No 30:
+Autonomous car emergency braking
+An autonomous car triggers its emergency brakes instantly if a Pedestrian is detected in its path.
+For static obstacles ( like trash cans or cones ), the brakes are triggered only if the car’s current speed is over 30 mph and the road conditions are slippery.
+*/
+
+// let isPedestrianDetected = false;
+// let isStaticObstacles = true;
+// let currentSpeed = 23;
+// let isRoadSlip = true;
+
+// if(isPedestrianDetected){
+//     console.log('Hydrolic brak need.')
+// }else if(isStaticObstacles){
+//     if(currentSpeed > 30 && isRoadSlip){
+//         console.log('Hard brak need.')
+//     }else{
+//         console.log('No need to brak.')
+//     }
+// }else{
+//     console.log('Ride on normal speed.')
+// }
+
+// let brak = isPedestrianDetected ? 'Hydrolic brak need.' : ((isStaticObstacles) ? ((currentSpeed > 30 && isRoadSlip) ? 'Hard brak need.' : 'No need to brak.') : 'Ride on normal speed.');
+// console.log(brak);
+
+
+/*
+🎉No 31:
+University scholarship qualification
+A university automatically awards a full scholarship if the student is a valedictorian of their high school.
+For all other students, they qualify only if they have an SAT score above 1450 and family income is below $40000.
+*/
+
+// let isValedictorian = false;
+// let isRegularApplicant = true;
+// let satScore = 1700;
+// let familyIncome = 55000;
+
+// if(isValedictorian){
+//     console.log('Auto selected for scholarship.')
+// }else if(isRegularApplicant){
+//     if(satScore >= 1450 && familyIncome <= 40000){
+//         console.log('Selected for scholarship.')
+//     }else{
+//         console.log('check SAT score or family income.')
+//     }
+// }else{
+//     console.log('Not selected for scholarship.')
+// }
+
+// let getScholarship = isValedictorian ? 'Auto selected for scholarship.' : ((isRegularApplicant) ? ((satScore >= 1450 && familyIncome <= 40000) ? 'Selected for scholarship' : 'Check SAT score or family income.') : 'Not selected for scholarship.');
+// console.log(getScholarship);
+
+
+/*
+🎉No 32: 
+Movie ticket pricing system 
+A theater decides ticket prices based on age and whether the customer is a student.
+Outer condition: First check if the person is an adult ( age 18 or above ) or a child ( under 18 ).
+Inner condition ( for adults ): If they are a student, the ticket is $10.
+If they are not students, the ticket is $15.
+Inner condition ( for children ): All children’s tickets are $5 ( no student check needed ).
+*/
+
+// let manAge = 27;
+// let isStudent = false;
+// if(manAge < 18){
+//     console.log('Ticket price $5.')
+// }else if(isStudent){
+//     console.log('Ticket price 10$.')
+// }else{
+//     console.log('Ticket price 15$.')
+// }
+
+// let ticketPrice = manAge < 18 ? 'Ticket price $5.' : (isStudent ? 'Ticket price $10' : 'Ticket price $15.');
+// console.log(ticketPrice);
+
+/*
+🎉No 33:
+E-commerce premium shipping
+An online shop calculates shipping costs based on the total order amount and VIP membership status.
+Order conditions: First check if the order amount is $100 or more.
+Inner condition ( for $100+ orders ): If the customer is a VIP, shipping is free.
+If they are not VIPs, shipping costs $5.
+Inner conditions ( for under 100 orders ): if they are a VIP shipping costs $10, otherwise shipping costs $20.
+*/
+
+// let isVIpCustomer = false;
+// let orderAmount = 20;
+
+// if(orderAmount >= 100){
+//     if(isVIpCustomer){
+//         console.log('Shipping cost $0.')
+//     }else{
+//         console.log('Shipping cost $5. ')
+//     }
+// }else if(isVIpCustomer){
+//     console.log('Shipping cost $10')
+// }else{
+//     console.log('Shipping cost $20.')
+// }
+
+// let shippingCost = orderAmount >= 100 ? ((isVIpCustomer) ? 'Shipping cost $0.' : 'Shipping cost $5.') : ((isVIpCustomer) ? 'Shipping cost $10' : 'Shipping cost $20.');
+// console.log(shippingCost);
+
+
+/*
+🎉No 34:
+ATM cash withdrawal security
+An ATM checks a bank account before dispensing cash.
+Outer condition: First check if the entered PIN is correct. If it is wrong, print “Wrong Pin”.
+Inner condition ( if pin is correct ); Check if the account has enough balance for the requested withdrawal amount.
+If yes, print “cash dispensed”
+If not, print “ Insufficient balance”.
+*/
+
+// let isPinCorrect = true;
+// let cashAmount = 1500;
+
+// if(isPinCorrect){
+//     if(cashAmount > 1000){
+//         console.log('Dispense your cash.')
+//     }else{
+//         console.log('Low balance.')
+//     }
+// }else{
+//     console.log('incorrect pin.')
+// }
+
+// // guard
+
+// if(!isPinCorrect){
+//     console.log('incorrect pin')
+// }else if(cashAmount > 1000){
+//     console.log('Dispense your cash.')
+// }else{
+//     console.log('Low balance.')
+// }
+
+// let dispenseCash = isPinCorrect ? ((cashAmount > 1000) ? 'Dispense your cash.' : 'Low balance.') : 'incorrect pin.';
+// console.log(dispenseCash);
+
+// let cashDispense = !isPinCorrect ? 'incorrect pin' : ((cashAmount > 1000 ) ? 'Dispense your cash.' : 'Low balance.');
+// console.log(cashDispense);
+
+
+/*
+🎉No 35:
+Website admin panel access
+A security portal controls access to a sensitive dashboard.
+Outer condition: First check if the user is Logged in. If not, print “Please log in first”.
+Inner condition ( if logged in ) : Check the user’s role.
+If their role is “admin”, print “Welcome to admin dashboard”.
+If their role is anything else, print “Access denied: Admins are allowed only”.
+*/
+
+// let isLoggedIn = true;
+// let isAdmin = false;
+
+// if(isLoggedIn){
+//     if(isAdmin){
+//         console.log('Welcome to Admin panel.')
+//     }else{
+//         console.log('Access denied. Only admins are allowed.')
+//     }
+// }else{
+//     console.log('Please log in first.')
+// }
+
+// if(!isLoggedIn){
+//     console.log('Please log in first.')
+// }else if(isAdmin){
+//     console.log('Welcome to admin panel.')
+// }else{
+//     console.log('Access denied. Only admins are allowed.')
+// }
+
+// let websiteLogin = isLoggedIn ? (isAdmin ? 'Welcome to admin panel.' : 'Access denied. Only admins are allowed.') : 'Please log in first.';
+// console.log(websiteLogin);
+
+// let webLogin = !isLoggedIn ? 'Please log in first.' :(isAdmin ? 'Welcome to admin panel.' : 'Access denied. Only admins are allowed.');
+// console.log(webLogin);
+
+
+/*
+🎉No 36: 
+Smart thermostat home climate control
+A smart home system decides whether to turn on the AC or Heater based on temperature and humidity.
+Outer condition: First check if the temperature is above 30 degrees.
+Inner condition ( if above 30 ): If humidity is above 70%, print “Turn on AC ( high power)”. Otherwise print “Turn on AC (normal power)”.
+Inner condition ( if below 30): print “ Turn on Heater”.
+*/
+
+// let temp = 32;
+// let humidity = 70;
+
+// if(temp >= 30){
+//     if(humidity >= 70){
+//         console.log('Turn on AC: High power.')
+//     }else{
+//         console.log('Turn on AC: Normal power.')
+//     }
+// }else{
+//     console.log('Turn on Heater.')
+// }
+
+// if(temp < 30){
+//     console.log('Turn on Heater.')
+// }else if(humidity >= 70){
+//     console.log('Turn on AC: High power.')
+// }else{
+//     console.log('Turn on AC: Normal power.')
+// }
+
+// let turnAcOrHeater = temp >= 30 ? (humidity >= 70 ? 'Turn on AC: high power.' : 'Turn on AC: Normal power.') : 'Turn on heater.';
+// console.log(turnAcOrHeater)
+
+// let acOrHeaterTurnOn = temp < 30 ? 'Turn on Heater.' : (humidity >= 70 ? 'Turn on AC: high power.' : 'Turn on AC: Normal power.');
+// console.log(acOrHeaterTurnOn)
+
+
+/*
+🎉No 37:
+Space rocket launch command
+A space agency launches a rocket based on weather, mechanical readiness and countdown status.
+Outer condition: First check if the weather is clear and the wind speed is under 20 mph.
+If not, print “ Launch aborted: Bad weather.”
+Inner condition: If the weather is good, check the mechanical system.
+If isFuelFull is true and isEngineReady is true, print “Rocket launched successfully”. Otherwise print “ launched aborted, system failure”.
+*/
+
+// let isWeatherClear = true;
+// let windSpeed = 19;
+// let isFuelFull = true;
+// let isEngineReady = true;
+
+// if(isWeatherClear && windSpeed < 20){
+//     if(isFuelFull && isEngineReady){
+//         console.log('Rocket launched successfully.')
+//     }else{
+//         console.log('Launch aborted. System failure.')
+//     }
+// }else{
+//     console.log('Launched aborted. Bad weather.')
+// }
+
+// if(!isWeatherClear || windSpeed > 20){
+//     console.log('Launch aborted. Bad weather.')
+// }else if(isFuelFull && isEngineReady){
+//     console.log('Rocket launched successfully.')
+// }else{
+//     console.log('Launch aborted. System failure.')
+// }
+
+// let rocketLaunch = (isWeatherClear && windSpeed <= 20) ? ((isFuelFull && isEngineReady) ? 'Rocket launched successfully.' : 'Launch aborted. System failure.') : 'Launch aborted. Bad weather.';
+// console.log(rocketLaunch);
+
+// let launchRocket = (!isWeatherClear && windSpeed > 20) ? 'Launch aborted. Bad wether.' : ((isEngineReady && isFuelFull) ? 'Rocket launched successfully.' : 'Launch aborted. System failure.');
+// console.log(launchRocket);
+
+
+/*
+🎉No 38:
+E-sports tournament eligibility
+A gaming tournament checks if a player can enter the Pro Division or the Amateur Division.
+Outer condition: First check if the player’s age is 16 or older.
+If they are under 16, print “ Too young to compete”.
+Inner condition: If they are old enough, check their game rank score. If their score is above 2500 or they have a Pro license, print “ Welcome to Pro Division”. Otherwise, print “ Welcome to Amateur division”.
+*/
+
+// let playersAge = 10;
+// let gameScore = 2600;
+// let hasProLicense = true;
+
+// if(playersAge >= 18){
+//     if(gameScore >= 2500 && hasProLicense){
+//         console.log('Welcome to Pro division.')
+//     }else{
+//         console.log('Welcome to Ametuer division.')
+//     }
+// }else{
+//     console.log('Too young to compete.')
+// }
+
+// if(playersAge < 18){
+//     console.log('Too young to compete.')
+// }else if(gameScore >= 2500 & hasProLicense){
+//     console.log('Welcome to Pro division.')
+// }else{
+//     console.log('Welcome to Ametuer division.')
+// }
+
+// let gameEntry = playersAge >= 18 ? ((gameScore >= 2500 && hasProLicense) ? 'Welcome to Pro division.' : 'Welcome to Ameteur division.') : 'Too young to compete.';
+// console.log(gameEntry);
+
+
+/*
+🎉No 39:
+Hospital emergency room triage
+An automated hospital system prioritizes patients when they arrive at the emergency room.
+Outer condition: First check, if the patient has a Life - Threatening emergency ( isCritical === true ), if true, print “ Admit immediately to ICU”.
+Inner condition: If they are not critical, check their fever temperature.
+If the temperature is above 38 degrees ( 100.4 F ) and they have a cough, print “ Direct to fever clinic”.
+Otherwise print, “ Please wait in the regular waiting room”.
+*/
+
+let isCritical = true;
+let temprature = 37;
+let hasCough = true;
+
+if(isCritical){
+    console.log('Admit immediately to ICU.')
+}else if(temprature > 36 && hasCough){
+    console.log('Admit to fever unit.')
 }else{
-    console.log('Not allowed.')
+    console.log('Please wait in the regular waiting room, take primary treatment.')
 }
 
-let carRent = (isIntTourist && hasIntDrivingLicense) ? 'Can rent car. no need to age limit.' : ((hasDrivingLicense && ages > 21) ? 'Can rent a car.' : 'Not allowed.')
-console.log(carRent);
+let admitHospital = isCritical ? 'Admit immidiately to ICU.' : ((temprature > 36 && hasCough) ? 'Admit to fever unit.' : 'Please wait in the regular waiting room, take primary treatment.');
+console.log(admitHospital);
