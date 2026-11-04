@@ -1265,17 +1265,108 @@ If the temperature is above 38 degrees ( 100.4 F ) and they have a cough, print 
 Otherwise print, “ Please wait in the regular waiting room”.
 */
 
-let isCritical = true;
-let temprature = 37;
-let hasCough = true;
+// let isCritical = true;
+// let temprature = 37;
+// let hasCough = true;
 
-if(isCritical){
-    console.log('Admit immediately to ICU.')
-}else if(temprature > 36 && hasCough){
-    console.log('Admit to fever unit.')
+// if(isCritical){
+//     console.log('Admit immediately to ICU.')
+// }else if(temprature > 36 && hasCough){
+//     console.log('Admit to fever unit.')
+// }else{
+//     console.log('Please wait in the regular waiting room, take primary treatment.')
+// }
+
+// let admitHospital = isCritical ? 'Admit immidiately to ICU.' : ((temprature > 36 && hasCough) ? 'Admit to fever unit.' : 'Please wait in the regular waiting room, take primary treatment.');
+// console.log(admitHospital);
+
+
+/*
+🎉No 40: My own created problems
+BCS application eligibility
+For BCS exam application an examiner must be Bangladeshi and age less than 30 years old.
+For special quota age consider upto 32.
+The examiner must complete honors 4th year exam in the circulation given last date of application.
+No 3rd class result accepted in the education ssc, hsc.
+*/
+
+// let isBangladeshi = true;
+// let ages =30;
+// let hasQuata = false;
+// let maxAge = hasQuata ? 32 : 30;
+// let hasCompleteHonors4ht = true;
+// let sscResult = 1;
+// let hscResult = 3.5;
+
+// if(isBangladeshi){
+//     if(ages <= maxAge){
+//         if(hasCompleteHonors4ht){
+//             if(sscResult >=3 && hscResult >=3){
+//                 console.log('You are eligible for BCS application.')
+//             }else{
+//                 console.log('Your SSC or HSC result less than 3.')
+//             }
+//         }else{
+//             console.log('Not completed honors.')
+//         }
+//     }else{
+//         console.log('Age is over than required.')
+//     }
+// }else{
+//     console.log('Sorry! you are not a Bangladeshi.')
+// }
+
+// if(!isBangladeshi){
+//     console.log('You are not a Bangladeshi.')
+// }else if(ages > maxAge){
+//     console.log('Exceeded maximum age limit.')
+// }else if(!hasCompleteHonors4ht){
+//     console.log('Not completed honors.')
+// }else if(sscResult < 3 || hscResult < 3){
+//     console.log('SSC or HSC result less than 3.')
+// }else{
+//     console.log('Eligible for BCS exam.')
+// }
+
+
+/*
+🎉No 41: My own created problems
+Birth registration certificate
+A child gets its BRC if it is born in Bangladesh or its parents are Bangladeshi.
+If a father or mother has their BRC, they can apply for a child's BRC, otherwise first get fathers or mothers BRC.
+If the child is under 45 days, application is free. Age under 5 years and over 45 days charges 200tk, above 5 years charges 500tk.
+*/
+
+let bornInBd = false;
+let isFatherOrMotherBd = true;
+let hasFatherBrc = true;
+let hasMotherBrc = true;
+let childAge = 40;
+
+if(bornInBd || isFatherOrMotherBd){
+    if(hasFatherBrc || hasMotherBrc){
+        if(childAge <= 45){
+            console.log('Fee free.')
+        }else if(childAge <= 1825){
+            console.log('Fee 200tk.')
+        }else{
+            console.log('Fee 500tk.')
+        }
+    }else{
+        console.log('First collect fathers or mothers BRC.')
+    }
 }else{
-    console.log('Please wait in the regular waiting room, take primary treatment.')
+    console.log('Child is not Bangladeshi.')
 }
 
-let admitHospital = isCritical ? 'Admit immidiately to ICU.' : ((temprature > 36 && hasCough) ? 'Admit to fever unit.' : 'Please wait in the regular waiting room, take primary treatment.');
-console.log(admitHospital);
+if(!bornInBd && !isFatherOrMotherBd){
+    console.log('Child is not Bangladeshi.')
+}else if(!hasFatherBrc && !hasMotherBrc){
+    console.log('First collect fathers or mohthers BRC.')
+}else if(childAge > 1825){
+    console.log('Fee 500tk.')
+}else if(childAge > 45){
+    console.log('Fee 200 tk.')
+}else{
+    console.log('Fee free.')
+}
