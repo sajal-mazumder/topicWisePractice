@@ -1337,36 +1337,104 @@ If a father or mother has their BRC, they can apply for a child's BRC, otherwise
 If the child is under 45 days, application is free. Age under 5 years and over 45 days charges 200tk, above 5 years charges 500tk.
 */
 
-let bornInBd = false;
-let isFatherOrMotherBd = true;
-let hasFatherBrc = true;
-let hasMotherBrc = true;
-let childAge = 40;
+// let bornInBd = false;
+// let isFatherOrMotherBd = true;
+// let hasFatherBrc = true;
+// let hasMotherBrc = true;
+// let childAge = 40;
 
-if(bornInBd || isFatherOrMotherBd){
-    if(hasFatherBrc || hasMotherBrc){
-        if(childAge <= 45){
-            console.log('Fee free.')
-        }else if(childAge <= 1825){
-            console.log('Fee 200tk.')
+// if(bornInBd || isFatherOrMotherBd){
+//     if(hasFatherBrc || hasMotherBrc){
+//         if(childAge <= 45){
+//             console.log('Fee free.')
+//         }else if(childAge <= 1825){
+//             console.log('Fee 200tk.')
+//         }else{
+//             console.log('Fee 500tk.')
+//         }
+//     }else{
+//         console.log('First collect fathers or mothers BRC.')
+//     }
+// }else{
+//     console.log('Child is not Bangladeshi.')
+// }
+
+// if(!bornInBd && !isFatherOrMotherBd){
+//     console.log('Child is not Bangladeshi.')
+// }else if(!hasFatherBrc && !hasMotherBrc){
+//     console.log('First collect fathers or mohthers BRC.')
+// }else if(childAge > 1825){
+//     console.log('Fee 500tk.')
+// }else if(childAge > 45){
+//     console.log('Fee 200 tk.')
+// }else{
+//     console.log('Fee free.')
+// }
+
+/*
+🎉No 42: My own created problems
+Getting personal loan
+To get a personal loan from a Bangladeshi Bank you must be a Bangladeshi. You have an account in an existing bank. You must provide your valid papers to the bank. Finally the bank will inquire if your income is enough to pay your loan installment. Then the bank will approve the loan according to your income range.
+*/
+
+let isBangladeshi = true;
+let hasAccount = true;
+let hasValidPapers = true;
+let hasCurrentLoan = false;
+let hasNOC = false;
+let cibReport = 'ok';
+let monthlyIncome = 1550000;
+
+if(isBangladeshi){
+    if(hasAccount){
+        if(hasValidPapers){
+            if(hasCurrentLoan && !hasNOC){
+               console.log('Please bring NOC for current active loan.')
+            }else if(cibReport === 'ok'){
+                    if(monthlyIncome <= 20000){
+                        console.log('Loan amount 2 lac tk.')
+                    }else if(monthlyIncome <= 50000){
+                        console.log('Loan amount 3 lac tk.')
+                    }else if(monthlyIncome <= 100000){
+                        console.log('Loan amont 5 lac tk.')
+                    }else if(monthlyIncome <= 250000){
+                        console.log('Loan amount 10 lac tk.')
+                    }else{
+                        console.log('Loan amount maximum 20 lac tk.')
+                    }
+                }else{
+                    console.log('Your cib report is not ok.')
+                }
         }else{
-            console.log('Fee 500tk.')
+            console.log('Please submit all of your valid papers.')
         }
     }else{
-        console.log('First collect fathers or mothers BRC.')
+        console.log('You don not have an accont. First open a new account.')
     }
 }else{
-    console.log('Child is not Bangladeshi.')
+    console.log('You are not a Bangladeshi. Not eligible for Loan.')
 }
 
-if(!bornInBd && !isFatherOrMotherBd){
-    console.log('Child is not Bangladeshi.')
-}else if(!hasFatherBrc && !hasMotherBrc){
-    console.log('First collect fathers or mohthers BRC.')
-}else if(childAge > 1825){
-    console.log('Fee 500tk.')
-}else if(childAge > 45){
-    console.log('Fee 200 tk.')
+if(!isBangladeshi){
+    console.log('You are not a Bangladeshi. Not eligible for Loan.')
+}else if(!hasAccount){
+    console.log('You do not have an account. First open a new account.')
+}else if(!hasValidPapers){
+    console.log('Please submit your all valid papers.')
+}else if(hasCurrentLoan && !hasNOC){
+    console.log('Please bring NOC for current active loan.')
+}else if(cibReport !== 'ok'){
+    console.log('Your cib report is not ok.')
 }else{
-    console.log('Fee free.')
+    if(monthlyIncome <= 20000){
+        console.log('Loan amount 2 lac tk.')
+    }else if(monthlyIncome <= 50000){
+        console.log('Loan amount 3 lac tk.')
+    }else if(monthlyIncome <= 100000){
+        console.log('Loan amount 5 lac tk.')
+    }else if(monthlyIncome <= 250000){
+        console.log('Loan amount 10 lac tk.')
+    }else{
+        console.log('Loan amount maximum 20 lac tk.')
+    }
 }

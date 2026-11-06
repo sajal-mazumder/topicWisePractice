@@ -934,7 +934,7 @@ For domestic transactions, an alert is triggered only if the transaction amount 
 
 // let fraudTrigger = (isInternationalWithdraw) 
 // ? 'Fraud Alert Triggered:- International withdrawal detected. Transaction blocked.'
-//     : ((transactionAmount > 500 && hasNeverShopped) ? 'Fraud Alert Triggered:- High-value domestic          transaction at an unfamiliar store.' 
+//     : ((transactionAmount > 500 && hasNeverShopped) ? 'Fraud Alert Triggered:- High-value domestic transaction at an unfamiliar store.' 
 //         : 'Transaction Successful! Welcome to our secure banking partner.');
 // console.log(fraudTrigger);
 
@@ -997,8 +997,8 @@ For static obstacles ( like trash cans or cones ), the brakes are triggered only
 
 // ternary
 
-// let carRunning = (isPedestrianDetected) 
-// ? 'Brake car instantly. Wait for pedestrian cross the road.' 
+// let carRunning = (isPedestrianDetected) ?
+//  'Brake car instantly. Wait for pedestrian cross the road.' 
 //     : ((isTrashCans) ? ((currentSpeed > 30 && roadCondition === 'slippery') ? 'Brake car for road bad situation.' 
 //         : 'No need to brake. Speed below 30 mph or road is not slippery.') 
 //             : 'Keep on running car. Road condition is good.');
@@ -1026,14 +1026,13 @@ For all other students, they qualify only if they have an SAT score above 1450 a
 
 // ternary
 
-// let scholarship = (isValedictorian) 
-// ? 'Congrates! You are automatically selected for Scholarship.' 
+// let scholarship = (isValedictorian) ?
+//  'Congrates! You are automatically selected for Scholarship.' 
 //     : ((satScore > 1450 && familyIncome < 30000) ? 'You are selected for our Scholarship.' 
 //         : 'Not eligible for Scholarship. Your sat score is less than 1450 or family income more than $30000');
 // console.log(scholarship);
 
 /*
-
 🎉No 32: 
 Movie ticket pricing system 
 A theater decides ticket prices based on age and whether the customer is a student.
@@ -1089,8 +1088,8 @@ Inner conditions ( for under 100 orders ): if they are a VIP shipping costs $10,
 
 // ternary
 
-// let shippingCharge = (orderAmount >=100) 
-// ? ((isVIP) ? 'You are a VIP customer. Shipping charge free, You ordered more than 100$.' 
+// let shippingCharge = (orderAmount >=100) ?
+//  ((isVIP) ? 'You are a VIP customer. Shipping charge free, You ordered more than 100$.' 
 //     :  'You are not a VIP customer and ordered more than 100$. Shipping charge $5.') 
 //         : ((isVIP) ? 'You are a VIP customer and ordered less than 100$. Shipping charge $10.' 
 //             : 'You are not VIP customer and ordered less than 100$. Shipping charge 20$.');
@@ -1121,8 +1120,8 @@ If not, print “ Insufficient balance”.
 
 // ternary
 
-// let cashDispense = (!isPinCorrect) 
-// ? 'Sorry! Incorrect pin. Try again.' 
+// let cashDispense = (!isPinCorrect) ?
+//  'Sorry! Incorrect pin. Try again.' 
 //     : ((accountBalance >= withdrawalBalance) ? 'Cash dispensed.' 
 //         : 'Insufficient balance.');
 // console.log(cashDispense);
@@ -1151,8 +1150,8 @@ If their role is anything else, print “Access denied: Admins are allowed only�
 
 // ternary
 
-// let adminDashboard = (!isLoggedIn) 
-// ? 'Please log in first.' 
+// let adminDashboard = (!isLoggedIn) ?
+//  'Please log in first.' 
 //     : ((isAdmin) ? 'Welcome to admin dashboard.' 
 //         : 'Access denied. Admin are allowed only.');
 // console.log(adminDashboard);
@@ -1182,8 +1181,8 @@ Inner condition ( if below 30): print “ Turn on Heater”.
 
 // ternary
 
-// let turnAc = (temperature > 30) 
-// ? ((humidity > 70) ? 'Turn on AC. High power.' 
+// let turnAc = (temperature > 30) ?
+//  ((humidity > 70) ? 'Turn on AC. High power.' 
 //     : 'Turn on AC. Normal power.') 
 //         : 'Turn on Heater.';
 // console.log(turnAc);
@@ -1226,8 +1225,8 @@ If isFuelFull is true and isEngineReady is true, print “Rocket launched succes
 
 // ternary 
 
-// let rocketLaunch = (!isWeatherClear || windSpeed >= 20) 
-// ? 'Launch aborted: Bad wether.' 
+// let rocketLaunch = (!isWeatherClear || windSpeed >= 20) ?
+//  'Launch aborted: Bad wether.' 
 //     : ((isFuelFull && isEngineReady) ? 'Rocket launched successfully. ' 
 //         : 'Launch aborted. System failured.');
 // console.log(rocketLaunch);
@@ -1257,8 +1256,8 @@ Inner condition: If they are old enough, check their game rank score. If their s
 
 // ternary
 
-// let tournamentEligible = (playersAge < 16) 
-// ? 'Too young to compete.' 
+// let tournamentEligible = (playersAge < 16) ?
+//  'Too young to compete.' 
 //     : ((gameScore > 2500 || hasProLicense) ? 'Welcome to Pro Division.' 
 //         : 'Welcome to Amateur Division.');
 // console.log(tournamentEligible);
@@ -1288,8 +1287,8 @@ Otherwise print, “ Please wait in the regular waiting room”.
 
 // ternary
 
-// let admitHospital = (isCritical) 
-// ? 'Admit immediately to ICU.' 
+// let admitHospital = (isCritical) ?
+//  'Admit immediately to ICU.' 
 //     : ((feverTemp > 38 && hasCough) ? 'Refer to fever clinic.' 
 //         : 'Please wait in the regular waiting room and take primary treatement.');
 // console.log(admitHospital);
@@ -1453,7 +1452,7 @@ if (!isBangladeshi) {
 }else if (cibReport !== 'ok') {
     console.log('Your cib report is not ok.')
 }else{
-    if (incomeMonthly <= 3000) {
+    if (incomeMonthly <= 30000) {
         console.log('Can approve 2 lac taka.')
     }else if (incomeMonthly <= 50000) {
         console.log('Can approve 2.5 lac taka.')
