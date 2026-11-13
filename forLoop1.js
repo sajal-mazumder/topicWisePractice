@@ -418,20 +418,207 @@ Print a square grid of numbers from 1 to 3 repeated across 3 rows.
 The Odd Sum Stop (বিজোড় সংখ্যার যোগফল)১ থেকে শুরু করে ২৫ পর্যন্ত সব বিজোড় (Odd) সংখ্যাগুলোর যোগফল বের করুন। তবে লুপের ভেতরে একটি শর্ত থাকবে—যদি যোগফল কোনো কারণে ৫০ পার হয়ে যায় (sum > 50), তবে লুপটি সঙ্গে সঙ্গে বন্ধ (break) হয়ে যাবে এবং তখনকার চূড়ান্ত যোগফলটি প্রিন্ট করবে।ইঙ্গিত: লুপের ভেতরে if কন্ডিশন এবং break কীওয়ার্ড ব্যবহার করতে হবে।
 */
 
-let sumOfOdd = 0;
-for(let i = 1; i <= 55; i += 2){
-    sumOfOdd += i;
-    if(sumOfOdd > 270){
-        break;
-    }
-}
-console.log(sumOfOdd)
+// let sumOfOdd = 0;
+// for(let i = 1; i <= 55; i += 2){
+//     sumOfOdd += i;
+//     if(sumOfOdd > 270){
+//         break;
+//     }
+// }
+// console.log(sumOfOdd)
 
-let oddSum = 0;
-for( let i = 1; i <= 25; i += 2){
-    oddSum += i;
-    if (oddSum > 50) {
-        break;
+// let oddSum = 0;
+// for( let i = 1; i <= 25; i += 2){
+//     oddSum += i;
+//     if (oddSum > 50) {
+//         break;
+//     }
+// }
+// console.log(oddSum);
+
+
+/*
+challange 1: . Search and Destroy (Intermediate)Goal: Write a loop that prints numbers from 1 to 10. 
+However, if the loop hits the number 7, it must stop completely and print nothing else after it.Hint: Use the break; statement inside an if block.
+*/
+
+// let num = '';
+// for(let i = 0; i <= 10; i++){
+//     if(i === 7){
+//         break;
+//     }
+//     num += i + '\n'
+// }
+// console.log(num)
+
+
+/*
+challange 2: . The Price Filter (Array Challenge)Goal: You are given an array of prices: let prices = [10, 45, 60, 12, 85, 30];. 
+Use a loop to print only the prices that are greater than 40.
+Hint: Combine your array loop knowledge (prices[i]) with an if condition.
+*/
+
+// let priceArr = [10, 34, 24, 35, 45];
+// let result = [];
+// for(let i = 0; i < priceArr.length; i++){
+//     // if(priceArr[i] > 25){
+//     //     result += priceArr[i] + '\n'
+//     // }
+//     if(priceArr[i] < 30){
+//         result += priceArr[i] + '\n'
+//     }
+// }
+// console.log(result)
+
+
+/*
+No 1: The Narcissistic Number Search
+Find all 3-digit numbers where the sum of each digit raised to the power of 3 equals the number itself (e.g., 1³ + 5³ + 3³ = 153).
+*/
+
+// for(let i = 100; i <= 999; i++){
+//     let temp = i ;
+
+//     let digit3 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp % 10;
+    
+//     let sumCubes = Math.pow(digit3, 3) + Math.pow(digit2, 3) + Math.pow(digit1, 3);
+//     if(sumCubes === i){
+//         console.log(i)
+//     }
+// }
+
+// for(let i = 10; i <= 99; i++){
+//     let temp = i;
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10);
+
+//     let digit1 = temp % 10;
+
+//     let sumSqr = Math.pow(digit1, 2) + Math.pow(digit2, 2);
+//     if(sumSqr === i){
+//         console.log(i)
+//     }
+// }
+
+
+// for(let i = 1000; i <= 9999; i++){
+//     let temp = i;
+
+//     let digit4 = temp % 10;
+//     temp = Math.floor(temp / 10)
+
+//     let digit3 = temp % 10;
+//     temp = Math.floor(temp / 10)
+
+//     let digit2 = temp % 10;
+//     temp = Math.floor(temp / 10)
+
+//     let digit1 = temp % 10;
+    
+//     let sumOfPowerFour = Math.pow(digit4, 4) + Math.pow(digit3, 4) + Math.pow(digit2, 4) + Math.pow(digit1, 4);
+//     if(sumOfPowerFour === i){
+//         console.log(i)
+//     }
+// }
+
+
+/*
+No 2: The Collatz Conjecture Sequence
+Given any positive integer, print its Collatz sequence using a loop. If even, divide by 2; if odd, multiply by 3 and add 1. Stop when it hits 1.
+*/
+
+// let number = 9;
+// for( let i = number; i > 1;){
+//     if(i % 2 === 0){
+//         i = i / 2;
+//     }else{
+//         i = i * 3 + 1;
+//     }
+//     console.log(i)
+// }
+
+// while loop, best practice
+
+// let num = 5;
+// while(num > 1){
+//     if(num % 2 === 0){
+//         num = num / 2;
+//     }else{
+//         num = num * 3 + 1;
+//     }
+//     console.log(num)
+// }
+
+
+/*
+No 3: Diamond Pattern Generator
+Print a perfect diamond shape made of asterisks (*) based on an odd number of maximum rows provided by the user.
+*/
+
+// let n = 5;
+// let mid = Math.floor(n / 2) + 1;
+
+// for(let i = 1; i <= mid; i++){
+//     let rowStar = ""
+
+//     for(let j = 1; j <= mid - i; j++){
+//         rowStar += " "
+//     }
+
+//     for(let k = 1; k <=( 2 * i) - 1; k++ ){
+//         rowStar += "*"
+//     }
+//     console.log(rowStar)
+// }
+
+// for(let i = mid - 1; i >= 1; i--){
+//     let rowStar = "";
+
+//     for(let j = 1; j <= mid - i; j++){
+//         rowStar += " ";
+//     }
+
+//     for(let k = 1; k <= (2 * i) - 1; k++){
+//         rowStar += "*"
+//     }
+//     console.log(rowStar)
+// }
+
+
+let number = 7;
+let midLine = Math.floor(number / 2) + 1;
+
+for(let i = 1; i <= midLine; i++){
+    let rowStar = "";
+
+    for(let j = 1; j <= midLine - i; j++){
+        rowStar += " "
     }
+
+    for(let k = 1; k <= (2 * i) - 1; k++){
+        rowStar += "*"
+    }
+    console.log(rowStar)
 }
-console.log(oddSum);
+
+// below slide
+
+for(let i = midLine - 1; i >= 1; i--){
+    let rowStar = ""
+
+    for(let j = 1; j <= midLine - i; j++){
+        rowStar += " "
+    }
+
+    for(let k = 1; k <= (2 * i) - 1; k++){
+        rowStar += "*"
+    }
+    console.log(rowStar)
+}
